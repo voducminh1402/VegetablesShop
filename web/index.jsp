@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from bestwebcreator.com/organiq/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:47:20 GMT -->
+<!-- Mirrored from bestwebcreator.com/organiq/demo/index.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:47:20 GMT -->
 <head>
 <!-- Meta -->
 <meta charset="utf-8">
@@ -400,7 +400,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -420,7 +420,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -439,7 +439,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -459,7 +459,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -478,7 +478,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -497,7 +497,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -517,7 +517,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -537,7 +537,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -561,7 +561,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -580,7 +580,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -599,7 +599,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -618,7 +618,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -638,7 +638,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -658,7 +658,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -682,7 +682,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -702,7 +702,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -722,7 +722,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -741,7 +741,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -761,7 +761,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -781,7 +781,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -805,7 +805,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -824,7 +824,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -843,7 +843,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -863,7 +863,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -883,7 +883,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -907,7 +907,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -926,7 +926,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -946,7 +946,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -966,7 +966,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -985,7 +985,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1005,7 +1005,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1024,7 +1024,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1044,7 +1044,7 @@ var sc_https=1;
                                                 <ul class="list_none pr_action_btn">
                                                     <li><a href="#"><i class="ti-heart"></i></a></li>
                                                     <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                                    <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1171,7 +1171,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1188,7 +1188,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1205,7 +1205,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1224,7 +1224,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1241,7 +1241,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1258,7 +1258,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1277,7 +1277,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1294,7 +1294,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1311,7 +1311,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1330,7 +1330,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1347,7 +1347,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1364,7 +1364,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1383,7 +1383,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1400,7 +1400,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1417,7 +1417,7 @@ var sc_https=1;
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                         <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
+                                        <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.jsp" class="popup-ajax"><i class="ti-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1629,41 +1629,6 @@ var sc_https=1;
 </section>
 <!-- END SECTION CLIENT LOGO -->
 
-<!-- END SECTION NEWSLATTER -->
-<section class="bg_light_green newslatter_wrap">
-	<div class="container">
-    	<div class="row justify-content-center">
-        	<div class="col-lg-6 col-md-8 text-center">
-                <div class="heading_s1 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
-                    <h2>Subscribe Our Newsletter</h2>
-                </div>
-                <p class="m-0 animation" data-animation="fadeInUp" data-animation-delay="0.03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
-                <div class="small_divider"></div> 
-                <div class="newsletter_form animation" data-animation="fadeInUp" data-animation-delay="0.04s">
-                    <form> 
-                        <div class="rounded_input">
-                           <input type="text" class="form-control" required="" placeholder="Enter your Email Address">
-                        </div>
-                        <button type="submit" title="Subscribe" class="btn btn-default" name="submit" value="Submit">subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="overlap_shape">
-        <div class="ol_shape19">
-            <div class="animation" data-animation="fadeInLeft" data-animation-delay="0.5s">
-                <img data-parallax='{"y": 20, "smoothness": 20}' src="assets/images/shape34.png" alt="shape34"/>
-            </div>
-        </div>
-        <div class="ol_shape20">
-            <div class="animation" data-animation="fadeInRight" data-animation-delay="0.5s">
-                <img data-parallax='{"y": 20, "smoothness": 20}' src="assets/images/shape35.png" alt="shape35"/>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END SECTION NEWSLATTER -->
 
 <jsp:include page="Footer.jsp" />
 
@@ -1706,5 +1671,5 @@ var sc_https=1;
 
 </body>
 
-<!-- Mirrored from bestwebcreator.com/organiq/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:48:43 GMT -->
+<!-- Mirrored from bestwebcreator.com/organiq/demo/index.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:48:43 GMT -->
 </html>

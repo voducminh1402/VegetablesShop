@@ -990,8 +990,6 @@ button:focus {
 }
 .dropdown-toggle::after, .dropdown-toggler::after {
 	border: 0 none;
-	content: "\f3d0";
-	font-family: "Ionicons";
 	height: auto;
 	line-height: normal;
 	margin-left: 5px;
