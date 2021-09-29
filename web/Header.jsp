@@ -4,7 +4,9 @@
     Author     : VODUCMINH
 --%>
 
+<%@page import="vegetablesshop.users.UserDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!-- LOADER -->
 <div id="preloader">
     <div class="line-scale">
@@ -39,16 +41,30 @@
                                 </select>
                             </div>
                         </li>
+                        <%
+                            UserDTO loginUser = (UserDTO)session.getAttribute("LOGIN_USER");
+                            if (loginUser != null) {
+                        %>
                         <li class="dropdown">
-                          <a class="dropdown-toggle" href="#" data-toggle="dropdown">My Account</a>
+                          <a class="dropdown-toggle" href="#" data-toggle="dropdown">Hello <%= loginUser.getUserName() %></a>
                           <div class="dropdown-menu shadow dropdown-menu-right">
                             <ul>
                                 <li><a class="dropdown-item" href="my-account.jsp">My account</a></li>
                                 <li><a class="dropdown-item" href="wishlist.jsp">Wishlist</a></li>
-                                <li><a class="dropdown-item" href="checkout.jsp">Checkout</a></li>
+                                <li><a class="dropdown-item" href="MainController?action=Logout">Checkout</a></li>
                             </ul>
                           </div>
                         </li>
+                        <%        
+                            }
+                        else {
+                        %>
+                            <li class="dropdown">
+                              <a class="dropdown-toggle" href="login.html">LOGIN</a>
+                            </li>
+                        <%
+                        }
+                        %>
                     </ul>
                 </div>
             </div>
