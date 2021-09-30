@@ -16,23 +16,23 @@ public class ProductDTO {
     private double productPrice;
     private int quantity;
     private String description;
-    private int availableID;
-    private int categoryID;
+    private String availableName;
+    private String categoryName;
     private String createDate;
     private int productStatus;
 
     public ProductDTO() {
     }
 
-    public ProductDTO(String productID, String productName, String productImage, double productPrice, int quantity, String description, int availableID, int categoryID, String createDate, int productStatus) {
+    public ProductDTO(String productID, String productName, String productImage, double productPrice, int quantity, String description, String availableName, String categoryName, String createDate, int productStatus) {
         this.productID = productID;
         this.productName = productName;
         this.productImage = productImage;
         this.productPrice = productPrice;
         this.quantity = quantity;
         this.description = description;
-        this.availableID = availableID;
-        this.categoryID = categoryID;
+        this.availableName = availableName;
+        this.categoryName = categoryName;
         this.createDate = createDate;
         this.productStatus = productStatus;
     }
@@ -85,20 +85,20 @@ public class ProductDTO {
         this.description = description;
     }
 
-    public int getAvailableID() {
-        return availableID;
+    public String getAvailableName() {
+        return availableName;
     }
 
-    public void setAvailableID(int availableID) {
-        this.availableID = availableID;
+    public void setAvailableName(String availableName) {
+        this.availableName = availableName;
     }
 
-    public int getCategoryID() {
-        return categoryID;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setCategoryID(int categoryID) {
-        this.categoryID = categoryID;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public String getCreateDate() {
@@ -116,6 +116,12 @@ public class ProductDTO {
     public void setProductStatus(int productStatus) {
         this.productStatus = productStatus;
     }
+
+    @Override
+    public String toString() {
+        return "ProductDTO{" + "productID=" + productID + ", productName=" + productName + ", productImage=" + productImage + ", productPrice=" + productPrice + ", quantity=" + quantity + ", description=" + description + ", availableID=" + availableName + ", categoryID=" + categoryName + ", createDate=" + createDate + ", productStatus=" + productStatus + '}';
+    }
+    
     
     
 }

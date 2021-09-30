@@ -2262,8 +2262,14 @@ body.active {
 	z-index: 1;
 }
 .product_img img {
-	width: 100%;
-	padding: 10px 10px 0 10px;
+    width: 100%;
+    padding: 10px 10px 0 10px;
+}
+
+.product-detail-img {
+    width: 348px !important;
+    height: 348px !important;
+    object-fit: cover !important;
 }
 .product_info {
 	text-align: center;

@@ -3,7 +3,10 @@
     Created on : Sep 28, 2021, 11:02:31 PM
     Author     : VODUCMINH
 --%>
-
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@page import="vegetablesshop.products.ProductDAO"%>
+<%@page import="java.util.List"%>
+<%@page import="vegetablesshop.products.ProductDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,9 +62,8 @@ var sc_https=1;
 </head>
 
 <body>
-
-<jsp:include page="Header.jsp" />
-
+    <jsp:include page="Header.jsp" />
+    
 <!-- START SECTION BANNER -->
 <section class="bg_light_yellow breadcrumb_section background_bg bg_fixed bg_size_contain" data-img-src="assets/images/breadcrumb_bg.png">
 	<div class="container">
@@ -87,182 +89,33 @@ var sc_https=1;
 <section>
 	<div class="container">
     	<div class="row">
-            <div class="col-lg-4 col-sm-6">
-                <div class="product">
-                    <span class="pr_flash bg_green">Sale</span>
-                    <div class="product_img">
-                        <a href="#"><img src="assets/images/product_img1.jpg" alt="product_img1"/></a>
-                        <div class="product_action_box">
-                            <ul class="list_none pr_action_btn">
-                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
-                            </ul>
+            <c:if test="${sessionScope.ACTIVE_PRODUCT_LIST == null}">
+                <c:redirect url="MainController?action=GetActiveProduct"></c:redirect>
+            </c:if>
+            
+            <c:forEach items="${sessionScope.ACTIVE_PRODUCT_LIST}" var="o">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="product">
+                        <span class="pr_flash bg_green">Sale</span>
+                        <div class="product_img">
+                            <a href="MainController?action=GetDetailProduct&id=${o.productID}"><img class="product-detail-img" src="${o.productImage}"/></a>
+                            <div class="product_action_box">
+                                <ul class="list_none pr_action_btn">
+                                    <li><a href="#"><i class="ti-heart"></i></a></li>
+                                    <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product_info">
+                            <h6><a href="MainController?action=GetDetailProduct&id=${o.productID}">${o.productName}</a></h6>
+                            <div class="rating"><div class="product_rate" style="width:80%"></div></div>
+                            <span class="price">$ ${o.productPrice}</span>
                         </div>
                     </div>
-                    <div class="product_info">
-                        <h6><a href="#">Fresh Organic Strawberry</a></h6>
-                        <div class="rating"><div class="product_rate" style="width:80%"></div></div>
-                        <span class="price">$35.00</span>
-                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="product">
-                    <span class="pr_flash bg_orange">-10%</span>
-                    <div class="product_img">
-                        <a href="#"><img src="assets/images/product_img2.jpg" alt="product_img2"/></a>
-                        <div class="product_action_box">
-                            <ul class="list_none pr_action_btn">
-                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product_info">
-                        <h6><a href="#">Fresh Organic Grapes</a></h6>
-                        <div class="rating"><div class="product_rate" style="width:80%"></div></div>
-                        <span class="price">$40.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="product">
-                    <div class="product_img">
-                        <a href="#"><img src="assets/images/product_img3.jpg" alt="product_img3"/></a>
-                        <div class="product_action_box">
-                            <ul class="list_none pr_action_btn">
-                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product_info">
-                        <h6><a href="#">Fresh Organic Cucumber</a></h6>
-                        <div class="rating"><div class="product_rate" style="width:60%"></div></div>
-                        <span class="price">$52.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="product">
-                    <span class="pr_flash bg_green">Sale</span>
-                    <div class="product_img">
-                        <a href="#"><img src="assets/images/product_img4.jpg" alt="product_img4"/></a>
-                        <div class="product_action_box">
-                            <ul class="list_none pr_action_btn">
-                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product_info">
-                        <h6><a href="#">Fresh Organic Orange</a></h6>
-                        <div class="rating"><div class="product_rate" style="width:100%"></div></div>
-                        <span class="price">$39.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="product">
-                    <div class="product_img">
-                        <a href="#"><img src="assets/images/product_img5.jpg" alt="product_img5"/></a>
-                        <div class="product_action_box">
-                            <ul class="list_none pr_action_btn">
-                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product_info">
-                        <h6><a href="#">100% Organic Juices</a></h6>
-                        <div class="rating"><div class="product_rate" style="width:100%"></div></div>
-                        <span class="price">$33.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="product">
-                    <div class="product_img">
-                        <a href="#"><img src="assets/images/product_img6.jpg" alt="product_img6"/></a>
-                        <div class="product_action_box">
-                            <ul class="list_none pr_action_btn">
-                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product_info">
-                        <h6><a href="#">Fresh Organic Banana</a></h6>
-                        <div class="rating"><div class="product_rate" style="width:60%"></div></div>
-                        <span class="price">$42.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="product">
-                    <span class="pr_flash bg_red">Hot</span>
-                    <div class="product_img">
-                        <a href="#"><img src="assets/images/product_img7.jpg" alt="product_img7"/></a>
-                        <div class="product_action_box">
-                            <ul class="list_none pr_action_btn">
-                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product_info">
-                        <h6><a href="#">Fresh Organic Tomato</a></h6>
-                        <div class="rating"><div class="product_rate" style="width:80%"></div></div>
-                        <span class="price">$54.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="product">
-                    <span class="pr_flash bg_orange">-25%</span>
-                    <div class="product_img">
-                        <a href="#"><img src="assets/images/product_img8.jpg" alt="product_img8"/></a>
-                        <div class="product_action_box">
-                            <ul class="list_none pr_action_btn">
-                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product_info">
-                        <h6><a href="#">Fresh Organic Carrots</a></h6>
-                        <div class="rating"><div class="product_rate" style="width:80%"></div></div>
-                        <span class="price">$32.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="product">
-                    <div class="product_img">
-                        <a href="#"><img src="assets/images/product_img9.jpg" alt="product_img9"/></a>
-                        <div class="product_action_box">
-                            <ul class="list_none pr_action_btn">
-                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                <li><a href="http://bestwebcreator.com//organiq/demo/shop-quick-view.html" class="popup-ajax"><i class="ti-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product_info">
-                        <h6><a href="#">Fresh Pineapple</a></h6>
-                        <div class="rating"><div class="product_rate" style="width:100%"></div></div>
-                        <span class="price">$22.00</span>
-                    </div>
-                </div>
-            </div>
+            </c:forEach>
+            
+            
         </div>
         <div class="row">
             <div class="col-12 mt-3 mt-lg-4">
@@ -278,42 +131,6 @@ var sc_https=1;
     </div>
 </section>
 <!-- END SECTION SHOP -->
-
-<!-- END SECTION NEWSLATTER -->
-<section class="bg_light_green newslatter_wrap">
-	<div class="container">
-    	<div class="row justify-content-center">
-        	<div class="col-lg-6 col-md-8 text-center">
-                <div class="heading_s2 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
-                    <h2>Subscribe Our Newsletter</h2>
-                </div>
-                <p class="m-0 animation" data-animation="fadeInUp" data-animation-delay="0.03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
-                <div class="small_divider"></div> 
-                <div class="newsletter_form animation" data-animation="fadeInUp" data-animation-delay="0.04s">
-                    <form> 
-                        <div class="rounded_input">
-                           <input type="text" class="form-control" required="" placeholder="Enter your Email Address">
-                        </div>
-                        <button type="submit" title="Subscribe" class="btn btn-default" name="submit" value="Submit">subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="overlap_shape">
-        <div class="ol_shape19">
-            <div class="animation" data-animation="fadeInLeft" data-animation-delay="0.5s">
-                <img data-parallax='{"y": 20, "smoothness": 20}' src="assets/images/shape34.png" alt="shape34"/>
-            </div>
-        </div>
-        <div class="ol_shape20">
-            <div class="animation" data-animation="fadeInRight" data-animation-delay="0.5s">
-                <img data-parallax='{"y": 20, "smoothness": 20}' src="assets/images/shape35.png" alt="shape35"/>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END SECTION NEWSLATTER -->
 
 <jsp:include page="Footer.jsp" />
 

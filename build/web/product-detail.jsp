@@ -4,6 +4,7 @@
     Author     : VODUCMINH
 --%>
 
+<%@page import="vegetablesshop.products.ProductDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -87,29 +88,34 @@ var sc_https=1;
 <section>
     <div class="container">
     	<div class="row">
+            <%
+                ProductDTO product = (ProductDTO)request.getAttribute("PRODUCT_DETAIL");
+                
+                if (product != null) {
+            %>
             <div class="col-md-6">
               <div class="product-image">
                  <span class="pr_flash bg_green">Sale</span>
-                 <img id="product_img" src='assets/images/product1.jpg' alt="product" data-zoom-image="assets/images/product1.jpg"/>
+                 <img id="product_img" src='<%= product.getProductImage() %>' alt="product" data-zoom-image="<%= product.getProductImage() %>"/>
                  <div id="pr_item_gallery" class="product_gallery_item owl-thumbs-slider owl-carousel owl-theme">
                     <div class="item">
-                        <a href="#" class="active" data-image="assets/images/product1.jpg" data-zoom-image="assets/images/product1.jpg">
-                            <img src="assets/images/product_img1.jpg" alt="product" />
+                        <a href="#" class="active" data-image="<%= product.getProductImage() %>" data-zoom-image="<%= product.getProductImage() %>">
+                            <img src="<%= product.getProductImage() %>" alt="product" />
                         </a>
                     </div>
                     <div class="item">
-                        <a href="#" data-image="assets/images/product1-1.jpg" data-zoom-image="assets/images/product1-1.jpg">
-                            <img src="assets/images/product_img1-1.jpg" alt="product" />
+                        <a href="#" data-image="<%= product.getProductImage() %>" data-zoom-image="<%= product.getProductImage() %>">
+                            <img src="<%= product.getProductImage() %>" alt="product" />
                         </a>
                     </div>
                     <div class="item">
-                        <a href="#" data-image="assets/images/product1-2.jpg" data-zoom-image="assets/images/product1-2.jpg">
-                            <img src="assets/images/product_img1-2.jpg" alt="product" />
+                        <a href="#" data-image="<%= product.getProductImage() %>" data-zoom-image="<%= product.getProductImage() %>">
+                            <img src="<%= product.getProductImage() %>" alt="product" />
                         </a>
                     </div>
                     <div class="item">
-                        <a href="#" data-image="assets/images/product1-3.jpg" data-zoom-image="assets/images/product1-3.jpg">
-                            <img src="assets/images/product_img1-3.jpg" alt="product" />
+                        <a href="#" data-image="<%= product.getProductImage() %>" data-zoom-image="<%= product.getProductImage() %>">
+                            <img src="<%= product.getProductImage() %>" alt="product" />
                         </a>
                     </div>
                 </div>
@@ -119,16 +125,15 @@ var sc_https=1;
                 <div class="pr_detail">
                   <div class="product-description">
                     <div class="product-title">
-                      <h4><a href="#">Fresh Organic Strawberry</a></h4>
+                      <h4><a href="#"><%= product.getProductName() %></a></h4>
                     </div>
                     <div class="product_price float-left">
-                        <span class="price">$35.00</span>
+                        <span class="price">$ <%= product.getProductPrice() %></span>
                     </div>
                     <div class="rating mt-2 float-right"><div class="product_rate" style="width:80%"></div></div>
                     <div class="clearfix"></div>
                     <hr>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                    <p>At vero accusamus iusto odio dignissimos ducimus blanditiis praesentium deleniti corrupti molestias excepturi sint occaecati cupiditate provident.</p>
+                    <p><%= product.getDescription() %></p>
                   </div>
                   <hr>
                   <div class="cart_extra">
@@ -147,7 +152,7 @@ var sc_https=1;
                   <div class="clearfix"></div>
                   <hr>
                   <ul class="product-meta list_none">
-                    <li>Category: <a href="#">Fresh Fruits</a>, <a href="#">Jiuce</a></li>
+                    <li>Category: <a href="#"><%= product.getCategoryName() %></a></li>
                     <li>Tags: <a href="#" rel="tag">Fruits</a>, <a href="#" rel="tag">Natural</a>, <a href="#" rel="tag">Organic</a> </li>
                   </ul>
                   <div class="product_share d-block d-sm-flex align-items-center">
@@ -161,6 +166,9 @@ var sc_https=1;
                   </div>
                 </div>
             </div>
+            <%
+                }
+            %>
         </div>
         <div class="row">
         	<div class="col-12">
@@ -175,16 +183,12 @@ var sc_https=1;
                         <a class="nav-link active" id="Description-tab" data-toggle="tab" href="#Description" role="tab" aria-controls="Description" aria-selected="true">Description</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="Additional-info-tab" data-toggle="tab" href="#Additional-info" role="tab" aria-controls="Additional-info" aria-selected="false">Additional info</a>
-                      </li>
-                      <li class="nav-item">
                         <a class="nav-link" id="Reviews-tab" data-toggle="tab" href="#Reviews" role="tab" aria-controls="Reviews" aria-selected="false">Reviews (2)</a>
                       </li>
                     </ul>
                 	<div class="tab-content shop_info_tab">
                       <div class="tab-pane fade show active" id="Description" role="tabpanel" aria-labelledby="Description-tab">
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Vivamus bibendum magna Lorem ipsum dolor sit amet, consectetur adipiscing elit.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                        <p><%= product.getDescription() %></p>
                       </div>
                       <div class="tab-pane fade" id="Additional-info" role="tabpanel" aria-labelledby="Additional-info-tab">
                         <table class="table table-bordered">
@@ -387,41 +391,7 @@ var sc_https=1;
 </section>
 <!-- END SECTION SHOP DETAIL -->
 
-<!-- END SECTION NEWSLATTER -->
-<section class="bg_light_green newslatter_wrap">
-	<div class="container">
-    	<div class="row justify-content-center">
-        	<div class="col-lg-6 col-md-8 text-center">
-                <div class="heading_s2 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
-                    <h2>Subscribe Our Newsletter</h2>
-                </div>
-                <p class="m-0 animation" data-animation="fadeInUp" data-animation-delay="0.03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
-                <div class="small_divider"></div> 
-                <div class="newsletter_form animation" data-animation="fadeInUp" data-animation-delay="0.04s">
-                    <form> 
-                        <div class="rounded_input">
-                           <input type="text" class="form-control" required="" placeholder="Enter your Email Address">
-                        </div>
-                        <button type="submit" title="Subscribe" class="btn btn-default" name="submit" value="Submit">subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="overlap_shape">
-        <div class="ol_shape19">
-            <div class="animation" data-animation="fadeInLeft" data-animation-delay="0.5s">
-                <img data-parallax='{"y": 20, "smoothness": 20}' src="assets/images/shape34.png" alt="shape34"/>
-            </div>
-        </div>
-        <div class="ol_shape20">
-            <div class="animation" data-animation="fadeInRight" data-animation-delay="0.5s">
-                <img data-parallax='{"y": 20, "smoothness": 20}' src="assets/images/shape35.png" alt="shape35"/>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END SECTION NEWSLATTER -->
+
 
 <jsp:include page="Footer.jsp" />
 

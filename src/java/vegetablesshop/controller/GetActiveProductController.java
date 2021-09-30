@@ -6,53 +6,39 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import vegetablesshop.products.ProductDAO;
+import vegetablesshop.products.ProductDTO;
 
 /**
  *
  * @author VODUCMINH
  */
-public class MainController extends HttpServlet {
-    private static final String ERROR = "error.jsp";
-    private static final String LOGIN = "LoginController";
-    private static final String LOGOUT = "LogoutController";
-    private static final String GET_ACTIVE_PRODUCT = "GetActiveProductController";
-    private static final String GET_DETAIL_PRODUCT = "GetDetailProductController";
+public class GetActiveProductController extends HttpServlet {
+    private static final String ERROR = "shop.jsp";
+    private static final String SUCCESS = "shop.jsp";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
-        
         try {
-            String action = request.getParameter("action");
-            if ("Login".equals(action)) {
-                url = LOGIN;
-            }
-            else if ("Logout".equals(action)) {
-                url = LOGOUT;
-            }
-            else if ("Logout".equals(action)) {
-                url = LOGOUT;
-            }
-            else if ("GetActiveProduct".equals(action)) {
-                url = GET_ACTIVE_PRODUCT;
-            }
-            else if ("GetDetailProduct".equals(action)) {
-                url = GET_DETAIL_PRODUCT;
-            }
-            else {
-                HttpSession session = request.getSession();
-                session.setAttribute("CONTROLLER_ERROR_MESSAGE", "This function is not supported!");
+            ProductDAO dao = new ProductDAO();
+            List<ProductDTO> productList = dao.getListActiveProduct();
+            HttpSession session = request.getSession();
+            
+            if (!productList.isEmpty()) {
+                session.setAttribute("ACTIVE_PRODUCT_LIST", productList);
+                url = SUCCESS;
             }
         } 
         catch (Exception e) {
-            log("Error at MainController: " + e.toString());
+            log("Error at GetActiveProductController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);

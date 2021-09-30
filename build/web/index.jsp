@@ -4,6 +4,9 @@
     Author     : VODUCMINH
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="vegetablesshop.products.ProductDTO"%>
+<%@page import="vegetablesshop.products.ProductDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -411,6 +414,7 @@ var sc_https=1;
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="col-xl-3 col-lg-4 col-sm-6">
                                 	<div class="product">
                                     	<span class="pr_flash bg_orange">-10%</span>

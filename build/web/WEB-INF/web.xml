@@ -12,6 +12,18 @@
         <servlet-name>LogoutController</servlet-name>
         <servlet-class>vegetablesshop.controller.LogoutController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetActiveProductController</servlet-name>
+        <servlet-class>vegetablesshop.controller.GetActiveProductController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetDetailProductController</servlet-name>
+        <servlet-class>vegetablesshop.controller.GetDetailProductController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>a</servlet-name>
+        <servlet-class>vegetablesshop.controller.a</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
         <url-pattern>/MainController</url-pattern>
@@ -23,6 +35,18 @@
     <servlet-mapping>
         <servlet-name>LogoutController</servlet-name>
         <url-pattern>/LogoutController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetActiveProductController</servlet-name>
+        <url-pattern>/GetActiveProductController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetDetailProductController</servlet-name>
+        <url-pattern>/GetDetailProductController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>a</servlet-name>
+        <url-pattern>/a</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

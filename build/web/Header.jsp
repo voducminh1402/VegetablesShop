@@ -51,7 +51,7 @@
                             <ul>
                                 <li><a class="dropdown-item" href="my-account.jsp">My account</a></li>
                                 <li><a class="dropdown-item" href="wishlist.jsp">Wishlist</a></li>
-                                <li><a class="dropdown-item" href="MainController?action=Logout">Checkout</a></li>
+                                <li><a class="dropdown-item" href="MainController?action=Logout">Logout</a></li>
                             </ul>
                           </div>
                         </li>
@@ -204,9 +204,9 @@
                     </div>
                 </li>
                 <li class="dropdown cart_wrap">
-                	<a class="nav-link" href="#" data-toggle="dropdown"><i class="ion-bag"></i><span class="cart_count">2</span></a>
-                        <div class="cart_box dropdown-menu dropdown-menu-right">
-                            <ul class="cart_list">
+                	<a class="nav-link" href="cart.jsp" ><i class="ion-bag"></i><span class="cart_count">2</span></a>
+<!--                        <div class="cart_box dropdown-menu dropdown-menu-right">
+                            <ul class="cart_list" style="height: 200px; overflow-y: scroll">
                                 <li>
                                     <a href="#" class="item_remove"><i class="ion-close"></i></a>
                                     <a href="#"><img src="assets/images/cart_thamb1.jpg" alt="cart_thumb1">Fresh Organic Strawberry</a>
@@ -221,7 +221,7 @@
                         <div class="cart_footer">
                             <p class="cart_total">Total: <span class="cart_amount"> <span class="price_symbole">$</span>159.00</span></p>
                             <p class="cart_buttons"><a href="cart.jsp" class="btn btn-default btn-radius view-cart">View Cart</a><a href="checkout.jsp" class="btn btn-dark btn-radius checkout">Checkout</a></p>
-                        </div>
+                        </div>-->
                     </div>
                 </li>
             </ul>
