@@ -242,6 +242,17 @@ button:focus {
 	border-color: #333333;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 .btn-radius,
 .pr-radius,
@@ -988,6 +999,14 @@ button:focus {
 .dark_skin .cart_list a:hover, .dark_skin .item_remove:hover {
 	color: #333333 !important;
 }
+
+.empty-cart-img {
+    display: block;
+    margin: 0 auto;
+    width: 700px;
+    object-fit: cover;
+}
+
 .dropdown-toggle::after, .dropdown-toggler::after {
 	border: 0 none;
 	height: auto;
@@ -2201,6 +2220,9 @@ body.active {
     background-position: 0 0;
     background-repeat: repeat-x;
     height: 13px;
+}
+.product-custom-width {
+    width: 180px !important;
 }
 .nav-tabs [class*="pr_"] {
 	height: 35px;

@@ -6,65 +6,37 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import vegetablesshop.shopping.Cart;
 
 /**
  *
  * @author VODUCMINH
  */
-public class MainController extends HttpServlet {
-    private static final String ERROR = "error.jsp";
-    private static final String LOGIN = "LoginController";
-    private static final String LOGOUT = "LogoutController";
-    private static final String GET_ACTIVE_PRODUCT = "GetActiveProductController";
-    private static final String GET_DETAIL_PRODUCT = "GetDetailProductController";
-    private static final String ADD_TO_CART = "AddToCartController";
-    private static final String DELETE_PRODUCT_CART = "DeleteProductCartController";
-    private static final String UPDATE_CART = "UpdateCartController";
+public class DeleteProductCartController extends HttpServlet {
+    private static final String ERROR = "cart.jsp";
+    private static final String SUCCESS = "cart.jsp";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
-        
         try {
-            String action = request.getParameter("action");
-            if ("Login".equals(action)) {
-                url = LOGIN;
-            }
-            else if ("Logout".equals(action)) {
-                url = LOGOUT;
-            }
-            else if ("Logout".equals(action)) {
-                url = LOGOUT;
-            }
-            else if ("GetActiveProduct".equals(action)) {
-                url = GET_ACTIVE_PRODUCT;
-            }
-            else if ("GetDetailProduct".equals(action)) {
-                url = GET_DETAIL_PRODUCT;
-            }
-            else if ("AddToCart".equals(action)) {
-                url = ADD_TO_CART;
-            }
-            else if ("DeleteProductCart".equals(action)) {
-                url = DELETE_PRODUCT_CART;
-            }
-            else if ("UpdateCart".equals(action)) {
-                url = UPDATE_CART;
-            }
-            else {
-                HttpSession session = request.getSession();
-                session.setAttribute("CONTROLLER_ERROR_MESSAGE", "This function is not supported!");
+            String productID = request.getParameter("productID");
+            HttpSession session = request.getSession();
+            Cart cart = (Cart) session.getAttribute("CART");
+            if (cart != null) {
+                cart.removeCart(productID);
+                session.setAttribute("CART", cart);
+                url = SUCCESS;
             }
         } 
         catch (Exception e) {
-            log("Error at MainController: " + e.toString());
+            log("Error at DeleteProductCartController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);

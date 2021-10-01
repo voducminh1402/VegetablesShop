@@ -4,6 +4,8 @@
     Author     : VODUCMINH
 --%>
 
+<%@page import="vegetablesshop.shopping.CartProduct"%>
+<%@page import="vegetablesshop.shopping.Cart"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +56,7 @@ var sc_invisible=1;
 var sc_security="35d2687e"; 
 var sc_https=1; 
 </script>
-<script src="../../../www.statcounter.com/counter/counter.js" async></script>
+<!--<script src="../../../www.statcounter.com/counter/counter.js" async></script>-->
 
 </head>
 
@@ -89,67 +91,75 @@ var sc_https=1;
         <div class="row">
         	<div class="col-12">    
             	<div class="table-responsive shop_cart_table">
-                	<table class="table">
-                    	<thead>
-                        	<tr>
-                            	<th class="product-thumbnail">&nbsp;</th>
-                                <th class="product-name">Product</th>
-                                <th class="product-price">Price</th>
-                                <th class="product-quantity">Quantity</th>
-                                <th class="product-subtotal">Total</th>
-                                <th class="product-remove">Remove</th>
-                            </tr>
-                        </thead>
+                        <%
+                            Cart cart = (Cart)session.getAttribute("CART");
+                            double totalMoney = 0;
+                            if (cart != null) {
+                                if (cart.getCart().size() != 0) {
+                        %>
+                            <table class="table">
+                            <thead>
+                                    <tr>
+                                    <th class="product-thumbnail">&nbsp;</th>
+                                    <th class="product-name">Product</th>
+                                    <th class="product-price product-custom-width">Price</th>
+                                    <th class="product-quantity">Quantity</th>
+                                    <th class="product-subtotal product-custom-width">Total</th>
+                                    <th class="product-remove">Remove</th>
+                                </tr>
+                            </thead>
+                        <%
+                                for(CartProduct product : cart.getCart().values()) {
+                                    totalMoney += product.getQuantity() * product.getProductPrice();
+                        %>
                         <tbody>
-                        	<tr>
-                            	<td class="product-thumbnail"><a href="#"><img src="assets/images/product_img1.jpg" alt="product1"></a></td>
-                                <td class="product-name" data-title="Product"><a href="#">Fresh Organic Strawberry</a></td>
-                                <td class="product-price" data-title="Price">$35.00</td>
-                                <td class="product-quantity" data-title="Quantity"><div class="quantity">
-                                <input type="button" value="-" class="minus">
-                                <input type="text" name="quantity" value="2" title="Qty" class="qty" size="4">
-                                <input type="button" value="+" class="plus">
-                              </div></td>
-                              	<td class="product-subtotal" data-title="Total">$70.00</td>
-                                <td class="product-remove" data-title="Remove"><a href="#"><i class="ti-close"></i></a></td>
-                            </tr>
                             <tr>
-                            	<td class="product-thumbnail"><a href="#"><img src="assets/images/product_img2.jpg" alt="product2"></a></td>
-                                <td class="product-name" data-title="Product"><a href="#">Fresh Organic Grapes</a></td>
-                                <td class="product-price" data-title="Price">$40.00</td>
-                                <td class="product-quantity" data-title="Quantity"><div class="quantity">
-                                <input type="button" value="-" class="minus">
-                                <input type="text" name="quantity" value="1" title="Qty" class="qty" size="4">
-                                <input type="button" value="+" class="plus">
-                              </div></td>
-                              	<td class="product-subtotal" data-title="Total">$40.00</td>
-                                <td class="product-remove" data-title="Remove"><a href="#"><i class="ti-close"></i></a></td>
+                            	<td class="product-thumbnail"><a href="#"><img src="<%= product.getProductImage() %>" alt="product1"></a></td>
+                                <td class="product-name" data-title="Product"><a href="#"><%= product.getProductName() %></a></td>
+                                <td class="product-price" data-title="Price">$ <%= product.getProductPrice() %></td>
+                                 
+                                <td class="product-quantity" data-title="Quantity">
+                                    <form action="MainController">
+                                        <button id="submit-form-cart" name="action" value="UpdateCart" type="submit" style="visibility: hidden; float: right"></button>
+                                        <div class="quantity">
+                                            <button type="submit" name="action" value="UpdateCart" class="minus">-</button>
+                                            <input type="number" min="1" name="quantity" value="<%= product.getQuantity() %>" title="Qty" class="qty" size="4">
+                                            <button type="submit" name="action" value="UpdateCart" class="plus">+</button>
+                                            <input type="hidden" name="productID" value="<%= product.getProductID() %>">
+                                        </div>
+                                    </form>
+                                </td>
+                              	<td class="product-subtotal" data-title="Total">$ <%= product.getProductPrice() * product.getQuantity() %></td>
+                                <td class="product-remove" data-title="Remove"><a href="MainController?action=DeleteProductCart&productID=<%= product.getProductID() %>"><i class="ti-close"></i></a></td>
                             </tr>
-                            <tr>
-                            	<td class="product-thumbnail"><a href="#"><img src="assets/images/product_img3.jpg" alt="product3"></a></td>
-                                <td class="product-name" data-title="Product"><a href="#">Fresh Organic Cucumber</a></td>
-                                <td class="product-price" data-title="Price">$52.00</td>
-                                <td class="product-quantity" data-title="Quantity"><div class="quantity">
-                                <input type="button" value="-" class="minus">
-                                <input type="text" name="quantity" value="3" title="Qty" class="qty" size="4">
-                                <input type="button" value="+" class="plus">
-                              </div></td>
-                              	<td class="product-subtotal" data-title="Total">$156.00</td>
-                                <td class="product-remove" data-title="Remove"><a href="#"><i class="ti-close"></i></a></td>
-                            </tr>
+                            
                         </tbody>
+                        <%
+                                    }
+                                }
+                                else if (cart.getCart().size() == 0){
+                        %>
+                                <img class="empty-cart-img" src="./assets/images/empty-cart.jpg">
+                        <%
+                                }
+                            }        
+                            else if (cart == null || cart.getCart().size() == 0){
+                        %>
+                        <img class="empty-cart-img" src="./assets/images/empty-cart.jpg">
+                        <%
+                            }
+                        %>
                         <tfoot>
                         	<tr>
                             	<td colspan="6" class="px-0">
                                 	<div class="row no-gutters align-items-center">
                                     	<div class="col-lg-4 col-md-6 mb-3 mb-md-0">
-                                            <div class="coupon field_form input-group">
-                                                <input type="text" value="" class="form-control" placeholder="Enter Coupon Code..">
-                                                <div class="input-group-append">
-                                                	<button class="btn btn-default btn-sm" type="submit">Apply Coupon</button>
-                                                </div>
-                                            </div>
+                                            <a href="shop.jsp" class="btn btn-default btn-sm float-left">Continue Shopping</a>
                                     	</div>
+                        <%
+                            if (cart != null) {
+                                if (cart.getCart().size() != 0) {
+                        %>
                                         <div class="col-lg-8 col-md-6 text-left text-md-right">
                                             <button class="btn btn-dark btn-sm" type="submit">Update Cart</button>
                                             <a href="#" class="btn btn-default btn-sm">Proceed to Checkout</a>
@@ -449,7 +459,7 @@ var sc_https=1;
                 	<table class="table">
                         <tbody><tr>
                             <td class="cart_total_label">Cart Subtotal</td>
-                            <td class="cart_total_amount">$266.00</td>
+                            <td class="cart_total_amount">$ <%= totalMoney %></td>
                         </tr>
                         <tr>
                             <td class="cart_total_label">Shipping</td>
@@ -457,12 +467,16 @@ var sc_https=1;
                         </tr>
                         <tr>
                             <td class="cart_total_label">Total</td>
-                            <td class="cart_total_amount"><strong>$266.00</strong></td>
+                            <td class="cart_total_amount"><strong>$ <%= totalMoney %></strong></td>
                         </tr>
                     </tbody></table>
                 </div>
             </div>
         </div>
+                        <%
+                                }
+                            }   
+                        %>
     </div>
 </section>
 <!-- END SECTION SHOP DETAIL -->
@@ -472,7 +486,8 @@ var sc_https=1;
 <jsp:include page="Footer.jsp" />
 
 <!-- Latest jQuery --> 
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-1.12.4.min.js"></script> 
+<!--<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>-->
+<script src="assets/js/jquery-1.12.4.min.js"></script> 
 <!-- jquery-ui --> 
 <script src="assets/js/jquery-ui.js"></script>
 <!-- popper min js --> 

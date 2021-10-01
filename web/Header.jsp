@@ -4,10 +4,11 @@
     Author     : VODUCMINH
 --%>
 
+<%@page import="vegetablesshop.shopping.Cart"%>
 <%@page import="vegetablesshop.users.UserDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<!-- LOADER -->
+ <!--LOADER--> 
 <div id="preloader">
     <div class="line-scale">
     	<div class="line"></div>
@@ -17,7 +18,7 @@
         <div class="line"></div>
     </div>
 </div>
-<!-- END LOADER --> 
+ <!--END LOADER-->  
 
 <!-- START HEADER -->
 <header class="header_wrap dark_skin main_menu_uppercase">
@@ -87,7 +88,7 @@
                         <a class="nav-link" href="about.jsp">About Us</a>
                     </li>
                     <li class="dropdown dropdown-mega-menu">
-                        <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Shop</a>
+                        <a class="dropdown-toggle nav-link" href="shop.jsp">Shop</a>
                         <div class="dropdown-menu">
                             <ul class="mega-menu d-lg-flex">
                                 <li class="mega-menu-col col-lg-3">
@@ -204,7 +205,27 @@
                     </div>
                 </li>
                 <li class="dropdown cart_wrap">
-                	<a class="nav-link" href="cart.jsp" ><i class="ion-bag"></i><span class="cart_count">2</span></a>
+                    <%
+                        Cart cart = (Cart) session.getAttribute("CART");
+                            
+                        if (cart != null) {
+                            if (cart.getCart().size() != 0) {
+                    %>
+                	<a class="nav-link" href="cart.jsp" ><i class="ion-bag"></i><span class="cart_count"><%= cart.getCart().size() %></span></a>
+                    <%
+                            }
+                            else {
+                    %>
+                        <a class="nav-link" href="cart.jsp" ><i class="ion-bag"></i></a>
+                    <%            
+                            }
+                        }
+                        else {
+                    %>
+                        <a class="nav-link" href="cart.jsp" ><i class="ion-bag"></i></a>
+                    <%        
+                        }
+                    %>    
 <!--                        <div class="cart_box dropdown-menu dropdown-menu-right">
                             <ul class="cart_list" style="height: 200px; overflow-y: scroll">
                                 <li>

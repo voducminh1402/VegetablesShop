@@ -16,7 +16,7 @@ PAGE JS
 	/*===================================*/
 	$(window).on('load', function() {
 		var preLoder = $("#preloader");
-		preLoder.delay(700).fadeOut(500).addClass('loaded');
+		preLoder.delay(200).fadeOut(250).addClass('loaded');
 	});
 
 	/*===================================*
@@ -838,14 +838,23 @@ PAGE JS
 	DEMO SWITCHER JS
 	*===================================*/
 	
-	$(document).ready( function() {
-		$(window).on("load", function() {
-			$('body').prepend('<div id="demo_content" class="demo_switcher"></div>');
-			$("#demo_content").load("demo.html");
-		});
-	});
+//	$(document).ready( function() {
+//		$(window).on("load", function() {
+//			$('body').prepend('<div id="demo_content" class="demo_switcher"></div>');
+//			$("#demo_content").load("demo.html");
+//		});
+//	});
 	
 })(jQuery);
+
+//Custom JS
+
+//Add to Cart Ajax
+addToCartAjax = (id) => {
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "MainController?action=AddToCart&productID="+id+"&quantity=1");
+    xhttp.send();
+} 
 
 
 

@@ -117,6 +117,53 @@ public class ProductDAO {
         return product;
     }
     
+    public ProductDTO getProductForCart(String productID) throws SQLException {
+        ProductDTO product = new ProductDTO();
+        ProductDAO dao = new ProductDAO();
+        Connection conn = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "SELECT productName, productImage, productPrice, quantity"
+                            + " FROM tblProducts "
+                            + " WHERE productID=?";
+                stm = conn.prepareStatement(sql);
+                stm.setString(1, productID);
+                rs = stm.executeQuery();
+                
+                if (rs.next()) {
+                    String productName = rs.getString("productName");
+                    String productImage = rs.getString("productImage");
+                    double productPrice = Double.parseDouble(rs.getString("productPrice"));
+                    int quantity = Integer.parseInt(rs.getString("quantity"));
+
+                    product = new ProductDTO(productID, productName, productImage, productPrice, quantity, "", "", "", "", 1);
+                }
+                
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            } 
+        }
+        
+        return product;
+    }
+    
     public String convertAvailableName(int availableID) throws SQLException {
         String availableName = null;
         Connection conn = null;

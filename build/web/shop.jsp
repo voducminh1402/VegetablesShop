@@ -102,7 +102,7 @@ var sc_https=1;
                             <div class="product_action_box">
                                 <ul class="list_none pr_action_btn">
                                     <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
+                                    <li><a href="MainController?action=AddToCart&quantity=1&productID=${o.productID}"><i class="ti-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
                         </div>

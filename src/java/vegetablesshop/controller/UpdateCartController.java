@@ -12,59 +12,46 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import vegetablesshop.shopping.Cart;
+import vegetablesshop.shopping.CartProduct;
 
 /**
  *
  * @author VODUCMINH
  */
-public class MainController extends HttpServlet {
-    private static final String ERROR = "error.jsp";
-    private static final String LOGIN = "LoginController";
-    private static final String LOGOUT = "LogoutController";
-    private static final String GET_ACTIVE_PRODUCT = "GetActiveProductController";
-    private static final String GET_DETAIL_PRODUCT = "GetDetailProductController";
-    private static final String ADD_TO_CART = "AddToCartController";
-    private static final String DELETE_PRODUCT_CART = "DeleteProductCartController";
-    private static final String UPDATE_CART = "UpdateCartController";
+public class UpdateCartController extends HttpServlet {
+    private static final String ERROR = "cart.jsp";
+    private static final String SUCCESS = "cart.jsp";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
-        
         try {
-            String action = request.getParameter("action");
-            if ("Login".equals(action)) {
-                url = LOGIN;
+            String productID = request.getParameter("productID");
+            int quantity = Integer.parseInt(request.getParameter("quantity"));
+            HttpSession session = request.getSession();
+            Cart cart = (Cart) session.getAttribute("CART");
+            CartProduct product = new CartProduct();
+            
+            for (CartProduct item : cart.getCart().values()) {
+                if (item.getProductID().equals(productID)) {
+                    String productName = item.getProductName();
+                    String productImage = item.getProductImage();
+                    double price = item.getProductPrice();
+                    product = new CartProduct(productID, productName, price, productImage, quantity);
+                    break;
+                }
             }
-            else if ("Logout".equals(action)) {
-                url = LOGOUT;
-            }
-            else if ("Logout".equals(action)) {
-                url = LOGOUT;
-            }
-            else if ("GetActiveProduct".equals(action)) {
-                url = GET_ACTIVE_PRODUCT;
-            }
-            else if ("GetDetailProduct".equals(action)) {
-                url = GET_DETAIL_PRODUCT;
-            }
-            else if ("AddToCart".equals(action)) {
-                url = ADD_TO_CART;
-            }
-            else if ("DeleteProductCart".equals(action)) {
-                url = DELETE_PRODUCT_CART;
-            }
-            else if ("UpdateCart".equals(action)) {
-                url = UPDATE_CART;
-            }
-            else {
-                HttpSession session = request.getSession();
-                session.setAttribute("CONTROLLER_ERROR_MESSAGE", "This function is not supported!");
+            
+            if (cart != null) {
+                cart.updateCart(productID, product);
+                session.setAttribute("CART", cart);
+                url = SUCCESS;
             }
         } 
         catch (Exception e) {
-            log("Error at MainController: " + e.toString());
+            log("Error at DeleteProductCartController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);

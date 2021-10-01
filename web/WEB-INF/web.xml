@@ -24,6 +24,18 @@
         <servlet-name>a</servlet-name>
         <servlet-class>vegetablesshop.controller.a</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddToCartController</servlet-name>
+        <servlet-class>vegetablesshop.controller.AddToCartController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteProductCartController</servlet-name>
+        <servlet-class>vegetablesshop.controller.DeleteProductCartController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateCartController</servlet-name>
+        <servlet-class>vegetablesshop.controller.UpdateCartController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
         <url-pattern>/MainController</url-pattern>
@@ -47,6 +59,18 @@
     <servlet-mapping>
         <servlet-name>a</servlet-name>
         <url-pattern>/a</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddToCartController</servlet-name>
+        <url-pattern>/AddToCartController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteProductCartController</servlet-name>
+        <url-pattern>/DeleteProductCartController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateCartController</servlet-name>
+        <url-pattern>/UpdateCartController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

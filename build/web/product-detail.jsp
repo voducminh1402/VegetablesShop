@@ -136,19 +136,22 @@ var sc_https=1;
                     <p><%= product.getDescription() %></p>
                   </div>
                   <hr>
-                  <div class="cart_extra">
-                    <div class="cart-product-quantity">
-                      <div class="quantity">
-                        <input type="button" value="-" class="minus">
-                        <input type="text" name="quantity" value="1" title="Qty" class="qty" size="4">
-                        <input type="button" value="+" class="plus">
+                  <form action="MainController">
+                      <div class="cart_extra">
+                        <div class="cart-product-quantity">
+                          <div class="quantity">
+                            <input type="button" value="-" class="minus">
+                            <input type="text" name="quantity" value="1" title="Qty" class="qty" size="4">
+                            <input type="button" value="+" class="plus">
+                          </div>
+                        </div>
+                        <div class="cart_btn">
+                            <input type="hidden" name="productID" value="<%= product.getProductID() %>">
+                            <button class="btn btn-default btn-radius btn-sm btn-addtocart" type="submit" name="action" value="AddToCart" >Add to cart</button>
+                            <a class="add_wishlist" href="#"><i class="ti-heart"></i></a>
+                        </div>
                       </div>
-                    </div>
-                    <div class="cart_btn">
-                        <button class="btn btn-default btn-radius btn-sm btn-addtocart" type="button">Add to cart</button>
-                        <a class="add_wishlist" href="#"><i class="ti-heart"></i></a>
-                    </div>
-                  </div>
+                  </form>
                   <div class="clearfix"></div>
                   <hr>
                   <ul class="product-meta list_none">
