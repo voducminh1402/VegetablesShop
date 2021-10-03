@@ -46,12 +46,11 @@ public class UpdateCartController extends HttpServlet {
                     String productImage = item.getProductImage();
                     double price = item.getProductPrice();
                     
-                    
                     if (quantity <= productDTO.getQuantity()) {
                         product = new CartProduct(productID, productName, price, productImage, quantity);
                     }
                     else {
-                        product = new CartProduct(productID, productName, price, productImage, item.getQuantity());
+                        product = new CartProduct(productID, productName, price, productImage, productDTO.getQuantity());
                         request.setAttribute("ERROR_CART", "Quantity of this product is not enough!");
                     }
                     break;

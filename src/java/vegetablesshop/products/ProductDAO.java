@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import vegetablesshop.utils.DBUtils;
 
 /**
@@ -115,6 +116,52 @@ public class ProductDAO {
         }
         
         return product;
+    }
+    
+    public List<ProductDTO> getProductForSearch(String search) throws SQLException {
+        List<ProductDTO> productList = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "SELECT productID, productName, productImage, productPrice"
+                            + " FROM tblProducts "
+                            + " WHERE productName LIKE ?";
+                stm = conn.prepareStatement(sql);
+                stm.setString(1, "%" + search + "%");
+                rs = stm.executeQuery();
+                
+                while (rs.next()) {
+                    String productID = rs.getString("productID");
+                    String productName = rs.getString("productName");
+                    String productImage = rs.getString("productImage");
+                    double productPrice = Double.parseDouble(rs.getString("productPrice"));
+
+                    productList.add(new ProductDTO(productID, productName, productImage, productPrice, 1, "", "", "", "", 1));
+                }
+                
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            } 
+        }
+        
+        return productList;
     }
     
     public ProductDTO getProductForCart(String productID) throws SQLException {
@@ -286,9 +333,10 @@ public class ProductDAO {
         return check;
     }
 
-    public static void main(String[] args) throws SQLException {
-        ProductDAO dao = new ProductDAO();
-        
-        System.out.println(dao.checkQuantityAvailable("12462851"));
-    }
+//    public static void main(String[] args) throws SQLException {
+//        ProductDAO dao = new ProductDAO();
+//        System.out.println("cà chua");
+//        System.out.println(dao.checkQuantityAvailable("12462851"));
+//        
+//    }
 }

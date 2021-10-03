@@ -58,7 +58,7 @@ public class MainController extends HttpServlet {
                 url = DELETE_PRODUCT_CART;
             }
             else if ("SearchProduct".equals(action)) {
-                url = DELETE_PRODUCT_CART;
+                url = SEARCH_PRODUCT;
             }
             else if ("UpdateCart".equals(action)) {
                 url = UPDATE_CART;

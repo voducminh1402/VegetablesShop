@@ -121,7 +121,7 @@ var sc_https=1;
                         <tbody>
                             <tr>
                             	<td class="product-thumbnail"><a href="#"><img src="<%= product.getProductImage() %>" alt="product1"></a></td>
-                                <td class="product-name" data-title="Product"><a href="#"><%= product.getProductName() %></a></td>
+                                <td class="product-name" data-title="Product"><a href="MainController?action=GetDetailProduct&id=<%= product.getProductID() %>"><%= product.getProductName() %></a></td>
                                 <td class="product-price" data-title="Price">$ <%= product.getProductPrice() %></td>
                                  
                                 <td class="product-quantity" data-title="Quantity">
