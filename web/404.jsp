@@ -1,17 +1,7 @@
-<%-- 
-    Document   : shop
-    Created on : Sep 28, 2021, 11:02:31 PM
-    Author     : VODUCMINH
---%>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<%@page import="vegetablesshop.products.ProductDAO"%>
-<%@page import="java.util.List"%>
-<%@page import="vegetablesshop.products.ProductDTO"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from bestwebcreator.com/organiq/demo/shop-three-columns.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:49:59 GMT -->
+<!-- Mirrored from bestwebcreator.com/organiq/demo/404.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:51:21 GMT -->
 <head>
 <!-- Meta -->
 <meta charset="utf-8">
@@ -22,7 +12,7 @@
 <meta name="keywords" content="food shop, fresh, modern, organic farm, organic farm shop, organic food, organic shop, agriculture, agritourism, agrotourism, e-commerce, eco, eco products, farm, farming, food, health, organic, organic food, retail, shop, store">
 
 <!-- SITE TITLE -->
-<title>Shop | Organiq - Organic Food HTML Template</title>
+<title>404 | Organiq - Organic Food HTML Template</title>
 <!-- Favicon Icon -->
 <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
 <!-- Animation CSS -->
@@ -62,21 +52,22 @@ var sc_https=1;
 </head>
 
 <body>
-    <jsp:include page="Header.jsp" />
-    
+
+    <jsp:include page="Header.jsp"/>
+
 <!-- START SECTION BANNER -->
 <section class="bg_light_yellow breadcrumb_section background_bg bg_fixed bg_size_contain" data-img-src="assets/images/breadcrumb_bg.png">
 	<div class="container">
     	<div class="row align-items-center">
         	<div class="col-sm-12 text-center">
             	<div class="page-title">
-            		<h1>Three columns</h1>
+            		<h1>Page Not Found</h1>
                 </div>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb justify-content-center">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Shop</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Three columns</li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">404</li>
                   </ol>
                 </nav>
             </div>
@@ -85,54 +76,62 @@ var sc_https=1;
 </section>
 <!-- END SECTION BANNER -->
 
-<!-- START SECTION SHOP -->
+
+<!-- START SECTION FAQ -->
 <section>
 	<div class="container">
-    	<div class="row">
-            <c:if test="${sessionScope.ACTIVE_PRODUCT_LIST == null}">
-                <c:redirect url="MainController?action=GetActiveProduct"></c:redirect>
-            </c:if>
-            
-            <c:forEach items="${sessionScope.ACTIVE_PRODUCT_LIST}" var="o">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="product">
-                        <span class="pr_flash bg_green">Sale</span>
-                        <div class="product_img">
-                            <a href="MainController?action=GetDetailProduct&id=${o.productID}"><img class="product-detail-img" src="${o.productImage}"/></a>
-                            <div class="product_action_box">
-                                <ul class="list_none pr_action_btn">
-                                    <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    <li><a href="MainController?action=AddToCart&quantity=1&productID=${o.productID}"><i class="ti-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product_info">
-                            <h6><a href="MainController?action=GetDetailProduct&id=${o.productID}">${o.productName}</a></h6>
-                            <div class="rating"><div class="product_rate" style="width:80%"></div></div>
-                            <span class="price">$ ${o.productPrice}</span>
-                        </div>
-                    </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-9 text-center">
+                <div class="error_txt background_bg" data-img-src="assets/images/404_text_bg.png">404</div>
+                <div class="heading_s2 mb-2">
+                	<h5>oops! The page you requested was not found!</h5> 
                 </div>
-            </c:forEach>
-            
-            
+                <p>The page you are looking for was moved, removed, renamed or might never existed.</p>
+                <a href="index.jsp" class="btn btn-outline-black">Back To Home</a>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-12 mt-3 mt-lg-4">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i class="ion-ios-arrow-thin-left"></i></a></li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#"><i class="ion-ios-arrow-thin-right"></i></a></li>
-                </ul>
+    </div>
+    <div class="overlap_shape">
+        <div class="ol_shape25">
+            <div class="animation" data-animation="bounceInDown" data-animation-delay="0.5s">
+                <img data-parallax='{"y": -30, "smoothness": 20}' src="assets/images/shape44.png" alt="shape44"/>
+            </div>
+        </div>
+        <div class="ol_shape3">
+            <div class="animation" data-animation="zoomIn" data-animation-delay="0.5s">
+                <img data-parallax='{"y": 30, "smoothness": 20}' src="assets/images/shape45.png" alt="shape45"/>
+            </div>
+        </div>
+        <div class="ol_shape26">
+            <div class="animation" data-animation="zoomIn" data-animation-delay="0.5s">
+                <img data-parallax='{"y": 30, "smoothness": 20}' src="assets/images/shape46.png" alt="shape46"/>
+            </div>
+        </div>
+        <div class="ol_shape28">
+            <div class="animation" data-animation="bounceInUp" data-animation-delay="0.5s">
+                <img data-parallax='{"y": 30, "smoothness": 20}' src="assets/images/shape47.png" alt="shape47"/>
+            </div>
+        </div>
+        <div class="ol_shape29">
+            <div class="animation" data-animation="slideInRight" data-animation-delay="0.5s">
+                <img data-parallax='{"y": 30, "smoothness": 20}' src="assets/images/shape48.png" alt="shape48"/>
+            </div>
+        </div>
+        <div class="ol_shape30">
+            <div class="animation" data-animation="slideInRight" data-animation-delay="0.5s">
+                <img data-parallax='{"y": 30, "smoothness": 20}' src="assets/images/shape49.png" alt="shape49"/>
+            </div>
+        </div>
+        <div class="ol_shape31">
+            <div class="animation" data-animation="slideInRight" data-animation-delay="0.5s">
+                <img data-parallax='{"y": 30, "smoothness": 20}' src="assets/images/shape50.png" alt="shape50"/>
             </div>
         </div>
     </div>
 </section>
-<!-- END SECTION SHOP -->
+<!-- END SECTION FAQ -->
 
-<jsp:include page="Footer.jsp" />
+<jsp:include page="Footer.jsp"/>
 
 <!-- Latest jQuery --> 
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-1.12.4.min.js"></script> 
@@ -170,17 +169,8 @@ var sc_https=1;
 <script src="assets/js/js.cookie.js"></script>
 <!-- scripts js --> 
 <script src="assets/js/scripts.js"></script>
-<script>
-        document.addEventListener("DOMContentLoaded", function(event) { 
-        var scrollpos = localStorage.getItem('scrollpos');
-        if (scrollpos) window.scrollTo(0, scrollpos);
-    });
 
-    window.onbeforeunload = function(e) {
-        localStorage.setItem('scrollpos', window.scrollY);
-    };
-</script>
 </body>
 
-<!-- Mirrored from bestwebcreator.com/organiq/demo/shop-three-columns.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:49:59 GMT -->
+<!-- Mirrored from bestwebcreator.com/organiq/demo/404.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:51:22 GMT -->
 </html>

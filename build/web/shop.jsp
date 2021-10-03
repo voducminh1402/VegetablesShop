@@ -170,7 +170,16 @@ var sc_https=1;
 <script src="assets/js/js.cookie.js"></script>
 <!-- scripts js --> 
 <script src="assets/js/scripts.js"></script>
+<script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+        var scrollpos = localStorage.getItem('scrollpos');
+        if (scrollpos) window.scrollTo(0, scrollpos);
+    });
 
+    window.onbeforeunload = function(e) {
+        localStorage.setItem('scrollpos', window.scrollY);
+    };
+</script>
 </body>
 
 <!-- Mirrored from bestwebcreator.com/organiq/demo/shop-three-columns.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:49:59 GMT -->

@@ -16,7 +16,7 @@ PAGE JS
 	/*===================================*/
 	$(window).on('load', function() {
 		var preLoder = $("#preloader");
-		preLoder.delay(200).fadeOut(250).addClass('loaded');
+		preLoder.delay(0).fadeOut(300).addClass('loaded');
 	});
 
 	/*===================================*
@@ -847,6 +847,8 @@ PAGE JS
 	
 })(jQuery);
 
+
+
 //Custom JS
 
 //Add to Cart Ajax
@@ -855,8 +857,6 @@ addToCartAjax = (id) => {
     xhttp.open("GET", "MainController?action=AddToCart&productID="+id+"&quantity=1");
     xhttp.send();
 } 
-
-
 
 
 

@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import vegetablesshop.products.ProductDAO;
+import vegetablesshop.products.ProductDTO;
 import vegetablesshop.shopping.Cart;
 import vegetablesshop.shopping.CartProduct;
 
@@ -30,6 +32,10 @@ public class UpdateCartController extends HttpServlet {
         try {
             String productID = request.getParameter("productID");
             int quantity = Integer.parseInt(request.getParameter("quantity"));
+            
+            ProductDAO dao = new ProductDAO();
+            ProductDTO productDTO = dao.getProductForCart(productID);
+            
             HttpSession session = request.getSession();
             Cart cart = (Cart) session.getAttribute("CART");
             CartProduct product = new CartProduct();
@@ -39,7 +45,15 @@ public class UpdateCartController extends HttpServlet {
                     String productName = item.getProductName();
                     String productImage = item.getProductImage();
                     double price = item.getProductPrice();
-                    product = new CartProduct(productID, productName, price, productImage, quantity);
+                    
+                    
+                    if (quantity <= productDTO.getQuantity()) {
+                        product = new CartProduct(productID, productName, price, productImage, quantity);
+                    }
+                    else {
+                        product = new CartProduct(productID, productName, price, productImage, item.getQuantity());
+                        request.setAttribute("ERROR_CART", "Quantity of this product is not enough!");
+                    }
                     break;
                 }
             }

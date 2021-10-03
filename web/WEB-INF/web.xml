@@ -36,6 +36,14 @@
         <servlet-name>UpdateCartController</servlet-name>
         <servlet-class>vegetablesshop.controller.UpdateCartController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchProductController</servlet-name>
+        <servlet-class>vegetablesshop.controller.SearchProductController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CheckoutLoginController</servlet-name>
+        <servlet-class>vegetablesshop.controller.CheckoutLoginController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
         <url-pattern>/MainController</url-pattern>
@@ -72,9 +80,21 @@
         <servlet-name>UpdateCartController</servlet-name>
         <url-pattern>/UpdateCartController</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchProductController</servlet-name>
+        <url-pattern>/SearchProductController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckoutLoginController</servlet-name>
+        <url-pattern>/CheckoutLoginController</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
-            30
+            60
         </session-timeout>
     </session-config>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.jsp</location>
+    </error-page>
 </web-app>

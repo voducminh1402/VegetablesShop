@@ -1,3 +1,10 @@
+<%-- 
+    Document   : login
+    Created on : Oct 3, 2021, 11:13:33 AM
+    Author     : VODUCMINH
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <!DOCTYPE html>
@@ -41,7 +48,21 @@
                         <input class="login-form-email-input" type="password" name="password" placeholder="Password">
                     </div>
                     <div class="login-form-button">
-                        <button type="submit" name="action" value="Login">LOGIN</button>
+                        <%
+                            String pageValue = request.getParameter("pageValue");
+                            
+                        if ("checkout".equals(pageValue)) {
+                        %>
+                            <input type="hidden" name="pageValue" value="<%= pageValue %>">
+                            <button type="submit" name="action" value="Login">LOGIN</button>
+                        <%        
+                        }
+                        else {
+                        %>
+                            <button type="submit" name="action" value="Login">LOGIN</button>
+                        <%
+                            }
+                        %>
                     </div>
                 </div>
                </form>

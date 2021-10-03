@@ -4,6 +4,7 @@
     Author     : VODUCMINH
 --%>
 
+<%@page import="vegetablesshop.users.UserDTO"%>
 <%@page import="vegetablesshop.shopping.CartProduct"%>
 <%@page import="vegetablesshop.shopping.Cart"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -93,10 +94,15 @@ var sc_https=1;
             	<div class="table-responsive shop_cart_table">
                         <%
                             Cart cart = (Cart)session.getAttribute("CART");
+                            String error = (String)request.getAttribute("ERROR_CART");
+                            if (error == null) {
+                                error = "";
+                            }
+                            
                             double totalMoney = 0;
                             if (cart != null) {
                                 if (cart.getCart().size() != 0) {
-                        %>
+                        %>               
                             <table class="table">
                             <thead>
                                     <tr>
@@ -162,7 +168,20 @@ var sc_https=1;
                         %>
                                         <div class="col-lg-8 col-md-6 text-left text-md-right">
                                             <button class="btn btn-dark btn-sm" type="submit">Update Cart</button>
-                                            <a href="#" class="btn btn-default btn-sm">Proceed to Checkout</a>
+                                            <%
+                                                UserDTO loginUser = (UserDTO)session.getAttribute("LOGIN_USER");
+                                                
+                                                if (loginUser != null) {
+                                            %>
+                                            <a href="checkout.jsp" class="btn btn-default btn-sm">Proceed to Checkout</a>
+                                            <%
+                                                }
+                                                else {
+                                            %>
+                                            <a href="MainController?action=CheckoutLogin&pageValue=checkout" class="btn btn-default btn-sm">Proceed to Checkout</a>
+                                            <%
+                                                }
+                                            %>
                                         </div>
                                     </div>
                                 </td>
@@ -523,6 +542,16 @@ var sc_https=1;
 <!-- scripts js --> 
 <script src="assets/js/scripts.js"></script>
 
+<script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+        var scrollpos = localStorage.getItem('scrollpos');
+        if (scrollpos) window.scrollTo(0, scrollpos);
+    });
+
+    window.onbeforeunload = function(e) {
+        localStorage.setItem('scrollpos', window.scrollY);
+    };
+</script>
 </body>
 
 <!-- Mirrored from bestwebcreator.com/organiq/demo/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:50:07 GMT -->

@@ -61,7 +61,7 @@
                         else {
                         %>
                             <li class="dropdown">
-                              <a class="dropdown-toggle" href="login.html">LOGIN</a>
+                              <a class="dropdown-toggle" href="login.jsp">LOGIN</a>
                             </li>
                         <%
                         }
@@ -195,18 +195,18 @@
                 <li><a href="javascript:void(0);" class="nav-link search_trigger"><i class="ion-ios-search-strong"></i></a>
                     <div class="search-overlay">
                         <div class="search_wrap">
-                            <form>
+                            <form action="MainController">
                                 <div class="rounded_input">
-                                	<input type="text" placeholder="Search" class="form-control" id="search_input">
+                                    <input type="text" name="search" placeholder="Search" class="form-control" id="search_input">
                                 </div>
-                                <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
+                                <button type="submit" name="action" value="SearchProduct" class="search_icon"><i class="fas fa-search"></i></button>
                             </form>
                         </div>
                     </div>
                 </li>
                 <li class="dropdown cart_wrap">
                     <%
-                        Cart cart = (Cart) session.getAttribute("CART");
+                        Cart cart = (Cart)session.getAttribute("CART");
                             
                         if (cart != null) {
                             if (cart.getCart().size() != 0) {

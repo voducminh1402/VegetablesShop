@@ -26,6 +26,8 @@ public class MainController extends HttpServlet {
     private static final String ADD_TO_CART = "AddToCartController";
     private static final String DELETE_PRODUCT_CART = "DeleteProductCartController";
     private static final String UPDATE_CART = "UpdateCartController";
+    private static final String SEARCH_PRODUCT = "SearchProductController";
+    private static final String CHECKOUT_LOGIN = "CheckoutLoginController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -55,8 +57,14 @@ public class MainController extends HttpServlet {
             else if ("DeleteProductCart".equals(action)) {
                 url = DELETE_PRODUCT_CART;
             }
+            else if ("SearchProduct".equals(action)) {
+                url = DELETE_PRODUCT_CART;
+            }
             else if ("UpdateCart".equals(action)) {
                 url = UPDATE_CART;
+            }
+            else if ("CheckoutLogin".equals(action)) {
+                url = CHECKOUT_LOGIN;
             }
             else {
                 HttpSession session = request.getSession();

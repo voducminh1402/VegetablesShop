@@ -244,10 +244,51 @@ public class ProductDAO {
         
         return categoryName;
     }
+    
+    public int checkQuantityAvailable(String productID) throws SQLException {
+       int check = 0;
+        Connection conn = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "SELECT quantity"
+                            + " FROM tblProducts "
+                            + " WHERE productID=?";
+                stm = conn.prepareStatement(sql);
+                stm.setString(1, productID);
+                rs = stm.executeQuery();
+                
+                if (rs.next()) {
+                    int quantity = Integer.parseInt(rs.getString("quantity"));
+                    check = quantity;
+                }
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            } 
+        }
+        
+        return check;
+    }
 
     public static void main(String[] args) throws SQLException {
         ProductDAO dao = new ProductDAO();
         
-        System.out.println((dao.getProduct("12515190")).toString());
+        System.out.println(dao.checkQuantityAvailable("12462851"));
     }
 }

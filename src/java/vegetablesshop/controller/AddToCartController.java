@@ -23,6 +23,7 @@ import vegetablesshop.shopping.CartProduct;
 public class AddToCartController extends HttpServlet {
     private static final String ERROR = "shop.jsp";
     private static final String SUCCESS = "shop.jsp";
+    private static final String UPDATE_CART = "UpdateCartController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -40,18 +41,63 @@ public class AddToCartController extends HttpServlet {
             double productPrice = product.getProductPrice();
             String productImage = product.getProductImage();
             
-            CartProduct cartProduct = new CartProduct(productID, productName, productPrice, productImage, quantity);
+            
             
             HttpSession session = request.getSession();
             Cart cart = (Cart) session.getAttribute("CART");
             
+            
+            
             if (cart == null) {
                 cart = new Cart();
             }
-            cart.addToCart(cartProduct);
             
-            session.setAttribute("CART", cart);
-            url = SUCCESS;
+            if (cart.getCart() != null) {
+                    CartProduct item = new CartProduct();
+                    
+                    for (CartProduct checkItem : cart.getCart().values()) {
+                        if (checkItem.getProductID().equals(productID)) {
+                            item = checkItem;
+                        }
+                    }
+                
+                    if (item.getProductID().equals(productID)) {
+                        if ((quantity + item.getQuantity()) <= product.getQuantity()) {
+                            item.setQuantity(quantity + item.getQuantity());
+                        }
+                        else {
+                            item.setQuantity(product.getQuantity());
+                        }
+                    }
+                    else {
+                        if (quantity <= product.getQuantity()) {
+                            CartProduct cartProduct = new CartProduct(productID, productName, productPrice, productImage, quantity);
+                            cart.addToCart(cartProduct);
+                            session.setAttribute("CART", cart);
+                            url = SUCCESS;
+                        }
+                }
+                if (cart.getCart().size() == 0) {
+                    if (quantity <= product.getQuantity()) {
+                            CartProduct cartProduct = new CartProduct(productID, productName, productPrice, productImage, quantity);
+                            cart.addToCart(cartProduct);
+                            session.setAttribute("CART", cart);
+                            url = SUCCESS;
+                        }
+                }
+            }
+            else {
+                if (quantity <= product.getQuantity()) {
+                    CartProduct cartProduct = new CartProduct(productID, productName, productPrice, productImage, quantity);
+                    cart.addToCart(cartProduct);
+                    session.setAttribute("CART", cart);
+                    url = SUCCESS;
+                }
+                else {
+                    request.setAttribute("ERROR_CART", "Quantity of this product is not enough!");
+                }
+            }
+            
         } 
         catch (Exception e) {
             log("Error at AddToCartController: " + e.toString());

@@ -4,6 +4,7 @@
     Author     : VODUCMINH
 --%>
 
+<%@page import="vegetablesshop.shopping.Cart"%>
 <%@page import="vegetablesshop.products.ProductDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -90,7 +91,6 @@ var sc_https=1;
     	<div class="row">
             <%
                 ProductDTO product = (ProductDTO)request.getAttribute("PRODUCT_DETAIL");
-                
                 if (product != null) {
             %>
             <div class="col-md-6">
@@ -141,7 +141,7 @@ var sc_https=1;
                         <div class="cart-product-quantity">
                           <div class="quantity">
                             <input type="button" value="-" class="minus">
-                            <input type="text" name="quantity" value="1" title="Qty" class="qty" size="4">
+                            <input type="text" name="quantity" value="1" min="1" max="<%= product.getQuantity() %>" title="Quantity is greater than 0" class="qty" size="4" pattern="^\+?(|[1-9]\d*)$">
                             <input type="button" value="+" class="plus">
                           </div>
                         </div>

@@ -11,61 +11,31 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import vegetablesshop.users.UserDAO;
-import vegetablesshop.users.UserDTO;
 
 /**
  *
  * @author VODUCMINH
  */
-public class LoginController extends HttpServlet {
-    private static final String ERROR = "login.html";
-    private static final String USER = "index.jsp";
-    private static final String ADMIN = "admin.jsp";
-    private static final String CHECKOUT = "checkout.jsp";
-    private static final int AD = 1;
-    private static final int US = 2;
-      
+public class CheckoutLoginController extends HttpServlet {
+    private static final String ERROR = "cart.jsp";
+    private static final String SUCCESS = "login.jsp";
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
         try {
-            String userID = request.getParameter("userID");
-            String password = request.getParameter("password");
             String pageValue = request.getParameter("pageValue");
-            
-            UserDAO dao = new UserDAO();
-            UserDTO loginUser = dao.checkLogin(userID, password);
-            
-            HttpSession session = request.getSession();
-            session.setAttribute("LOGIN_USER", loginUser);
-            
-            if (loginUser != null) {
-                int roleID = loginUser.getRoleID();
-                
-                if (AD == loginUser.getRoleID()) {
-                    url = ADMIN;
-                }
-                else if (US == loginUser.getRoleID() && !"checkout".equals(pageValue)) {
-                    url = USER;
-                }
-                else if (US == loginUser.getRoleID() && "checkout".equals(pageValue)) {
-                    url = CHECKOUT;
-                }
-                else {
-                    session.setAttribute("MESSAGE_ERROR", "This role is not supported!");
-                }
-            }
-            else {
-                session.setAttribute("MESSAGE_ERROR", "Incorrect user ID or password!");
+        
+            if ("checkout".equals(pageValue)) {
+                url = SUCCESS;
             }
         } 
         catch (Exception e) {
+            log("Error at CheckoutLoginController: " + e.toString());
         }
         finally {
-            response.sendRedirect(url);
+            request.getRequestDispatcher(url).forward(request, response);
         }
     }
 
