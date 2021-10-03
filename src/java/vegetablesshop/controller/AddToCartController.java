@@ -23,6 +23,7 @@ import vegetablesshop.shopping.CartProduct;
 public class AddToCartController extends HttpServlet {
     private static final String ERROR = "shop.jsp";
     private static final String SUCCESS = "shop.jsp";
+    private static final String SEARCH = "SearchProductController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -32,7 +33,9 @@ public class AddToCartController extends HttpServlet {
         try {
             String productID = request.getParameter("productID");
             int quantity = Integer.parseInt(request.getParameter("quantity"));
-            String pageValue = request.getParameter("pageValue");
+            String valuePage = request.getParameter("valuePage");
+            
+            
             
             ProductDAO dao = new ProductDAO();
             ProductDTO product = dao.getProductForCart(productID);
@@ -41,10 +44,8 @@ public class AddToCartController extends HttpServlet {
             double productPrice = product.getProductPrice();
             String productImage = product.getProductImage();
             
-            
             HttpSession session = request.getSession();
             Cart cart = (Cart) session.getAttribute("CART");
-            
             
             
             if (cart == null) {
@@ -53,7 +54,6 @@ public class AddToCartController extends HttpServlet {
             
             if (cart.getCart() != null) {
                     CartProduct item = new CartProduct();
-                    
                     for (CartProduct checkItem : cart.getCart().values()) {
                         if (checkItem.getProductID().equals(productID)) {
                             item = checkItem;
@@ -75,23 +75,26 @@ public class AddToCartController extends HttpServlet {
                             cart.addToCart(cartProduct);
                             session.setAttribute("CART", cart);
                             url = SUCCESS;
-                            if ("searchPage".equals(pageValue)) {
-                                StringBuilder requestURL = new StringBuilder(request.getRequestURL().toString());
-                                url = requestURL.toString();
+                            if ("searchPage".equals(valuePage)) {
+                                url = SEARCH;
+                            }
+                            else {
+                                url = SUCCESS;
                             }
                         }
                 }
                 if (cart.getCart().size() == 0) {
                     if (quantity <= product.getQuantity()) {
-                            CartProduct cartProduct = new CartProduct(productID, productName, productPrice, productImage, quantity);
-                            cart.addToCart(cartProduct);
-                            session.setAttribute("CART", cart);
-                            url = SUCCESS;
-                            if ("searchPage".equals(pageValue)) {
-                                StringBuilder requestURL = new StringBuilder(request.getRequestURL().toString());
-                                url = requestURL.toString();
-                            }
+                        CartProduct cartProduct = new CartProduct(productID, productName, productPrice, productImage, quantity);
+                        cart.addToCart(cartProduct);
+                        session.setAttribute("CART", cart);
+                        if ("searchPage".equals(valuePage)) {
+                            url = SEARCH;
                         }
+                        else {
+                            url = SUCCESS;
+                        }
+                    }
                 }
             }
             else {
@@ -99,13 +102,17 @@ public class AddToCartController extends HttpServlet {
                     CartProduct cartProduct = new CartProduct(productID, productName, productPrice, productImage, quantity);
                     cart.addToCart(cartProduct);
                     session.setAttribute("CART", cart);
-                    url = SUCCESS;
-                    if ("searchPage".equals(pageValue)) {
-                        StringBuilder requestURL = new StringBuilder(request.getRequestURL().toString());
-                        url = requestURL.toString();
+                    if ("searchPage".equals(valuePage)) {
+                        url = SEARCH;
+                    }
+                    else {
+                        url = SUCCESS;
                     }
                 }
                 else {
+                    if ("searchPage".equals(valuePage)) {
+                        url = SEARCH;
+                    }
                     request.setAttribute("ERROR_CART", "Quantity of this product is not enough!");
                 }
             }
