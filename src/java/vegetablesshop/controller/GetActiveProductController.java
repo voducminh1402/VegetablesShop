@@ -11,7 +11,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.products.ProductDTO;
 
@@ -19,6 +18,7 @@ import vegetablesshop.products.ProductDTO;
  *
  * @author VODUCMINH
  */
+
 public class GetActiveProductController extends HttpServlet {
     private static final String ERROR = "shop.jsp";
     private static final String SUCCESS = "shop.jsp";

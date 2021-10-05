@@ -66,6 +66,7 @@ public class MainController extends HttpServlet {
             else if ("GetInfoCheckout".equals(action)) {
                 url = CHECKOUT_INFO;
             }
+           
             else {
                 HttpSession session = request.getSession();
                 session.setAttribute("CONTROLLER_ERROR_MESSAGE", "This function is not supported!");
