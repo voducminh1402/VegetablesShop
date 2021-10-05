@@ -63,7 +63,6 @@ var sc_https=1;
 
 <body>
     <jsp:include page="Header.jsp"/>
-
 <!-- START SECTION BANNER -->
 <section class="banner_slider p-0">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">

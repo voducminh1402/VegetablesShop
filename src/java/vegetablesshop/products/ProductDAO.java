@@ -211,6 +211,82 @@ public class ProductDAO {
         return product;
     }
     
+    public int getProductQuantity(String productID) throws SQLException {
+        int quantity = 0;
+        Connection conn = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "SELECT quantity"
+                            + " FROM tblProducts "
+                            + " WHERE productID=?";
+                stm = conn.prepareStatement(sql);
+                stm.setString(1, productID);
+                rs = stm.executeQuery();
+                
+                if (rs.next()) {
+                    quantity = Integer.parseInt(rs.getString("quantity"));
+                }
+                
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            } 
+        }
+        
+        return quantity;
+    }
+    
+    public boolean minusProduct(String productID, int quantity) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement stm = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "UPDATE tblProducts"
+                            + " SET quantity = ? "
+                            + " WHERE productID=?";
+                stm = conn.prepareStatement(sql);
+                stm.setInt(1, getProductQuantity(productID) - quantity);
+                stm.setString(2, productID);
+                check = stm.executeUpdate() > 0;
+                
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            } 
+        }
+        
+        return check;
+    }
+    
     public String convertAvailableName(int availableID) throws SQLException {
         String availableName = null;
         Connection conn = null;

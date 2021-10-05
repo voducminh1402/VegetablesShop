@@ -30,10 +30,10 @@ public class GetActiveProductController extends HttpServlet {
         try {
             ProductDAO dao = new ProductDAO();
             List<ProductDTO> productList = dao.getListActiveProduct();
-            HttpSession session = request.getSession();
+//            HttpSession session = request.getSession();
             
             if (!productList.isEmpty()) {
-                session.setAttribute("ACTIVE_PRODUCT_LIST", productList);
+                request.setAttribute("ACTIVE_PRODUCT_LIST", productList);
                 url = SUCCESS;
             }
         } 

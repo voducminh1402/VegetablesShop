@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>vegetablesshop.filters.CharacterEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     <servlet>
         <servlet-name>MainController</servlet-name>
         <servlet-class>vegetablesshop.controller.MainController</servlet-class>
@@ -43,6 +51,10 @@
     <servlet>
         <servlet-name>CheckoutLoginController</servlet-name>
         <servlet-class>vegetablesshop.controller.CheckoutLoginController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetInfoCheckoutController</servlet-name>
+        <servlet-class>vegetablesshop.controller.GetInfoCheckoutController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
@@ -88,11 +100,21 @@
         <servlet-name>CheckoutLoginController</servlet-name>
         <url-pattern>/CheckoutLoginController</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetInfoCheckoutController</servlet-name>
+        <url-pattern>/GetInfoCheckoutController</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             60
         </session-timeout>
     </session-config>
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
     <error-page>
         <error-code>404</error-code>
         <location>/404.jsp</location>

@@ -3,18 +3,19 @@
     Created on : Sep 28, 2021, 11:02:31 PM
     Author     : VODUCMINH
 --%>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="vegetablesshop.products.ProductDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="vegetablesshop.products.ProductDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <!-- Mirrored from bestwebcreator.com/organiq/demo/shop-three-columns.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:49:59 GMT -->
 <head>
 <!-- Meta -->
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="Anil z" name="author">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,14 +64,13 @@ var sc_https=1;
 
 <body>
     <jsp:include page="Header.jsp" />
-    
 <!-- START SECTION BANNER -->
 <section class="bg_light_yellow breadcrumb_section background_bg bg_fixed bg_size_contain" data-img-src="assets/images/breadcrumb_bg.png">
 	<div class="container">
     	<div class="row align-items-center">
         	<div class="col-sm-12 text-center">
             	<div class="page-title">
-            		<h1>Three columns</h1>
+                    <h1>Three columns</h1>
                 </div>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb justify-content-center">
@@ -89,11 +89,11 @@ var sc_https=1;
 <section>
 	<div class="container">
     	<div class="row">
-            <c:if test="${sessionScope.ACTIVE_PRODUCT_LIST == null}">
+            <c:if test="${requestScope.ACTIVE_PRODUCT_LIST == null}">
                 <c:redirect url="MainController?action=GetActiveProduct"></c:redirect>
             </c:if>
             
-            <c:forEach items="${sessionScope.ACTIVE_PRODUCT_LIST}" var="o">
+            <c:forEach items="${requestScope.ACTIVE_PRODUCT_LIST}" var="o">
                 <div class="col-lg-4 col-sm-6">
                     <div class="product">
                         <span class="pr_flash bg_green">Sale</span>
@@ -114,7 +114,6 @@ var sc_https=1;
                     </div>
                 </div>
             </c:forEach>
-            
             
         </div>
         <div class="row">

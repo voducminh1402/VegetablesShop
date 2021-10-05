@@ -2641,6 +2641,7 @@ body.active {
 }
 .payment_method .custome-radio:first-child .payment-text {
 	display: block;
+        
 }
 .payment-text {
 	display: none;
@@ -2688,12 +2689,20 @@ body.active {
 }
 .product-qty {
 	font-weight: 600;
+        float: right;
+        margin-right: 30px; 
 }
 .order_table thead th {
 	border-bottom: 0;
 }
 .order_table {
 	background-color: #fafafa;
+}
+.payment_method_custom {
+    margin:0 !important; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
 }
 .payment_method .custome-radio {
 	background-color: #fafafa;

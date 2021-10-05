@@ -43,7 +43,6 @@ public class LoginController extends HttpServlet {
             session.setAttribute("LOGIN_USER", loginUser);
             
             if (loginUser != null) {
-                int roleID = loginUser.getRoleID();
                 
                 if (AD == loginUser.getRoleID()) {
                     url = ADMIN;
@@ -63,6 +62,7 @@ public class LoginController extends HttpServlet {
             }
         } 
         catch (Exception e) {
+            log("Error at LoginContoller: " + e.toString());
         }
         finally {
             response.sendRedirect(url);
@@ -80,7 +80,7 @@ public class LoginController extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException {        
         processRequest(request, response);
     }
 

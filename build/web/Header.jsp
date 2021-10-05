@@ -3,11 +3,9 @@
     Created on : Sep 28, 2021, 10:14:09 PM
     Author     : VODUCMINH
 --%>
-
 <%@page import="vegetablesshop.shopping.Cart"%>
 <%@page import="vegetablesshop.users.UserDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
  <!--LOADER--> 
 <div id="preloader">
     <div class="line-scale">
@@ -45,9 +43,10 @@
                         <%
                             UserDTO loginUser = (UserDTO)session.getAttribute("LOGIN_USER");
                             if (loginUser != null) {
+                                 
                         %>
                         <li class="dropdown">
-                          <a class="dropdown-toggle" href="#" data-toggle="dropdown">Hello <%= loginUser.getUserName() %></a>
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Hello <%= loginUser.getUserName() %></a>
                           <div class="dropdown-menu shadow dropdown-menu-right">
                             <ul>
                                 <li><a class="dropdown-item" href="my-account.jsp">My account</a></li>
@@ -56,8 +55,8 @@
                             </ul>
                           </div>
                         </li>
-                        <%        
-                            }
+                        <%      
+                           }
                         else {
                         %>
                             <li class="dropdown">

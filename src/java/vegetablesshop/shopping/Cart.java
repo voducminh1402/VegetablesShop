@@ -59,4 +59,15 @@ public class Cart {
         }
     }
     
+    public double getTotalMoney() {
+        double totalMoney = 0;
+        if (this.cart != null) {
+            for (CartProduct product : this.cart.values()) {
+                totalMoney += product.getProductPrice() * product.getQuantity();
+            }
+        }
+        
+        return totalMoney;
+    }
+    
 }

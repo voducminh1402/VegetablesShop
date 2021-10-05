@@ -6,7 +6,6 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +27,7 @@ public class MainController extends HttpServlet {
     private static final String UPDATE_CART = "UpdateCartController";
     private static final String SEARCH_PRODUCT = "SearchProductController";
     private static final String CHECKOUT_LOGIN = "CheckoutLoginController";
+    private static final String CHECKOUT_INFO = "GetInfoCheckoutController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -38,9 +38,6 @@ public class MainController extends HttpServlet {
             String action = request.getParameter("action");
             if ("Login".equals(action)) {
                 url = LOGIN;
-            }
-            else if ("Logout".equals(action)) {
-                url = LOGOUT;
             }
             else if ("Logout".equals(action)) {
                 url = LOGOUT;
@@ -65,6 +62,9 @@ public class MainController extends HttpServlet {
             }
             else if ("CheckoutLogin".equals(action)) {
                 url = CHECKOUT_LOGIN;
+            }
+            else if ("GetInfoCheckout".equals(action)) {
+                url = CHECKOUT_INFO;
             }
             else {
                 HttpSession session = request.getSession();
