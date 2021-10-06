@@ -51,7 +51,6 @@
                     }
                     
                 %>
-                <%= totalMoney %>
                 <form action="/VegetablesShop/vnpayajax" id="frmCreateOrder" method="post">        
                     <div class="form-group">
                         <label for="language">Loại hàng hóa </label>

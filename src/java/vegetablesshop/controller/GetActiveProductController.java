@@ -18,7 +18,6 @@ import vegetablesshop.products.ProductDTO;
  *
  * @author VODUCMINH
  */
-
 public class GetActiveProductController extends HttpServlet {
     private static final String ERROR = "shop.jsp";
     private static final String SUCCESS = "shop.jsp";
