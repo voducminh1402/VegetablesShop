@@ -66,9 +66,12 @@
                     </div>
                 </div>
                </form>
-               <div class="login-form-forgot">
+<!--               <div class="login-form-forgot">
                    <a><span>Forgot </span>Username/Password?</a>
-               </div>
+               </div>-->
+                <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/VegetablesShop/login-google&response_type=code&client_id=228319326160-mu93gh5bmia8f58sketkt5tg8hq47d8a.apps.googleusercontent.com&approval_prompt=force" class="login-with-google-btn" >
+                        Sign in with Google
+                    </a>
                <div class="login-form-account">
                    <a href="signup.html">Create Your Account <span class="ti-arrow-right"></span></a>
                </div>

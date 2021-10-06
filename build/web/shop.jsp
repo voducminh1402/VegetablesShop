@@ -92,7 +92,6 @@ var sc_https=1;
             <c:if test="${requestScope.ACTIVE_PRODUCT_LIST == null}">
                 <c:redirect url="MainController?action=GetActiveProduct"></c:redirect>
             </c:if>
-            
             <c:forEach items="${requestScope.ACTIVE_PRODUCT_LIST}" var="o">
                 <div class="col-lg-4 col-sm-6">
                     <div class="product">

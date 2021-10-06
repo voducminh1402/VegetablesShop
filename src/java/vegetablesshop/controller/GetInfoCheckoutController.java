@@ -23,6 +23,7 @@ import vegetables.orders.ShippingInfo;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.shopping.Cart;
 import vegetablesshop.shopping.CartProduct;
+import vegetablesshop.users.UserDAO;
 import vegetablesshop.users.UserDTO;
 
 /**
@@ -49,39 +50,50 @@ public class GetInfoCheckoutController extends HttpServlet {
             String note = request.getParameter("note");
             String order_time = request.getParameter("order_time");
             String payment_option = request.getParameter("payment_option");
-            String newOrderID = null;
+//            String newOrderID = null;
             
             HttpSession session = request.getSession();
             Cart cart = (Cart)session.getAttribute("CART");
+            String loginCheck = (String)session.getAttribute("LOGIN_CHECK");
             UserDTO loginUser = (UserDTO) session.getAttribute("LOGIN_USER");
+            
+            UserDAO userDAO = new UserDAO();
             
             String orderID = null;
             if ("check".equals(payment_option)) {
-                UUID uuid = UUID.randomUUID();
-                orderID = uuid.toString();
-                String userID = loginUser.getUserID();
-                double totalPrice = cart.getTotalMoney();
-                String createDate = order_time;
+                boolean checkInsertUser = false;
+                if("GG".equals(loginCheck)) {
+                    UserDTO user = new UserDTO(loginUser.getUserID(), loginUser.getUserName(), "", "", "", order_time, loginUser.getEmail(), "1", 3);
+                    checkInsertUser = userDAO.insertUser(user);
+                }
                 
-                Order order = new Order(orderID, userID, totalPrice, createDate);
-                OrderDAO dao = new OrderDAO();
-                ProductDAO productDao = new ProductDAO();
-                boolean check = dao.insertOrder(order);
-                
-                if (check == true) {
-                    
-                    for (CartProduct product : cart.getCart().values()) {
-                        productDao.minusProduct(product.getProductID(), product.getQuantity());
-                        
-                        UUID detailUUID = UUID.randomUUID();
-                        String detailID = detailUUID.toString();
-                        dao.insertOrderDetail(new OrderDetail(detailID, orderID, product.getProductID(), product.getProductPrice(), product.getQuantity()));
+                if (checkInsertUser) {
+                    UUID uuid = UUID.randomUUID();
+                    orderID = uuid.toString();
+                    String userID = loginUser.getUserID();
+                    double totalPrice = cart.getTotalMoney();
+                    String createDate = order_time;
+
+                    Order order = new Order(orderID, userID, totalPrice, createDate);
+                    OrderDAO dao = new OrderDAO();
+                    ProductDAO productDao = new ProductDAO();
+                    boolean check = dao.insertOrder(order);
+
+                    if (check == true) {
+
+                        for (CartProduct product : cart.getCart().values()) {
+                            productDao.minusProduct(product.getProductID(), product.getQuantity());
+
+                            UUID detailUUID = UUID.randomUUID();
+                            String detailID = detailUUID.toString();
+                            dao.insertOrderDetail(new OrderDetail(detailID, orderID, product.getProductID(), product.getProductPrice(), product.getQuantity()));
+                        }
+
+                        dao.insertShippingInfo(new ShippingInfo(fullName, address, city, state, phone, note, orderID, 1));
+
+                        session.removeAttribute("CART");
+                        url = SUCCESS;
                     }
-                    
-                    dao.insertShippingInfo(new ShippingInfo(fullName, address, city, state, phone, note, orderID, 1));
-                    
-                    session.removeAttribute("CART");
-                    url = SUCCESS;
                 }
             }
             else if ("vnpay".equals(payment_option)) {

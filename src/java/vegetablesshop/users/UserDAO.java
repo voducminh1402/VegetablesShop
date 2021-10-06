@@ -103,9 +103,49 @@ public class UserDAO {
         return user;
     } 
     
-    public static void main(String[] args) throws SQLException {
-        UserDAO dao = new UserDAO();
-        System.out.println(dao.getUser("minhvd").toString());
+    public boolean insertUser(UserDTO user) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement stm = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "INSERT INTO tblUsers(userID, userName, userAddress, userPhone, password, createDate, email, userStatus, roleID) "
+                            + " VALUES(?,?,?,?,?,?,?,?,?)";
+                            
+                stm = conn.prepareStatement(sql);
+                stm.setString(1, user.getUserID());
+                stm.setString(2, user.getUserName());
+                stm.setString(3, "GG");
+                stm.setString(4, "GG");
+                stm.setString(5, "GG");
+                stm.setString(6, user.getCreateDate());
+                stm.setString(7, user.getEmail());
+                stm.setInt(8, 1);
+                stm.setInt(9, 3);
+                
+                check = stm.executeUpdate() > 0;
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return check;
     }
+    
+//    public static void main(String[] args) throws SQLException {
+//        UserDAO dao = new UserDAO();
+//        System.out.println(dao.getUser("minhvd").toString());
+//    }
     
 }

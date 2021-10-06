@@ -3,7 +3,6 @@
     Created on : Sep 28, 2021, 10:14:49 PM
     Author     : VODUCMINH
 --%>
-
 <%@page import="java.util.List"%>
 <%@page import="vegetablesshop.products.ProductDTO"%>
 <%@page import="vegetablesshop.products.ProductDTO"%>
@@ -110,7 +109,7 @@ var sc_https=1;
                                     <p class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit<br> massa enim. Nullam id varius nunc id varius nunc.</p>
                                     <a class="btn btn-default btn-radius btn-borderd animation" href="#" data-animation="fadeInUp" data-animation-delay="0.7s">Learn More</a>
                                     <a class="btn btn-white btn-radius btn-borderd animation" href="#" data-animation="fadeInUp" data-animation-delay="0.8s">Contact Us</a>
-                        		</div>
+                                </div>
                             </div>
                         </div>
                     </div>

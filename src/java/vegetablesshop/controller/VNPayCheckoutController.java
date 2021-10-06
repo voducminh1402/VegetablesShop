@@ -23,6 +23,7 @@ import vegetables.orders.ShippingInfo;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.shopping.Cart;
 import vegetablesshop.shopping.CartProduct;
+import vegetablesshop.users.UserDAO;
 import vegetablesshop.users.UserDTO;
 
 /**
@@ -54,9 +55,18 @@ public class VNPayCheckoutController extends HttpServlet {
             Cart cart = (Cart)session.getAttribute("CART");
             ShippingInfo shipInfo = (ShippingInfo)session.getAttribute("SHIPPING_INFO");
             UserDTO loginUser = (UserDTO) session.getAttribute("LOGIN_USER");
+            String loginCheck = (String)session.getAttribute("LOGIN_CHECK");
             
+            UserDAO userDAO = new UserDAO();
             
             if ("00".equals(responseCode)) {
+                if("GG".equals(loginCheck)) {
+                    UserDTO user = new UserDTO(loginUser.getUserID(), loginUser.getUserName(), "", "", "", order_time, loginUser.getEmail(), "1", 3);
+                    if (userDAO.getUser(loginUser.getUserID()) != null) {
+                        userDAO.insertUser(user);
+                    }
+                }
+                
                 UUID uuid = UUID.randomUUID();
                 String orderID = uuid.toString();                    
                 String userID = loginUser.getUserID();
