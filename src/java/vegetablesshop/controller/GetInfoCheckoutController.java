@@ -56,18 +56,33 @@ public class GetInfoCheckoutController extends HttpServlet {
             Cart cart = (Cart)session.getAttribute("CART");
             String loginCheck = (String)session.getAttribute("LOGIN_CHECK");
             UserDTO loginUser = (UserDTO) session.getAttribute("LOGIN_USER");
-            
+            ProductDAO productDAO = new ProductDAO();
             UserDAO userDAO = new UserDAO();
             
             String orderID = null;
+            boolean checkQuantityProduct = false;
+            
             if ("check".equals(payment_option)) {
-                boolean checkInsertUser = false;
-                if("GG".equals(loginCheck)) {
-                    UserDTO user = new UserDTO(loginUser.getUserID(), loginUser.getUserName(), "", "", "", order_time, loginUser.getEmail(), "1", 3);
-                    checkInsertUser = userDAO.insertUser(user);
+            
+                for (CartProduct product : cart.getCart().values()) {
+                    int productData = productDAO.getProductQuantity(product.getProductID());
+                    if (product.getQuantity() <= productData) {
+                        checkQuantityProduct = true;
+                    }
+                    else {
+                        checkQuantityProduct = false;
+                    }
                 }
                 
-                if (checkInsertUser) {
+                if (checkQuantityProduct) {
+//                    boolean checkInsertUser = false;
+                    if("GG".equals(loginCheck)) {
+                        UserDTO user = new UserDTO(loginUser.getUserID(), loginUser.getUserName(), "", "", "", order_time, loginUser.getEmail(), "1", 3);
+                        if (userDAO.getUser(loginUser.getUserID()) != null) {
+                            userDAO.insertUser(user);
+                        }
+                    }
+
                     UUID uuid = UUID.randomUUID();
                     orderID = uuid.toString();
                     String userID = loginUser.getUserID();
@@ -95,17 +110,35 @@ public class GetInfoCheckoutController extends HttpServlet {
                         url = SUCCESS;
                     }
                 }
+                else {
+                    url = "404.jsp";
+                }
+                
             }
             else if ("vnpay".equals(payment_option)) {
 //                UUID uuid = UUID.randomUUID();
 //                newOrderID = uuid.toString();
+                 for (CartProduct product : cart.getCart().values()) {
+                    int productData = productDAO.getProductQuantity(product.getProductID());
+                    if (product.getQuantity() <= productData) {
+                        checkQuantityProduct = true;
+                    }
+                    else {
+                        checkQuantityProduct = false;
+                    }
+                }
                 
-                ShippingInfo shippingInfo = new ShippingInfo(fullName, address, city, state, phone, note, "", 1);
+                if (checkQuantityProduct) {
+                    ShippingInfo shippingInfo = new ShippingInfo(fullName, address, city, state, phone, note, "", 1);
                 
                 
-                session.setAttribute("SHIPPING_INFO", shippingInfo);
-//                request.setAttribute("ORDER_ID", newOrderID);
-                url = VN_PAY;
+                    session.setAttribute("SHIPPING_INFO", shippingInfo);
+    //                request.setAttribute("ORDER_ID", newOrderID);
+                    url = VN_PAY;
+                }
+                else {
+                    url = "404.jsp";
+                }
             }
             
         } 

@@ -70,4 +70,14 @@ public class Cart {
         return totalMoney;
     }
     
+    public boolean checkQuantityAvailable() {
+        boolean check = false;
+        
+        for (CartProduct product : this.cart.values()) {
+            
+        }
+        
+        return check;
+    }
+    
 }
