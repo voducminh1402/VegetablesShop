@@ -11,12 +11,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 
 /**
  *
  * @author VODUCMINH
  */
 public class MainController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR = "error.jsp";
     private static final String LOGIN = "LoginController";
     private static final String LOGOUT = "LogoutController";
@@ -73,7 +75,7 @@ public class MainController extends HttpServlet {
             }
         } 
         catch (Exception e) {
-            log("Error at MainController: " + e.toString());
+            LOGGER.error("Error at MainController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);

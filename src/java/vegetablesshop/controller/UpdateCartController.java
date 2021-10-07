@@ -6,12 +6,12 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.products.ProductDTO;
 import vegetablesshop.shopping.Cart;
@@ -22,6 +22,7 @@ import vegetablesshop.shopping.CartProduct;
  * @author VODUCMINH
  */
 public class UpdateCartController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR = "cart.jsp";
     private static final String SUCCESS = "cart.jsp";
     
@@ -48,10 +49,12 @@ public class UpdateCartController extends HttpServlet {
                     
                     if (quantity <= productDTO.getQuantity()) {
                         product = new CartProduct(productID, productName, price, productImage, quantity);
+                        LOGGER.info("Update cart successfully!");
                     }
                     else {
                         product = new CartProduct(productID, productName, price, productImage, productDTO.getQuantity());
                         request.setAttribute("ERROR_CART", "Quantity of this product is not enough!");
+                        LOGGER.warn("Quantity of this product is not enough!");
                     }
                     break;
                 }
@@ -64,7 +67,7 @@ public class UpdateCartController extends HttpServlet {
             }
         } 
         catch (Exception e) {
-            log("Error at DeleteProductCartController: " + e.toString());
+            LOGGER.error("Error at DeleteProductCartController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);

@@ -26,7 +26,7 @@ public class UserDAO {
             conn = DBUtils.getConnection();
             
             if (conn != null) {
-                String sql = "SELECT userName, roleID "
+                String sql = "SELECT userName, roleID, email "
                             + " FROM tblUsers "
                             + " WHERE userID=? AND password=?";
                 stm = conn.prepareStatement(sql);
@@ -37,8 +37,9 @@ public class UserDAO {
                 if (rs.next()) {
                     String userName = rs.getString("userName");
                     int roleID = Integer.parseInt(rs.getString("roleID"));
+                    String email = rs.getString("email");
                     
-                    user = new UserDTO(userID, userName, "", "", password, "", "", "", roleID);
+                    user = new UserDTO(userID, userName, "", "", password, "", email, "", roleID);
                 }
             }
         } 

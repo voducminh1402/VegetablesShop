@@ -6,20 +6,18 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.UUID;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 import vegetables.orders.Order;
 import vegetables.orders.OrderDAO;
 import vegetables.orders.OrderDetail;
 import vegetables.orders.ShippingInfo;
+import vegetablesshop.email.SendHTMLEmail;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.shopping.Cart;
 import vegetablesshop.shopping.CartProduct;
@@ -31,6 +29,7 @@ import vegetablesshop.users.UserDTO;
  * @author VODUCMINH
  */
 public class GetInfoCheckoutController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR = "checkout.jsp";
     private static final String SUCCESS = "success.jsp";
     private static final String VN_PAY = "vnpay_index.jsp";
@@ -63,7 +62,7 @@ public class GetInfoCheckoutController extends HttpServlet {
             boolean checkQuantityProduct = false;
             
             if ("check".equals(payment_option)) {
-            
+                LOGGER.info("Access COD checkout function successfully!");
                 for (CartProduct product : cart.getCart().values()) {
                     int productData = productDAO.getProductQuantity(product.getProductID());
                     if (product.getQuantity() <= productData) {
@@ -80,6 +79,7 @@ public class GetInfoCheckoutController extends HttpServlet {
                         UserDTO user = new UserDTO(loginUser.getUserID(), loginUser.getUserName(), "", "", "", order_time, loginUser.getEmail(), "1", 3);
                         if (userDAO.getUser(loginUser.getUserID()) != null) {
                             userDAO.insertUser(user);
+                            LOGGER.info("Insert user has id: " + loginUser.getUserID() + "successfully!");
                         }
                     }
 
@@ -92,19 +92,29 @@ public class GetInfoCheckoutController extends HttpServlet {
                     Order order = new Order(orderID, userID, totalPrice, createDate);
                     OrderDAO dao = new OrderDAO();
                     ProductDAO productDao = new ProductDAO();
+                    
                     boolean check = dao.insertOrder(order);
 
                     if (check == true) {
-
+                        LOGGER.info("Insert order has order id: " + orderID + "successfully!");
                         for (CartProduct product : cart.getCart().values()) {
                             productDao.minusProduct(product.getProductID(), product.getQuantity());
+                            LOGGER.info("Minus product has product id: " + product.getProductID() + " and minus: " + product.getQuantity() + " successfully");
 
                             UUID detailUUID = UUID.randomUUID();
                             String detailID = detailUUID.toString();
                             dao.insertOrderDetail(new OrderDetail(detailID, orderID, product.getProductID(), product.getProductPrice(), product.getQuantity()));
+                            LOGGER.info("Insert order detail has id: " + orderID + " successfully");
                         }
 
-                        dao.insertShippingInfo(new ShippingInfo(fullName, address, city, state, phone, note, orderID, 1));
+                        boolean checkInsertShip = dao.insertShippingInfo(new ShippingInfo(fullName, address, city, state, phone, note, orderID, 1));
+                        LOGGER.info("Insert shipping info has id: " + orderID + " successfully");
+                        
+                        if (checkInsertShip) {
+                            SendHTMLEmail send = new SendHTMLEmail();
+                            send.sendEmail(orderID, loginUser.getEmail());
+                        }
+                        
 
                         session.removeAttribute("CART");
                         url = SUCCESS;
@@ -116,6 +126,7 @@ public class GetInfoCheckoutController extends HttpServlet {
                 
             }
             else if ("vnpay".equals(payment_option)) {
+                LOGGER.info("Access VN Pay checkout function successfully!");
 //                UUID uuid = UUID.randomUUID();
 //                newOrderID = uuid.toString();
                  for (CartProduct product : cart.getCart().values()) {
@@ -143,7 +154,7 @@ public class GetInfoCheckoutController extends HttpServlet {
             
         } 
         catch (Exception e) {
-            log("Error at GetInfoCheckoutController: " + e.toString());
+            LOGGER.error("Error at GetInfoCheckoutController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);

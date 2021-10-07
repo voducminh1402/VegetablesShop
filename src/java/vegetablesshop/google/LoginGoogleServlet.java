@@ -6,7 +6,6 @@
 package vegetablesshop.google;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
+import vegetablesshop.controller.LoginController;
 import vegetablesshop.users.UserDTO;
 
 /**
@@ -22,6 +23,7 @@ import vegetablesshop.users.UserDTO;
  */
 @WebServlet(name = "LoginGoogleServlet", urlPatterns = {"/login-google"})
 public class LoginGoogleServlet extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
   private static final long serialVersionUID = 1L;
   public LoginGoogleServlet() {
     super();
@@ -45,6 +47,7 @@ public class LoginGoogleServlet extends HttpServlet {
        session.setAttribute("LOGIN_USER", loginUser);
        session.setAttribute("LOGIN_CHECK", "GG");
       response.sendRedirect("index.jsp");
+      LOGGER.info("Login by Google with email: " + googlePojo.getEmail() + " successfully!");
     }
   }
   protected void doPost(HttpServletRequest request, HttpServletResponse response)

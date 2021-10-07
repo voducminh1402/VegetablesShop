@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.products.ProductDTO;
 
@@ -18,6 +19,7 @@ import vegetablesshop.products.ProductDTO;
  * @author VODUCMINH
  */
 public class GetDetailProductController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR ="shop.jsp";
     private static final String SUCCESS ="product-detail.jsp";
     
@@ -33,11 +35,12 @@ public class GetDetailProductController extends HttpServlet {
             
             if (product != null) {
                 request.setAttribute("PRODUCT_DETAIL", product);
+                LOGGER.info("Get information of product has id: " + product.getProductID() + " successfully!");
                 url = SUCCESS;
             }
             
         } catch (Exception e) {
-            log("Error at GetDetailProductController: " + e.toString());
+            LOGGER.error("Error at GetDetailProductController: " + e.toString());
         }
         finally{
             request.getRequestDispatcher(url).forward(request, response);

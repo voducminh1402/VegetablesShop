@@ -6,18 +6,19 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 
 /**
  *
  * @author VODUCMINH
  */
 public class LogoutController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR = "login.html";
     private static final String SUCCESS = "index.jsp";
     
@@ -29,11 +30,12 @@ public class LogoutController extends HttpServlet {
             HttpSession session = request.getSession(false);
             if (session != null) {
                 session.invalidate();
+                LOGGER.info("Logout successfully!");
                 url = SUCCESS;
             }
         } 
         catch (Exception e) {
-            log("Error at LogoutController: " + e.toString());
+            LOGGER.error("Error at LogoutController: " + e.toString());
         }
         finally {
             response.sendRedirect(url);

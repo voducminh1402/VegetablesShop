@@ -6,7 +6,6 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.UUID;
@@ -16,10 +15,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 import vegetables.orders.Order;
 import vegetables.orders.OrderDAO;
 import vegetables.orders.OrderDetail;
 import vegetables.orders.ShippingInfo;
+import vegetablesshop.email.SendHTMLEmail;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.shopping.Cart;
 import vegetablesshop.shopping.CartProduct;
@@ -32,6 +33,7 @@ import vegetablesshop.users.UserDTO;
  */
 @WebServlet(name = "VNPayCheckoutController", urlPatterns = {"/VNPayCheckoutController"})
 public class VNPayCheckoutController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR = "checkout.jsp";
     private static final String SUCCESS = "success.jsp";
     
@@ -64,6 +66,7 @@ public class VNPayCheckoutController extends HttpServlet {
                     UserDTO user = new UserDTO(loginUser.getUserID(), loginUser.getUserName(), "", "", "", order_time, loginUser.getEmail(), "1", 3);
                     if (userDAO.getUser(loginUser.getUserID()) != null) {
                         userDAO.insertUser(user);
+                        LOGGER.info("Insert user has id: " + loginUser.getUserID() + "successfully!");
                     }
                 }
                 
@@ -79,19 +82,25 @@ public class VNPayCheckoutController extends HttpServlet {
                 boolean check = dao.insertOrder(order);
 
                 if (check == true) {    
+                    LOGGER.info("Insert order has order id: " + orderID + "successfully!");
                     for (CartProduct product : cart.getCart().values()) {
                         productDao.minusProduct(product.getProductID(), product.getQuantity());
+                        LOGGER.info("Minus product has product id: " + product.getProductID() + " and minus: " + product.getQuantity() + " successfully");
 
                         UUID detailUUID = UUID.randomUUID();
                         String detailID = detailUUID.toString();
                         dao.insertOrderDetail(new OrderDetail(detailID, orderID, product.getProductID(), product.getProductPrice(), product.getQuantity()));
+                        LOGGER.info("Insert order detail has id: " + orderID + " successfully");
                     }
 //
 //success.jsp
                     ShippingInfo ship = new ShippingInfo(shipInfo.getFullName(), shipInfo.getAddress(), shipInfo.getCity(), shipInfo.getState(), shipInfo.getPhone(), shipInfo.getNote(), orderID, shipInfo.getStatusID());
                     boolean checkInsertShip = dao.insertShippingInfo(ship);
+                    LOGGER.info("Insert shipping info has id: " + orderID + " successfully");
 
                     if (checkInsertShip) {
+                        SendHTMLEmail send = new SendHTMLEmail();
+                        send.sendEmail(orderID, loginUser.getEmail());
                         session.removeAttribute("CART");
                         url = SUCCESS;
                     }
@@ -100,7 +109,7 @@ public class VNPayCheckoutController extends HttpServlet {
             session.removeAttribute("SHIPPING_INFO");
         } 
         catch (Exception e) {
-            log("Error at VNPayCheckoutController: " + e.toString());
+            LOGGER.error("Error at VNPayCheckoutController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);

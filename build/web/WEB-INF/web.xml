@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>vegetablesshop.listener.ContextListener</listener-class>
+    </listener>
     <servlet>
         <servlet-name>MainController</servlet-name>
         <servlet-class>vegetablesshop.controller.MainController</servlet-class>
@@ -122,4 +126,12 @@
         <error-code>404</error-code>
         <location>/404.jsp</location>
     </error-page>
+    <context-param>
+        <param-name>log4j-config-location</param-name>
+        <param-value>WEB-INF/log4j.properties</param-value>
+    </context-param>
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>vegetablesshop.listener.ContextListener</listener-class>
+    </listener>
 </web-app>

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 import vegetablesshop.shopping.Cart;
 
 /**
@@ -18,6 +19,7 @@ import vegetablesshop.shopping.Cart;
  * @author VODUCMINH
  */
 public class DeleteProductCartController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR = "cart.jsp";
     private static final String SUCCESS = "cart.jsp";
     
@@ -31,12 +33,13 @@ public class DeleteProductCartController extends HttpServlet {
             Cart cart = (Cart) session.getAttribute("CART");
             if (cart != null) {
                 cart.removeCart(productID);
+                LOGGER.info("Remove product from cart has id: " + productID + " successfully!");
                 session.setAttribute("CART", cart);
                 url = SUCCESS;
             }
         } 
         catch (Exception e) {
-            log("Error at DeleteProductCartController: " + e.toString());
+            LOGGER.error("Error at DeleteProductCartController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);

@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.products.ProductDTO;
 
@@ -19,6 +20,7 @@ import vegetablesshop.products.ProductDTO;
  * @author VODUCMINH
  */
 public class GetActiveProductController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR = "shop.jsp";
     private static final String SUCCESS = "shop.jsp";
     
@@ -33,11 +35,12 @@ public class GetActiveProductController extends HttpServlet {
             
             if (!productList.isEmpty()) {
                 request.setAttribute("ACTIVE_PRODUCT_LIST", productList);
+                LOGGER.info("Get product list successfully!");
                 url = SUCCESS;
             }
         } 
         catch (Exception e) {
-            log("Error at GetActiveProductController: " + e.toString());
+            LOGGER.error("Error at GetActiveProductController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);

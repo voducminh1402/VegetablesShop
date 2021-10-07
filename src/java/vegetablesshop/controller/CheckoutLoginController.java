@@ -6,17 +6,18 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
 
 /**
  *
  * @author VODUCMINH
  */
 public class CheckoutLoginController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR = "cart.jsp";
     private static final String SUCCESS = "login.jsp";
     
@@ -32,7 +33,7 @@ public class CheckoutLoginController extends HttpServlet {
             }
         } 
         catch (Exception e) {
-            log("Error at CheckoutLoginController: " + e.toString());
+            LOGGER.error("Error at CheckoutLoginController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);

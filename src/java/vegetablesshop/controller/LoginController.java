@@ -6,12 +6,12 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 import vegetablesshop.users.UserDAO;
 import vegetablesshop.users.UserDTO;
 
@@ -20,6 +20,7 @@ import vegetablesshop.users.UserDTO;
  * @author VODUCMINH
  */
 public class LoginController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR = "login.html";
     private static final String USER = "index.jsp";
     private static final String ADMIN = "admin.jsp";
@@ -46,23 +47,28 @@ public class LoginController extends HttpServlet {
                 
                 if (AD == loginUser.getRoleID()) {
                     url = ADMIN;
+                    LOGGER.info("Login admin success!");
                 }
                 else if (US == loginUser.getRoleID() && !"checkout".equals(pageValue)) {
                     url = USER;
+                    LOGGER.info("Login user success!");
                 }
                 else if (US == loginUser.getRoleID() && "checkout".equals(pageValue)) {
                     url = CHECKOUT;
+                    LOGGER.info("Login to checkout success!");
                 }
                 else {
                     session.setAttribute("MESSAGE_ERROR", "This role is not supported!");
+                    LOGGER.warn("Login fail! This role not support!");
                 }
             }
             else {
                 session.setAttribute("MESSAGE_ERROR", "Incorrect user ID or password!");
+                LOGGER.warn("Login fail! Incorrect user ID or password!");
             }
         } 
         catch (Exception e) {
-            log("Error at LoginContoller: " + e.toString());
+            LOGGER.error("Error at LoginContoller: " + e.toString());
         }
         finally {
             response.sendRedirect(url);

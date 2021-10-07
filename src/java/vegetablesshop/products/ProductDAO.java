@@ -11,7 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 import vegetablesshop.utils.DBUtils;
 
 /**
@@ -408,7 +407,7 @@ public class ProductDAO {
         
         return check;
     }
-
+    
 //    public static void main(String[] args) throws SQLException {
 //        ProductDAO dao = new ProductDAO();
 //        System.out.println("cà chua");

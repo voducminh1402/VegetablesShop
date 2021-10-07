@@ -7,7 +7,9 @@ package vegetables.orders;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.UUID;
 import vegetablesshop.utils.DBUtils;
 
@@ -144,5 +146,143 @@ public class OrderDAO {
         }
         
         return check;
+    }
+    
+    public int getOrderDetail(String orderID) throws SQLException {
+        int quantityOrder = 0;
+        
+        Connection conn = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "SELECT ord.productID "
+                            + " FROM tblOrderDetails ord, tblProducts prd "
+                            + " WHERE ord.orderID=?  AND ord.productID = prd.productID";
+                stm = conn.prepareStatement(sql);
+                stm.setString(1, orderID);
+                
+                rs = stm.executeQuery();
+                
+                while (rs.next()) {
+                    quantityOrder = (rs.getRow());
+                }
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (rs != null) {
+                rs.close();;
+            }
+            if (stm != null) {
+                stm.close();;
+            }
+            if (conn != null) {
+                conn.close();;
+            }
+        }
+        
+        
+        return quantityOrder;
+    }
+    
+    public double getOrderInfo(String orderID) throws SQLException {
+        double price = 0;
+        
+        Connection conn = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "SELECT totalPrice "
+                            + " FROM tblOrders "
+                            + " WHERE orderID=? ";
+                stm = conn.prepareStatement(sql);
+                stm.setString(1, orderID);
+                
+                rs = stm.executeQuery();
+                
+                if (rs.next()) {
+                    price = Double.parseDouble(rs.getString("totalPrice"));
+                }
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (rs != null) {
+                rs.close();;
+            }
+            if (stm != null) {
+                stm.close();;
+            }
+            if (conn != null) {
+                conn.close();;
+            }
+        }
+        
+        return price;
+    }
+    
+    public String getShipInfo(String orderID) throws SQLException {
+        String fullInfo = "";
+        
+        Connection conn = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "SELECT fullName, address, city, state, phone "
+                            + " FROM tblShippingInfo "
+                            + " WHERE orderID=? ";
+                stm = conn.prepareStatement(sql);
+                stm.setString(1, orderID);
+                
+                rs = stm.executeQuery();
+                
+                if (rs.next()) {
+                    String fullName = rs.getString("fullName");
+                    String address = rs.getString("address");
+                    String city = rs.getString("city");
+                    String state = rs.getString("state");
+                    String phone = rs.getString("phone");
+                    
+                    fullInfo = fullName + ", " + phone + ", " + address + ", " + city + ", " + state + ".";
+                }
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        
+        return fullInfo;
+    }
+    
+    public static void main(String[] args) throws SQLException {
+        OrderDAO dao = new OrderDAO();
+        System.out.println(dao.getShipInfo("22d769f4-289c-4540-aa5d-61464b63c9a4"));
     }
 }

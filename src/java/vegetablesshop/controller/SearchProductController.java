@@ -6,12 +6,12 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.products.ProductDTO;
 
@@ -20,6 +20,7 @@ import vegetablesshop.products.ProductDTO;
  * @author VODUCMINH
  */
 public class SearchProductController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR = "index.jsp";
     private static final String SUCCESS = "search.jsp";
             
@@ -36,11 +37,12 @@ public class SearchProductController extends HttpServlet {
             
             if (!productList.isEmpty()) {
                 request.setAttribute("SEARCH_PRODUCT_LIST", productList);
+                LOGGER.info("Search product has keyword: " + search + " successfully");
                 url = SUCCESS;
             }
         } 
         catch (Exception e) {
-            log("Error at SearchProductController: " + e.toString());
+            LOGGER.error("Error at SearchProductController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);

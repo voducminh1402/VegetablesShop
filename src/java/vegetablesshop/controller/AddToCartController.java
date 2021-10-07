@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.log4j.Logger;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.products.ProductDTO;
 import vegetablesshop.shopping.Cart;
@@ -21,6 +22,7 @@ import vegetablesshop.shopping.CartProduct;
  * @author VODUCMINH
  */
 public class AddToCartController extends HttpServlet {
+    static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
     private static final String ERROR = "shop.jsp";
     private static final String SUCCESS = "shop.jsp";
     private static final String SEARCH = "SearchProductController";
@@ -35,8 +37,6 @@ public class AddToCartController extends HttpServlet {
             int quantity = Integer.parseInt(request.getParameter("quantity"));
             String valuePage = request.getParameter("valuePage");
             
-            
-            
             ProductDAO dao = new ProductDAO();
             ProductDTO product = dao.getProductForCart(productID);
             
@@ -46,7 +46,6 @@ public class AddToCartController extends HttpServlet {
             
             HttpSession session = request.getSession();
             Cart cart = (Cart) session.getAttribute("CART");
-            
             
             if (cart == null) {
                 cart = new Cart();
@@ -63,9 +62,11 @@ public class AddToCartController extends HttpServlet {
                     if (item.getProductID().equals(productID)) {
                         if ((quantity + item.getQuantity()) <= product.getQuantity()) {
                             item.setQuantity(quantity + item.getQuantity());
+                            LOGGER.info("Set quantity of product: " + product.getProductID() +" successfully!");
                         }
                         else {
                             item.setQuantity(product.getQuantity());
+                            LOGGER.info("Set max quantity of product in cart: " + product.getProductID() +" successfully!");
                         }
                     }
 //                    check lai database
@@ -74,6 +75,7 @@ public class AddToCartController extends HttpServlet {
                             CartProduct cartProduct = new CartProduct(productID, productName, productPrice, productImage, quantity);
                             cart.addToCart(cartProduct);
                             session.setAttribute("CART", cart);
+                            LOGGER.info("Add to cart product id: " + productID + " successfully!");
                             url = SUCCESS;
                             if ("searchPage".equals(valuePage)) {
                                 url = SEARCH;
@@ -114,12 +116,13 @@ public class AddToCartController extends HttpServlet {
                         url = SEARCH;
                     }
                     request.setAttribute("ERROR_CART", "Quantity of this product is not enough!");
+                    LOGGER.warn("Quantity of product " + productID + " is not enough!");
                 }
             }
             
         } 
         catch (Exception e) {
-            log("Error at AddToCartController: " + e.toString());
+            LOGGER.error("Error at AddToCartController: " + e.toString());
         }
         finally {
             request.getRequestDispatcher(url).forward(request, response);
