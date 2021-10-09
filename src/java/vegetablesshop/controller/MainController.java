@@ -30,6 +30,7 @@ public class MainController extends HttpServlet {
     private static final String SEARCH_PRODUCT = "SearchProductController";
     private static final String CHECKOUT_LOGIN = "CheckoutLoginController";
     private static final String CHECKOUT_INFO = "GetInfoCheckoutController";
+    private static final String GET_ALL_PRODUCT = "GetAllProductController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -68,7 +69,9 @@ public class MainController extends HttpServlet {
             else if ("GetInfoCheckout".equals(action)) {
                 url = CHECKOUT_INFO;
             }
-           
+            else if ("GetAllProduct".equals(action)) {
+                url = GET_ALL_PRODUCT;
+            }
             else {
                 HttpSession session = request.getSession();
                 session.setAttribute("CONTROLLER_ERROR_MESSAGE", "This function is not supported!");

@@ -63,7 +63,7 @@ var sc_https=1;
 </head>
 
 <body>
-    <jsp:include page="Header.jsp" />
+    <jsp:include page="Header.jsp"/>
 <!-- START SECTION BANNER -->
 <section class="bg_light_yellow breadcrumb_section background_bg bg_fixed bg_size_contain" data-img-src="assets/images/breadcrumb_bg.png">
 	<div class="container">

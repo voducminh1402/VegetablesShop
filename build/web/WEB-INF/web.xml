@@ -52,6 +52,10 @@
         <servlet-name>GetInfoCheckoutController</servlet-name>
         <servlet-class>vegetablesshop.controller.GetInfoCheckoutController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetAllProductController</servlet-name>
+        <servlet-class>vegetablesshop.controller.GetAllProductController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
         <url-pattern>/MainController</url-pattern>
@@ -107,6 +111,10 @@
     <servlet-mapping>
         <servlet-name>ajaxServlet</servlet-name>
         <url-pattern>/vnpayajax/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetAllProductController</servlet-name>
+        <url-pattern>/GetAllProductController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

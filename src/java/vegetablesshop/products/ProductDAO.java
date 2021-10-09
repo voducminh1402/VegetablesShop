@@ -67,6 +67,57 @@ public class ProductDAO {
         return listProduct;
     }
     
+    public List<ProductDTO> getAllProduct() throws SQLException {
+        List<ProductDTO> listProduct = new ArrayList<>();
+        ProductDAO dao = new ProductDAO();
+        Connection conn = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "SELECT productID, productName, productImage, productPrice, quantity, description, availableID, categoryID, createDate, productStatus "
+                            + " FROM tblProducts";
+                stm = conn.prepareStatement(sql);
+                rs = stm.executeQuery();
+                
+                while (rs.next()) {
+                    String productID = rs.getString("productID");
+                    String productName = rs.getString("productName");
+                    String productImage = rs.getString("productImage");
+                    double productPrice = Double.parseDouble(rs.getString("productPrice"));
+                    int quantity = Integer.parseInt(rs.getString("quantity"));
+                    String description = rs.getString("description");
+                    String availableName = dao.convertAvailableName(Integer.parseInt(rs.getString("availableID")));
+                    String categoryName = dao.convertCategoryName(Integer.parseInt(rs.getString("categoryID")));
+                    String createDate = rs.getString("createDate");
+                    int productStatus = Integer.parseInt(rs.getString("productStatus"));
+
+                    
+                    listProduct.add(new ProductDTO(productID, productName, productImage, productPrice, quantity, description, availableName, categoryName, createDate, productStatus));
+                }
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            } 
+        }
+        
+        return listProduct;
+    }
+    
     public ProductDTO getProduct(String productID) throws SQLException {
         ProductDTO product = new ProductDTO();
         ProductDAO dao = new ProductDAO();
@@ -408,10 +459,12 @@ public class ProductDAO {
         return check;
     }
     
-//    public static void main(String[] args) throws SQLException {
-//        ProductDAO dao = new ProductDAO();
-//        System.out.println("cà chua");
-//        System.out.println(dao.checkQuantityAvailable("12462851"));
-//        
-//    }
+    public static void main(String[] args) throws SQLException {
+        ProductDAO dao = new ProductDAO();
+        dao.getAllProduct();
+        for (ProductDTO product : dao.getAllProduct()) {
+            System.out.println(product.getCreateDate());
+        }
+        
+    }
 }

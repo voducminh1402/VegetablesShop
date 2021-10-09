@@ -43,10 +43,9 @@
                         <%
                             UserDTO loginUser = (UserDTO)session.getAttribute("LOGIN_USER");
                             if (loginUser != null) {
-                                 
                         %>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Hello <%= loginUser.getUserName() %></a>
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Hello <span><%= loginUser.getUserName() %></span></a>
                           <div class="dropdown-menu shadow dropdown-menu-right">
                             <ul>
                                 <li><a class="dropdown-item" href="my-account.jsp">My account</a></li>
