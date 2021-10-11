@@ -46,9 +46,9 @@
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
+                                <th>No</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Address</th>
                                 <th>Phone</th>
                                 <th>Role</th>
                                 <th>Status</th>
