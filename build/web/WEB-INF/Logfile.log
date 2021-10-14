@@ -1325,3 +1325,113 @@ INFO    2021-10-08 22:25:53,610 [http-nio-8080-exec-35] vegetablesshop.controlle
 INFO    2021-10-08 22:25:53,633 [http-nio-8080-exec-35] vegetablesshop.controller.LoginController  - Minus product has product id: 12515619 and minus: 1 successfully
 INFO    2021-10-08 22:25:53,644 [http-nio-8080-exec-35] vegetablesshop.controller.LoginController  - Insert order detail has id: 239180c1-c743-4ce2-8538-1a728274735a successfully
 INFO    2021-10-08 22:25:53,717 [http-nio-8080-exec-35] vegetablesshop.controller.LoginController  - Insert shipping info has id: 239180c1-c743-4ce2-8538-1a728274735a successfully
+INFO    2021-10-14 16:40:55,071 [http-nio-8080-exec-60] vegetablesshop.controller.LoginController  - Login user success!
+INFO    2021-10-14 16:40:58,007 [http-nio-8080-exec-57] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-14 16:41:01,145 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-14 16:41:04,850 [http-nio-8080-exec-62] vegetablesshop.controller.LoginController  - Update cart successfully!
+INFO    2021-10-14 16:41:05,507 [http-nio-8080-exec-65] vegetablesshop.controller.LoginController  - Update cart successfully!
+INFO    2021-10-14 16:41:06,049 [http-nio-8080-exec-61] vegetablesshop.controller.LoginController  - Update cart successfully!
+INFO    2021-10-14 16:41:07,056 [http-nio-8080-exec-64] vegetablesshop.controller.LoginController  - Update cart successfully!
+INFO    2021-10-14 16:41:07,758 [http-nio-8080-exec-60] vegetablesshop.controller.LoginController  - Update cart successfully!
+INFO    2021-10-14 16:41:08,363 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Update cart successfully!
+INFO    2021-10-14 16:41:08,977 [http-nio-8080-exec-63] vegetablesshop.controller.LoginController  - Update cart successfully!
+WARN    2021-10-14 16:41:10,885 [http-nio-8080-exec-59] vegetablesshop.controller.LoginController  - Quantity of this product is not enough!
+WARN    2021-10-14 16:41:13,310 [http-nio-8080-exec-66] vegetablesshop.controller.LoginController  - Quantity of this product is not enough!
+WARN    2021-10-14 16:41:15,587 [http-nio-8080-exec-57] vegetablesshop.controller.LoginController  - Quantity of this product is not enough!
+WARN    2021-10-14 16:41:16,363 [http-nio-8080-exec-62] vegetablesshop.controller.LoginController  - Quantity of this product is not enough!
+INFO    2021-10-14 16:41:23,111 [http-nio-8080-exec-60] vegetablesshop.controller.LoginController  - Access VN Pay checkout function successfully!
+INFO    2021-10-14 16:41:56,022 [http-nio-8080-exec-57] vegetablesshop.controller.LoginController  - Insert order has order id: 3028758a-9ade-4eb9-bbc5-56f68bac6525successfully!
+INFO    2021-10-14 16:41:56,045 [http-nio-8080-exec-57] vegetablesshop.controller.LoginController  - Minus product has product id: 12462851 and minus: 8 successfully
+INFO    2021-10-14 16:41:56,064 [http-nio-8080-exec-57] vegetablesshop.controller.LoginController  - Insert order detail has id: 3028758a-9ade-4eb9-bbc5-56f68bac6525 successfully
+INFO    2021-10-14 16:41:56,077 [http-nio-8080-exec-57] vegetablesshop.controller.LoginController  - Insert shipping info has id: 3028758a-9ade-4eb9-bbc5-56f68bac6525 successfully
+INFO    2021-10-14 16:46:32,763 [http-nio-8080-exec-60] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-14 16:46:35,598 [http-nio-8080-exec-66] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-14 16:46:41,499 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Access COD checkout function successfully!
+INFO    2021-10-14 16:46:41,521 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Insert order has order id: fb56451f-05dd-487c-9340-586f0290ef2fsuccessfully!
+INFO    2021-10-14 16:46:41,540 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Minus product has product id: 12515190 and minus: 1 successfully
+INFO    2021-10-14 16:46:41,552 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Insert order detail has id: fb56451f-05dd-487c-9340-586f0290ef2f successfully
+INFO    2021-10-14 16:46:41,563 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Insert shipping info has id: fb56451f-05dd-487c-9340-586f0290ef2f successfully
+INFO    2021-10-14 16:49:33,055 [http-nio-8080-exec-66] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-14 16:49:37,506 [http-nio-8080-exec-64] vegetablesshop.controller.LoginController  - Search product has keyword: a successfully
+INFO    2021-10-14 16:49:47,753 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-14 16:50:03,486 [http-nio-8080-exec-59] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 16:55:02,885 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 16:55:48,948 [http-nio-8080-exec-65] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 16:57:33,877 [http-nio-8080-exec-62] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 16:58:15,416 [http-nio-8080-exec-64] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 16:58:34,822 [http-nio-8080-exec-66] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 16:58:36,894 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 16:59:20,612 [http-nio-8080-exec-64] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 16:59:22,318 [http-nio-8080-exec-57] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:00:28,195 [http-nio-8080-exec-62] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:00:47,084 [http-nio-8080-exec-62] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:02:17,132 [http-nio-8080-exec-75] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:02:22,431 [http-nio-8080-exec-74] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:02:38,866 [http-nio-8080-exec-68] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:04:55,597 [http-nio-8080-exec-76] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:05:00,130 [http-nio-8080-exec-68] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:05:04,462 [http-nio-8080-exec-74] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:05:19,182 [http-nio-8080-exec-72] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:07:33,266 [http-nio-8080-exec-74] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:07:53,891 [http-nio-8080-exec-67] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:08:09,866 [http-nio-8080-exec-70] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:08:24,407 [http-nio-8080-exec-71] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:08:35,988 [http-nio-8080-exec-73] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:10:30,966 [http-nio-8080-exec-68] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-14 17:10:54,345 [http-nio-8080-exec-72] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-14 17:10:58,292 [http-nio-8080-exec-71] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:11:53,318 [http-nio-8080-exec-68] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:12:00,535 [http-nio-8080-exec-74] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:12:16,035 [http-nio-8080-exec-75] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:12:19,578 [http-nio-8080-exec-67] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:12:23,088 [http-nio-8080-exec-76] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 17:44:58,414 [http-nio-8080-exec-67] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:31:44,175 [http-nio-8080-exec-69] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:31:48,106 [http-nio-8080-exec-67] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:31:51,174 [http-nio-8080-exec-71] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:31:56,934 [http-nio-8080-exec-70] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:32:05,513 [http-nio-8080-exec-74] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:32:12,250 [http-nio-8080-exec-69] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:32:25,344 [http-nio-8080-exec-67] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:34:04,297 [http-nio-8080-exec-71] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:34:38,151 [http-nio-8080-exec-69] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:34:44,871 [http-nio-8080-exec-74] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:35:18,921 [http-nio-8080-exec-71] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 21:37:41,992 [http-nio-8080-exec-74] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 22:04:03,629 [http-nio-8080-exec-94] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 22:23:57,125 [http-nio-8080-exec-101] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:15:15,223 [http-nio-8080-exec-206] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+ERROR   2021-10-14 23:21:57,421 [http-nio-8080-exec-215] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+ERROR   2021-10-14 23:22:00,254 [http-nio-8080-exec-210] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+ERROR   2021-10-14 23:22:14,057 [http-nio-8080-exec-211] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+ERROR   2021-10-14 23:23:43,637 [http-nio-8080-exec-1] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+ERROR   2021-10-14 23:28:39,125 [http-nio-8080-exec-18] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+INFO    2021-10-14 23:29:57,104 [http-nio-8080-exec-14] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+ERROR   2021-10-14 23:32:15,105 [http-nio-8080-exec-28] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+ERROR   2021-10-14 23:32:56,493 [http-nio-8080-exec-24] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+INFO    2021-10-14 23:34:01,569 [http-nio-8080-exec-31] vegetablesshop.controller.LoginController  - Login admin success!
+ERROR   2021-10-14 23:34:08,052 [http-nio-8080-exec-27] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+INFO    2021-10-14 23:34:18,157 [http-nio-8080-exec-34] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-14 23:34:20,196 [http-nio-8080-exec-35] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-14 23:34:25,370 [http-nio-8080-exec-35] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-14 23:34:40,861 [http-nio-8080-exec-31] vegetablesshop.controller.LoginController  - Login admin success!
+ERROR   2021-10-14 23:37:58,014 [http-nio-8080-exec-43] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+INFO    2021-10-14 23:38:13,507 [http-nio-8080-exec-50] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-14 23:38:55,585 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-14 23:40:13,320 [http-nio-8080-exec-67] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:41:20,456 [http-nio-8080-exec-74] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:41:21,447 [http-nio-8080-exec-65] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:41:26,110 [http-nio-8080-exec-76] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:41:37,118 [http-nio-8080-exec-75] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:41:38,893 [http-nio-8080-exec-76] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:42:25,049 [http-nio-8080-exec-83] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:42:49,222 [http-nio-8080-exec-81] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:44:12,704 [http-nio-8080-exec-80] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:44:29,499 [http-nio-8080-exec-76] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:44:35,435 [http-nio-8080-exec-77] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-14 23:44:58,407 [http-nio-8080-exec-82] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+ERROR   2021-10-14 23:46:28,990 [http-nio-8080-exec-79] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+ERROR   2021-10-14 23:46:31,847 [http-nio-8080-exec-76] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+ERROR   2021-10-14 23:46:34,741 [http-nio-8080-exec-77] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+ERROR   2021-10-14 23:46:47,233 [http-nio-8080-exec-78] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException
+ERROR   2021-10-14 23:46:51,515 [http-nio-8080-exec-83] vegetablesshop.controller.LoginController  - Error at DeleteUserController: java.lang.NullPointerException

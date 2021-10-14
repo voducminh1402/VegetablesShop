@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import vegetablesshop.utils.DBUtils;
 
 /**
@@ -142,6 +144,144 @@ public class UserDAO {
             }
         }
         return check;
+    }
+    
+    public boolean editUser(UserDTO user) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement stm = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                String sql = "UPDATE tblUsers "
+                            + " SET roleID=?, userName=?, userPhone=?, userAddress=?, email=?, userStatus=? "
+                            + " WHERE userID=?";
+                stm = conn.prepareStatement(sql);
+                
+                stm.setInt(1, user.getRoleID());
+                stm.setString(2, user.getUserName());
+                stm.setString(3, user.getUserPhone());
+                stm.setString(4, user.getUserAddress());
+                stm.setString(5, user.getEmail());
+                stm.setInt(6, Integer.parseInt(user.getUserStatus()));
+                stm.setString(7, user.getUserID());
+                
+                check = stm.executeUpdate() > 0;
+                
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        
+        
+        return check;
+    }
+    
+    public boolean deleteUser(String userID) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement stm = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+             
+            if (conn != null) {
+                String sql = "UPDATE tblUsers "
+                            + " SET userStatus=? "
+                            + " WHERE userID=?";
+                stm = conn.prepareStatement(sql);
+                stm.setInt(1, 0);
+                stm.setString(2, userID);
+                
+                check = stm.executeUpdate() > 0;
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        
+        return check;
+    }
+    
+    public List<UserDTO> getActiveUser() throws SQLException {
+        List<UserDTO> listUser = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "SELECT userID, userName, userAddress, userPhone, roleID, userStatus, email, createDate"
+                            + " FROM tblUsers "
+                            + " WHERE roleID <> 3";
+                            
+                stm = conn.prepareStatement(sql);
+               
+                rs = stm.executeQuery();
+                
+                while (rs.next()) {
+                    String userID = rs.getString("userID");
+                    String userName = rs.getString("userName");
+                    String userAddress = rs.getString("userAddress");
+                    String userPhone = rs.getString("userPhone");
+                    int roleID = Integer.parseInt(rs.getString("roleID"));
+                    String userStatus = parseUserStatus(Integer.parseInt(rs.getString("userStatus")));
+                    String email = rs.getString("email");
+                    String createDate = rs.getString("createDate");
+                    
+                    listUser.add(new UserDTO(userID, userName, userAddress, userPhone, "*********", createDate, email, userStatus, roleID));
+                }
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        
+        return listUser;
+    }
+    
+    public String parseUserStatus(int userStatus) {
+        String result = "";
+        
+        if (userStatus == 1) {
+            result = "Active";
+        }
+        else if (userStatus == 0) {
+            result = "Deleted";
+        }
+        
+        return result;
     }
     
 //    public static void main(String[] args) throws SQLException {

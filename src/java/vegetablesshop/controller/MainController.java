@@ -31,6 +31,9 @@ public class MainController extends HttpServlet {
     private static final String CHECKOUT_LOGIN = "CheckoutLoginController";
     private static final String CHECKOUT_INFO = "GetInfoCheckoutController";
     private static final String GET_ALL_PRODUCT = "GetAllProductController";
+    private static final String GET_ACTIVE_USER = "GetActiveUserController";
+    private static final String EDIT_USER = "EditUserController";
+    private static final String DELETE_USER = "DeleteUserController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -71,6 +74,15 @@ public class MainController extends HttpServlet {
             }
             else if ("GetAllProduct".equals(action)) {
                 url = GET_ALL_PRODUCT;
+            }
+            else if ("GetActiveUser".equals(action)) {
+                url = GET_ACTIVE_USER;
+            }
+            else if ("EditUser".equals(action)) {
+                url = EDIT_USER;
+            }
+            else if ("DeleteUser".equals(action)) {
+                url = DELETE_USER;
             }
             else {
                 HttpSession session = request.getSession();

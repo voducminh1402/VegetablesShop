@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>vegetablesshop.filters.CharacterEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     <listener>
         <description>ServletContextListener</description>
         <listener-class>vegetablesshop.listener.ContextListener</listener-class>
@@ -55,6 +63,18 @@
     <servlet>
         <servlet-name>GetAllProductController</servlet-name>
         <servlet-class>vegetablesshop.controller.GetAllProductController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetActiveUserController</servlet-name>
+        <servlet-class>vegetablesshop.controller.GetActiveUserController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditUserController</servlet-name>
+        <servlet-class>vegetablesshop.controller.EditUserController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteUserController</servlet-name>
+        <servlet-class>vegetablesshop.controller.DeleteUserController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
@@ -115,6 +135,18 @@
     <servlet-mapping>
         <servlet-name>GetAllProductController</servlet-name>
         <url-pattern>/GetAllProductController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetActiveUserController</servlet-name>
+        <url-pattern>/GetActiveUserController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditUserController</servlet-name>
+        <url-pattern>/EditUserController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteUserController</servlet-name>
+        <url-pattern>/DeleteUserController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
