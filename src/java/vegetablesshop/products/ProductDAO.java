@@ -45,7 +45,7 @@ public class ProductDAO {
                     String availableName = dao.convertAvailableName(Integer.parseInt(rs.getString("availableID")));
                     String categoryName = dao.convertCategoryName(Integer.parseInt(rs.getString("categoryID")));
                     
-                    listProduct.add(new ProductDTO(productID, productName, productImage, productPrice, quantity, description, availableName, categoryName, "", 1));
+                    listProduct.add(new ProductDTO(productID, productName, productImage, productPrice, quantity, description, availableName, categoryName, ""));
                 }
             }
         } 
@@ -78,7 +78,7 @@ public class ProductDAO {
             conn = DBUtils.getConnection();
             
             if (conn != null) {
-                String sql = "SELECT productID, productName, productImage, productPrice, quantity, description, availableID, categoryID, createDate, productStatus "
+                String sql = "SELECT productID, productName, productImage, productPrice, quantity, description, availableID, categoryID, createDate"
                             + " FROM tblProducts";
                 stm = conn.prepareStatement(sql);
                 rs = stm.executeQuery();
@@ -93,10 +93,9 @@ public class ProductDAO {
                     String availableName = dao.convertAvailableName(Integer.parseInt(rs.getString("availableID")));
                     String categoryName = dao.convertCategoryName(Integer.parseInt(rs.getString("categoryID")));
                     String createDate = rs.getString("createDate");
-                    int productStatus = Integer.parseInt(rs.getString("productStatus"));
 
                     
-                    listProduct.add(new ProductDTO(productID, productName, productImage, productPrice, quantity, description, availableName, categoryName, createDate, productStatus));
+                    listProduct.add(new ProductDTO(productID, productName, productImage, productPrice, quantity, description, availableName, categoryName, createDate));
                 }
             }
         } 
@@ -145,7 +144,7 @@ public class ProductDAO {
                     String availableName = dao.convertAvailableName(Integer.parseInt(rs.getString("availableID")));
                     String categoryName = dao.convertCategoryName(Integer.parseInt(rs.getString("categoryID")));
 
-                    product = new ProductDTO(productID, productName, productImage, productPrice, quantity, description, availableName, categoryName, "", 1);
+                    product = new ProductDTO(productID, productName, productImage, productPrice, quantity, description, availableName, categoryName, "");
                 }
                 
             }
@@ -191,7 +190,7 @@ public class ProductDAO {
                     String productImage = rs.getString("productImage");
                     double productPrice = Double.parseDouble(rs.getString("productPrice"));
 
-                    productList.add(new ProductDTO(productID, productName, productImage, productPrice, 1, "", "", "", "", 1));
+                    productList.add(new ProductDTO(productID, productName, productImage, productPrice, 1, "", "", "", ""));
                 }
                 
             }
@@ -238,7 +237,7 @@ public class ProductDAO {
                     double productPrice = Double.parseDouble(rs.getString("productPrice"));
                     int quantity = Integer.parseInt(rs.getString("quantity"));
 
-                    product = new ProductDTO(productID, productName, productImage, productPrice, quantity, "", "", "", "", 1);
+                    product = new ProductDTO(productID, productName, productImage, productPrice, quantity, "", "", "", "");
                 }
                 
             }
@@ -419,7 +418,7 @@ public class ProductDAO {
     }
     
     public int checkQuantityAvailable(String productID) throws SQLException {
-       int check = 0;
+        int check = 0;
         Connection conn = null;
         PreparedStatement stm = null;
         ResultSet rs = null;
@@ -457,6 +456,47 @@ public class ProductDAO {
         }
         
         return check;
+    }
+    
+    public List<CategoryDTO> getCategoryList() throws SQLException {
+        List<CategoryDTO> cateList = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "SELECT categoryID, categoryName"
+                            + " FROM tblCategories ";
+                stm = conn.prepareStatement(sql);
+                rs = stm.executeQuery();
+                
+                while (rs.next()) {
+                    String categoryID = rs.getString("categoryID");
+                    String categoryName = rs.getString("categoryName");
+                    
+                    cateList.add(new CategoryDTO(categoryID, categoryName, ""));
+                }
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            } 
+        }
+        
+        return cateList;
     }
     
     public static void main(String[] args) throws SQLException {

@@ -3,7 +3,7 @@
     Created on : Sep 7, 2021, 8:38:18 AM
     Author     : VODUCMINH
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="vegetablesshop.products.ProductDTO"%>
 <%@page import="java.time.LocalDateTime"%>
 <%@page import="java.time.format.DateTimeFormatter"%>
@@ -84,60 +84,37 @@
                             </tr>
                        
                         <tbody>
-                            <%
-                                List<ProductDTO> productList = (List<ProductDTO>)request.getAttribute("ALL_PRODUCT_LIST");
-                                
-                                
-                                if (productList == null) {
-                                    response.sendRedirect("MainController?action=GetAllProduct");
-                                }
-                                
-                                int count = 1;
-                                
-                                if (productList != null) {
-                                    for (ProductDTO product : productList) {
-                            %>
+                            <c:if test="${requestScope.ALL_PRODUCT_LIST == null || requestScope.CATEGORY_LIST == null}">
+                                <c:redirect url="MainController?action=GetAllProduct"/>
+                            </c:if>
+                            
+                            <c:forEach items="${requestScope.ALL_PRODUCT_LIST}" var="product" varStatus="counter">
                             <tr>
-                                <td><%= count++ %></td>
-                                <td><%= product.getProductName() %></td>
-                                <td><%= product.getCategoryName() %></td>
-                                <td><%= product.getProductPrice() %></td>
-                                <td><%= product.getQuantity() %></td>
+                                <td>${counter.count}</td>
+                                <td>${product.productName}</td>
+                                <td>${product.categoryName}</td>
+                                <td>${product.productPrice}</td>
+                                <td>${product.quantity}</td>
                                 <td>
-                                    <%
-                                        if (product.getProductStatus() == 1) {
-                                    %>
-                                        <span class="badge badge-success">Published</span>
-                                    <%        
-                                        }
-                                        else {
-                                    %>
-                                         <span class="badge badge-danger">Deleted</span>
-                                    <%        
-                                        }
-                                    %>
+                                    <span class="badge badge-success">${product.availableName}</span>
                                 </td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit edit-product" 
-                                       data-id="" 
-                                       data-name=""
-                                       data-category=""
-                                       data-price=""
-                                       data-discount=""
-                                       data-description=""
-                                       data-image=""
-                                       data-quantity=""
-                                       data-available=""
-                                       data-condition=""
-                                       data-date=""
+                                       data-id="${product.productID}" 
+                                       data-name="${product.productName}"
+                                       data-category="${product.categoryName}"
+                                       data-price="${product.productPrice}"
+                                       data-description="${product.description}"
+                                       data-image="${product.productImage}"
+                                       data-quantity="${product.quantity}"
+                                       data-available="${product.availableName}"
+                                       data-date="${product.createDate}"
                                        data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                     <a href="#deleteEmployeeModal" data-id="" class="delete delete-product" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
-                            <%
-                                    }
-                                }
-                            %>
+                            </c:forEach>
+                          
                         </tbody>
                      
                     </table>
@@ -257,9 +234,9 @@
                             <div class="form-group">
                                 <label>Category Name</label>
                                 <select name="category" class="form-control" id="exampleFormControlSelect1">
-                                    
-                                  <option id="category-option" value=""></option>
-                                  
+                                    <c:forEach items="${requestScope.CATEGORY_LIST}" var="cate">
+                                        <option id="category-option" value="${cate.categoryID}">${cate.categoryName}</option>
+                                    </c:forEach>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -271,10 +248,6 @@
                                 <input id="product-price" step="0.01" name="price" min="0" type="number" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Discount</label>
-                                <input id="product-discount" name="discount" min="0" max="100" type="number" class="form-control" required>
-                            </div>
-                            <div class="form-group">
                                 <label>Description</label>
                                 <textarea id="product-description" name="description" rows="7" type="number" class="form-control" required></textarea>
                             </div>
@@ -284,21 +257,15 @@
                             </div>
                             <div class="form-group">
                                 <label>Quantity</label>
-                                <input id="product-quantity" name="quantity" min="0" type="number" class="form-control" required>
+                                <input id="product-quantity" name="quantity" min="1" type="number" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Available Status</label>
                                 <select name="availableStatus" class="form-control" id="exampleFormControlSelect1">
-                                  <option value="AV">Available</option>
-                                  <option value="NAV">Not Available</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Condition Status</label>
-                                <select name="conditionStatus" class="form-control" id="exampleFormControlSelect1">
-                                  <option value="SALE">Sale</option>
-                                  <option value="NEW">New</option>
-                                  <option value="NORMAL">Normal</option>
+                                  <option value="1">Available</option>
+                                  <option value="2">Not Available</option>
+                                  <option value="3">Coming Soon</option>
+                                  <option value="4">Sale</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -409,7 +376,7 @@
   
         end popup-->
 
-        <script src=".assets/js/app-admin.js"></script>
+<script src="./assets/js/app-admin.js"></script>
         <script>
             // ---------Responsive-navbar-active-animation-----------
             function test(){

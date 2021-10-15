@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import static vegetablesshop.controller.GetActiveProductController.LOGGER;
+import vegetablesshop.products.CategoryDTO;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.products.ProductDTO;
 
@@ -33,10 +34,12 @@ public class GetAllProductController extends HttpServlet {
         try {
             ProductDAO dao = new ProductDAO();
             List<ProductDTO> productList = dao.getAllProduct();
+            List<CategoryDTO> cateList = dao.getCategoryList();
 //            HttpSession session = request.getSession();
             
-            if (!productList.isEmpty()) {
+            if (!productList.isEmpty() && !cateList.isEmpty()) {
                 request.setAttribute("ALL_PRODUCT_LIST", productList);
+                request.setAttribute("CATEGORY_LIST", cateList);
                 LOGGER.info("Admin get all product list successfully!");
                 url = SUCCESS;
             }

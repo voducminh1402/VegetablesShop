@@ -19,12 +19,11 @@ public class ProductDTO {
     private String availableName;
     private String categoryName;
     private String createDate;
-    private int productStatus;
 
     public ProductDTO() {
     }
 
-    public ProductDTO(String productID, String productName, String productImage, double productPrice, int quantity, String description, String availableName, String categoryName, String createDate, int productStatus) {
+    public ProductDTO(String productID, String productName, String productImage, double productPrice, int quantity, String description, String availableName, String categoryName, String createDate) {
         this.productID = productID;
         this.productName = productName;
         this.productImage = productImage;
@@ -34,7 +33,6 @@ public class ProductDTO {
         this.availableName = availableName;
         this.categoryName = categoryName;
         this.createDate = createDate;
-        this.productStatus = productStatus;
     }
 
     public String getProductID() {
@@ -109,17 +107,9 @@ public class ProductDTO {
         this.createDate = createDate;
     }
 
-    public int getProductStatus() {
-        return productStatus;
-    }
-
-    public void setProductStatus(int productStatus) {
-        this.productStatus = productStatus;
-    }
-
     @Override
     public String toString() {
-        return "ProductDTO{" + "productID=" + productID + ", productName=" + productName + ", productImage=" + productImage + ", productPrice=" + productPrice + ", quantity=" + quantity + ", description=" + description + ", availableID=" + availableName + ", categoryID=" + categoryName + ", createDate=" + createDate + ", productStatus=" + productStatus + '}';
+        return "ProductDTO{" + "productID=" + productID + ", productName=" + productName + ", productImage=" + productImage + ", productPrice=" + productPrice + ", quantity=" + quantity + ", description=" + description + ", availableID=" + availableName + ", categoryID=" + categoryName + ", createDate=" + createDate + ", productStatus=" + '}';
     }
     
     

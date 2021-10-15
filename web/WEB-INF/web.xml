@@ -76,6 +76,10 @@
         <servlet-name>DeleteUserController</servlet-name>
         <servlet-class>vegetablesshop.controller.DeleteUserController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetCategoryController</servlet-name>
+        <servlet-class>vegetablesshop.controller.GetCategoryController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
         <url-pattern>/MainController</url-pattern>
@@ -147,6 +151,10 @@
     <servlet-mapping>
         <servlet-name>DeleteUserController</servlet-name>
         <url-pattern>/DeleteUserController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetCategoryController</servlet-name>
+        <url-pattern>/GetCategoryController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
