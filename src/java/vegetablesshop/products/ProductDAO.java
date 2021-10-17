@@ -30,8 +30,7 @@ public class ProductDAO {
             
             if (conn != null) {
                 String sql = "SELECT productID, productName, productImage, productPrice, quantity, description, availableID, categoryID "
-                            + " FROM tblProducts "
-                            + " WHERE productStatus = 1";
+                            + " FROM tblProducts ";
                 stm = conn.prepareStatement(sql);
                 rs = stm.executeQuery();
                 
@@ -498,6 +497,120 @@ public class ProductDAO {
         
         return cateList;
     }
+    
+    public boolean updateProduct(ProductDTO product) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement stm = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            if (conn != null) {
+                String sql = "UPDATE tblProducts "
+                            + " SET categoryID=?, productName=?, productPrice=?, description=?, productImage=?, quantity=?, availableID=? "
+                            + " WHERE productID=?";
+                stm = conn.prepareStatement(sql);
+                
+                stm.setInt(1, Integer.parseInt(product.getCategoryName()));
+                stm.setString(2, product.getProductName());
+                stm.setDouble(3, product.getProductPrice());
+                stm.setString(4, product.getDescription());
+                stm.setString(5, product.getProductImage());
+                stm.setInt(6, product.getQuantity());
+                stm.setInt(7, Integer.parseInt(product.getAvailableName()));
+                stm.setString(8, product.getProductID());
+                
+                check = stm.executeUpdate() > 0;
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        
+        return check;
+    }
+    
+    public boolean deleteProduct(String productId) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement stm = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "DELETE tblProducts WHERE productID=?";
+                stm = conn.prepareStatement(sql);
+                stm.setString(1, productId);
+                
+                check = stm.executeUpdate() > 0;
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        
+        return check;
+    }
+    
+    public boolean insertProduct(ProductDTO product) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement stm = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                
+                String sql = "INSERT INTO tblProducts(productID, productName, productImage, productPrice, quantity, description, availableID, categoryID, createDate) "
+                            + "VALUES(?,?,?,?,?,?,?,?,?)";
+                
+                stm = conn.prepareStatement(sql);
+                stm.setString(1, product.getProductID());
+                stm.setString(2, product.getProductName());
+                stm.setString(3, product.getProductImage());
+                stm.setDouble(4, product.getProductPrice());
+                stm.setInt(5, product.getQuantity());
+                stm.setString(6, product.getDescription());
+                stm.setInt(7, Integer.parseInt(product.getAvailableName()));
+                stm.setInt(8, Integer.parseInt(product.getCategoryName()));
+                stm.setString(9, product.getCreateDate());
+                
+                check = stm.executeUpdate() > 0;
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return check;
+    }
+    
+    
     
     public static void main(String[] args) throws SQLException {
         ProductDAO dao = new ProductDAO();

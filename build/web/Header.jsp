@@ -86,7 +86,7 @@
                         <a class="nav-link" href="about.jsp">About Us</a>
                     </li>
                     <li class="dropdown dropdown-mega-menu">
-                        <a class="dropdown-toggle nav-link" href="http://localhost:8080/VegetablesShop/MainController?action=GetActiveProduct">Shop</a>
+                        <a class="dropdown-toggle nav-link" href="MainController?action=GetActiveProduct">Shop</a>
                         <div class="dropdown-menu">
                             <ul class="mega-menu d-lg-flex">
                                 <li class="mega-menu-col col-lg-3">

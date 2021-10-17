@@ -100,7 +100,9 @@ $(document).on("click", ".edit-product", function () {
     $(".modal-body #product-name").val(name);
     $(".modal-body #product-price").val(parseFloat(price));
     $(".modal-body #product-discount").val(parseInt(discount));
-    $(".modal-body #product-description").val(description);
+    $(".modal-body #product-description p").val(description);
+//    $(".mce-content-body p").val(description);
+    tinyMCE.activeEditor.setContent(description);
     $(".modal-body #product-image").val(image);
     $(".modal-body #product-quantity").val(parseInt(quantity));
     $(".modal-body #date").val(date);

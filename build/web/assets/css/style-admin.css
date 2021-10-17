@@ -220,7 +220,10 @@ table.table .avatar {
 }	
 .modal form label {
 	font-weight: normal;
-}	
+}
+.modal-open .modal {
+    overflow-y: auto !important;
+}
 
 .a-tag-nostyle {
     color: white;
@@ -498,6 +501,14 @@ table.table .avatar {
   -o-transform: translateY(0);
   transform: translateY(0);
 }
+
+/*custom input upload image*/
+/*custom inpu file*/
+.custom-file-input {
+  opacity: 1 !important;
+
+}
+
 @media only screen and (min-width: 1170px) {
   .bts-popup-container {
     margin: 8em auto;
@@ -505,5 +516,6 @@ table.table .avatar {
 }
 
 /*end popup*/
+
 
 

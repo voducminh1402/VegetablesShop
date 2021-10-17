@@ -25,7 +25,29 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="./assets/css/style-admin.css">
-
+        <script src='https://cdn.tiny.cloud/1/m862mtwmvofelufcxf6kpr7rr30u4mh13bb09ks2g0xg8gdf/tinymce/5/tinymce.min.js' referrerpolicy="origin">
+        </script>
+        <script>
+          tinymce.init({
+            selector: '.text-area-des',
+            menubar: false
+          });
+          tinyMCE.activeEditor.setContent('<span>some</span> html');
+        </script>
+        <link rel="stylesheet" href="./assets/css/custombootstrap.css"/>
+        
+        <style>
+            #editEmployeeModal{
+                opacity:1 !important;
+                overflow: auto!important
+            }
+            
+            #addEmployeeModal{
+                opacity:1 !important;
+                overflow: auto!important
+            }
+        </style>
+        
     </head>
     <body>
         <nav class="navbar navbar-expand-custom navbar-mainbg">
@@ -110,7 +132,7 @@
                                        data-available="${product.availableName}"
                                        data-date="${product.createDate}"
                                        data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                    <a href="#deleteEmployeeModal" data-id="" class="delete delete-product" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                    <a href="#deleteEmployeeModal" data-id="${product.productID}" class="delete delete-product" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
                             </c:forEach>
@@ -137,22 +159,18 @@
         <div id="addEmployeeModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form action="MainController" accept-charset="UTF-8">
+                    <form action="MainController"  method="POST" accept-charset="UTF-8">
                         <div class="modal-header">						
-                            <h4 class="modal-title">Add Product</h4>
+                            <h4 class="modal-title">Edit Employee</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Product ID</label>
-                                <input name="productID" type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
                                 <label>Category Name</label>
-                                <select name="category" class="form-control" id="exampleFormControlSelect1">
-                                   
-                                  <option id="category-option" value=""></option>
-                                 
+                                <select name="categoryID" class="form-control" id="exampleFormControlSelect1">
+                                    <c:forEach items="${requestScope.CATEGORY_LIST}" var="cate">
+                                        <option id="category-option" value="${cate.categoryID}">${cate.categoryName}</option>
+                                    </c:forEach>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -161,40 +179,33 @@
                             </div>
                             <div class="form-group">
                                 <label>Price</label>
-                                <input name="price" step="0.01" min="0" type="number" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Discount</label>
-                                <input name="discount" min="0" max="100" type="number" class="form-control" required>
+                                <input step="0.01" name="productPrice" min="0" type="number" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
-                                <textarea name="description" type="number" class="form-control" required></textarea>
+                                <textarea  name="description" rows="10" type="number" class="form-control text-area-des"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Product Image</label>
-                                <input name="image" type="text" class="form-control" required>
+<!--                                <input id="product-image" name="image" type="text" class="form-control" required>-->
+                                <input type="file" class="custom-file-input">
+                                <input name="productImage" id="product-image" type="hidden" value="product-image">
                             </div>
                             <div class="form-group">
                                 <label>Quantity</label>
-                                <input name="quantity" min="0" type="number" class="form-control" required>
+                                <input  name="quantity" min="1" type="number" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Available Status</label>
-                                <select name="availableStatus" class="form-control" id="exampleFormControlSelect1">
-                                  <option value="AV">Available</option>
-                                  <option value="NAV">Not Available</option>
+                                <select name="availableID" class="form-control" id="exampleFormControlSelect1">
+                                  <option value="1">Available</option>
+                                  <option value="2">Not Available</option>
+                                  <option value="3">Coming Soon</option>
+                                  <option value="4">Sale</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Condition Status</label>
-                                <select name="conditionStatus" class="form-control" id="exampleFormControlSelect1">
-                                  <option value="SALE">Sale</option>
-                                  <option value="NEW">New</option>
-                                  <option value="NORMAL">Normal</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
+                                <label>Date</label>
                                 <%
                                     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");  
                                     LocalDateTime now = LocalDateTime.now();
@@ -202,8 +213,7 @@
                                     
                                     if (currentDate != null) {
                                 %>
-                                <label>Date</label>
-                                <input id="date" name="createDate" type="text" class="form-control" value="<%= currentDate %>" readonly>
+                                <input id="date" name="createDate" type="text" value="<%= currentDate %>" class="form-control" readonly>
                                 <%
                                     }
                                 %>
@@ -211,14 +221,14 @@
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" name="action" value="Add Product">
+                            <input type="submit" class="btn btn-success" name="action" value="AddProduct">
                         </div>
                     </form>
                 </div>
             </div>
         </div>
         <!-- Edit Modal HTML -->
-        <div id="editEmployeeModal" class="modal fade">
+        <div id="editEmployeeModal" class="modal fade custom-modal" style="overflow: auto !important">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form action="MainController"  method="POST" accept-charset="UTF-8">
@@ -233,7 +243,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Category Name</label>
-                                <select name="category" class="form-control" id="exampleFormControlSelect1">
+                                <select name="categoryID" class="form-control" id="exampleFormControlSelect1">
                                     <c:forEach items="${requestScope.CATEGORY_LIST}" var="cate">
                                         <option id="category-option" value="${cate.categoryID}">${cate.categoryName}</option>
                                     </c:forEach>
@@ -245,15 +255,17 @@
                             </div>
                             <div class="form-group">
                                 <label>Price</label>
-                                <input id="product-price" step="0.01" name="price" min="0" type="number" class="form-control" required>
+                                <input id="product-price" step="0.01" name="productPrice" min="0" type="number" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
-                                <textarea id="product-description" name="description" rows="7" type="number" class="form-control" required></textarea>
+                                <textarea id="product-description" name="description" rows="10" type="number" class="form-control text-area-des"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Product Image</label>
-                                <input id="product-image" name="image" type="text" class="form-control" required>
+<!--                                <input id="product-image" name="image" type="text" class="form-control" required>-->
+                                <input type="file" class="custom-file-input">
+                                <input name="productImage" type="hidden" id="product-image" value="product-image">
                             </div>
                             <div class="form-group">
                                 <label>Quantity</label>
@@ -261,7 +273,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Available Status</label>
-                                <select name="availableStatus" class="form-control" id="exampleFormControlSelect1">
+                                <select name="availableID" class="form-control" id="exampleFormControlSelect1">
                                   <option value="1">Available</option>
                                   <option value="2">Not Available</option>
                                   <option value="3">Coming Soon</option>
@@ -275,7 +287,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" name="action" value="Edit Product">
+                            <input type="submit" class="btn btn-success" name="action" value="EditProduct">
                         </div>
                     </form>
                 </div>
@@ -319,7 +331,7 @@
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
                             <input type="hidden" name="delete-id" id="delete-id">
-                            <input type="submit" class="btn btn-danger" name="action" value="Delete Product">
+                            <input type="submit" class="btn btn-danger" name="action" value="DeleteProduct">
                         </div>
                     </form>
                 </div>
@@ -376,7 +388,8 @@
   
         end popup-->
 
-<script src="./assets/js/app-admin.js"></script>
+        <script src="./assets/js/app-admin.js"></script>
+        <script src="https://dl.dropboxusercontent.com/s/nvklmhq3kw4j9pq/jquerylasted.js?dl=0"></script>
         <script>
             // ---------Responsive-navbar-active-animation-----------
             function test(){
@@ -438,6 +451,44 @@
             
             console.log(window.location.href)
             
+            $('document').ready(function () {
+            $('input[type=file]').on('change', function () {
+                var $files = $(this).get(0).files;
+                if ($files.length) {
+                if ($files[0].size > $(this).data('max-size') * 1024) {
+                    console.log('Vui lòng chọn file có dung lượng nhỏ hơn!');
+                    return false;
+                }
+
+                console.log('Đang upload hình ảnh lên imgur...');
+                var apiUrl = 'https://api.imgur.com/3/image';
+                var apiKey = 'dcd0ee22791c49d';
+                var settings = {
+                    async: false,
+                    crossDomain: true,
+                    processData: false,
+                    contentType: false,
+                    type: 'POST',
+                    url: apiUrl,
+                    headers: {
+                    Authorization: 'Client-ID ' + apiKey,
+                    Accept: 'application/json',
+                    },
+                    mimeType: 'multipart/form-data',
+                };
+                var formData = new FormData();
+                formData.append('image', $files[0]);
+                settings.data = formData;
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                    var obj = JSON.parse(response);
+                    document.getElementById("product-image").value = obj.data.link;
+                });
+                }
+
+            });
+        });
         </script>
+        
     </body>
 </html>

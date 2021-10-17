@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/FPT%20University/CN4/PRJ301/PRJ%20Code/FPT%20Learning/VegetablesShop/web/admin-product.jsp</file>
+            <file>file:/D:/FPT%20University/CN4/PRJ301/PRJ%20Code/FPT%20Learning/VegetablesShop/src/java/vegetablesshop/controller/VNPayCheckoutController.java</file>
+            <file>file:/D:/FPT%20University/CN4/PRJ301/PRJ%20Code/FPT%20Learning/VegetablesShop/src/java/vegetablesshop/products/ProductDAO.java</file>
+            <file>file:/D:/FPT%20University/CN4/PRJ301/PRJ%20Code/FPT%20Learning/VegetablesShop/src/java/vegetablesshop/controller/AddProductController.java</file>
+            <file>file:/D:/FPT%20University/CN4/PRJ301/PRJ%20Code/FPT%20Learning/VegetablesShop/src/java/vegetablesshop/controller/DeleteProductController.java</file>
+            <file>file:/D:/FPT%20University/CN4/PRJ301/PRJ%20Code/FPT%20Learning/VegetablesShop/src/java/vegetablesshop/controller/EditProductController.java</file>
+            <file>file:/D:/FPT%20University/CN4/PRJ301/PRJ%20Code/FPT%20Learning/VegetablesShop/web/assets/js/app-admin.js</file>
+        </group>
     </open-files>
 </project-private>

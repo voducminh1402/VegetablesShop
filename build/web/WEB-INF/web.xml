@@ -80,6 +80,18 @@
         <servlet-name>GetCategoryController</servlet-name>
         <servlet-class>vegetablesshop.controller.GetCategoryController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditProductController</servlet-name>
+        <servlet-class>vegetablesshop.controller.EditProductController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddProductController</servlet-name>
+        <servlet-class>vegetablesshop.controller.AddProductController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteProductController</servlet-name>
+        <servlet-class>vegetablesshop.controller.DeleteProductController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
         <url-pattern>/MainController</url-pattern>
@@ -155,6 +167,18 @@
     <servlet-mapping>
         <servlet-name>GetCategoryController</servlet-name>
         <url-pattern>/GetCategoryController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditProductController</servlet-name>
+        <url-pattern>/EditProductController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddProductController</servlet-name>
+        <url-pattern>/AddProductController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteProductController</servlet-name>
+        <url-pattern>/DeleteProductController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
