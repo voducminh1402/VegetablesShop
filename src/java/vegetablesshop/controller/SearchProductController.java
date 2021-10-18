@@ -21,7 +21,7 @@ import vegetablesshop.products.ProductDTO;
  */
 public class SearchProductController extends HttpServlet {
     static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
-    private static final String ERROR = "index.jsp";
+    private static final String ERROR = "shop.jsp";
     private static final String SUCCESS = "search.jsp";
             
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

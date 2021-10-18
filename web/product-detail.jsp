@@ -95,7 +95,23 @@ var sc_https=1;
             %>
             <div class="col-md-6">
               <div class="product-image">
-                 <span class="pr_flash bg_green">Sale</span>
+                 <%
+                                if (product.getAvailableName().equals("SALE")) {
+                            %>
+                                <span class="pr_flash bg_green">Sale</span>
+                            <%        
+                                }
+                                else if (product.getAvailableName().equals("Coming Soon")) {
+                            %>
+                                <span class="pr_flash bg_orange">Coming Soon</span>
+                            <%        
+                                }
+                                if (product.getAvailableName().equals("Not Available")) {
+                            %>
+                                <span class="pr_flash bg_red">Out Of Stock</span>
+                            <%        
+                                }
+                            %>
                  <img id="product_img" src='<%= product.getProductImage() %>' alt="product" data-zoom-image="<%= product.getProductImage() %>"/>
                  <div id="pr_item_gallery" class="product_gallery_item owl-thumbs-slider owl-carousel owl-theme">
                     <div class="item">
@@ -137,6 +153,9 @@ var sc_https=1;
                   </div>
                   <hr>
                   <form action="MainController">
+                      <%
+                            if ((!product.getAvailableName().equals("Coming Soon")) && (!product.getAvailableName().equals("Not Available"))) {
+                        %>
                       <div class="cart_extra">
                         <div class="cart-product-quantity">
                           <div class="quantity">
@@ -154,6 +173,9 @@ var sc_https=1;
                   </form>
                   <div class="clearfix"></div>
                   <hr>
+                  <%
+                        }
+                    %>
                   <ul class="product-meta list_none">
                     <li>Category: <a href="#"><%= product.getCategoryName() %></a></li>
                     <li>Tags: <a href="#" rel="tag">Fruits</a>, <a href="#" rel="tag">Natural</a>, <a href="#" rel="tag">Organic</a> </li>

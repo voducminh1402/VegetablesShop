@@ -57,7 +57,7 @@
                         <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0);"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                        <a class="nav-link" href="MainController?action=Logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
                     </li>
                 </ul>
             </div>

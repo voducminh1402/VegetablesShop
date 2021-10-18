@@ -15,7 +15,7 @@
         <meta http-equiv="cache-control" content="no-cache" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="-1" />
-        <title>VDM Shoes Store</title>
+        <title>Login Page</title>
         <link rel="stylesheet" href="./login_assets/css/base.css">
         <link rel="stylesheet" href="./login_assets/css/style.css">
         <link rel="stylesheet" href="./login_assets/css/responsive.css"> 

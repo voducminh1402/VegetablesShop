@@ -19,7 +19,7 @@ import org.apache.log4j.Logger;
  */
 public class LogoutController extends HttpServlet {
     static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
-    private static final String ERROR = "login.html";
+    private static final String ERROR = "login.jsp";
     private static final String SUCCESS = "index.jsp";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

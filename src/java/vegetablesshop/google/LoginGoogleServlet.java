@@ -41,7 +41,7 @@ public class LoginGoogleServlet extends HttpServlet {
       request.setAttribute("name", googlePojo.getName());
       request.setAttribute("email", googlePojo.getEmail());
       
-      UserDTO loginUser = new UserDTO(googlePojo.getEmail(), googlePojo.getEmail(), "", "", "", "", googlePojo.getEmail(), "", 0);
+      UserDTO loginUser = new UserDTO(googlePojo.getEmail(), googlePojo.getEmail(), "", "", "", "", googlePojo.getEmail(), "", 2);
       
       HttpSession session = request.getSession();
        session.setAttribute("LOGIN_USER", loginUser);

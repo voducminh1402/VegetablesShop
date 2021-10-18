@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="java.util.List"%>
 <%@page import="vegetablesshop.products.ProductDTO"%>
 <!DOCTYPE html>
@@ -109,7 +110,24 @@ var sc_https=1;
                     %> 
                     <div class="col-lg-4 col-sm-6">
                         <div class="product">
-                            <span class="pr_flash bg_green">Sale</span>
+                            <%
+                                if (product.getAvailableName().equals("SALE")) {
+                            %>
+                                <span class="pr_flash bg_green">Sale</span>
+                            <%        
+                                }
+                                else if (product.getAvailableName().equals("Coming Soon")) {
+                            %>
+                                <span class="pr_flash bg_orange">Coming Soon</span>
+                            <%        
+                                }
+                                if (product.getAvailableName().equals("Not Available")) {
+                            %>
+                                <span class="pr_flash bg_red">Out Of Stock</span>
+                            <%        
+                                }
+                            %>
+                          
                             <div class="product_img">
                                 <a href="#"><img src="<%= product.getProductImage() %>"/></a>
                             </div>
@@ -122,7 +140,14 @@ var sc_https=1;
                                 </div>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
-                                    	<li class="add-to-cart"><a href="MainController?action=AddToCart&quantity=1&productID=<%= product.getProductID() %>&valuePage=searchPage&search=<%= search %>"><i class="ti-shopping-cart"></i></a></li>
+                                        <%
+                                            if (!product.getAvailableName().equals("Coming Soon") && !product.getAvailableName().equals("Not Available")) {
+                                        %>
+                                            <li class="add-to-cart"><a href="MainController?action=AddToCart&quantity=1&productID=<%= product.getProductID() %>&valuePage=searchPage&search=<%= search %>"><i class="ti-shopping-cart"></i></a></li>
+                                        <%
+                                            }
+                                        %>
+                                    	
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
                                     </ul>
                                 </div>

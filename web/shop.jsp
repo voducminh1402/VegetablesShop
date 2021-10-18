@@ -16,6 +16,7 @@
 <head>
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="referrer" content="no-referrer">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="Anil z" name="author">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -95,13 +96,25 @@ var sc_https=1;
             <c:forEach items="${requestScope.ACTIVE_PRODUCT_LIST}" var="o">
                 <div class="col-lg-4 col-sm-6">
                     <div class="product">
-                        <span class="pr_flash bg_green">Sale</span>
+                        <c:if test="${o.availableName == 'SALE'}">
+                            <span class="pr_flash bg_green">Sale</span>
+                        </c:if>
+                        <c:if test="${o.availableName == 'Coming Soon'}">
+                            <span class="pr_flash bg_orange">Coming Soon</span>
+                        </c:if>
+                        <c:if test="${o.availableName == 'Not Available'}">
+                            <span class="pr_flash bg_red">Out Of Stock</span>
+                        </c:if>    
                         <div class="product_img">
                             <a href="MainController?action=GetDetailProduct&id=${o.productID}"><img class="product-detail-img" src="${o.productImage}"/></a>
                             <div class="product_action_box">
                                 <ul class="list_none pr_action_btn">
                                     <li><a href="#"><i class="ti-heart"></i></a></li>
-                                    <li><a href="MainController?action=AddToCart&quantity=1&productID=${o.productID}"><i class="ti-shopping-cart"></i></a></li>
+                                    <li>
+                                        <c:if test="${o.availableName ne 'Not Available' && o.availableName ne 'Coming Soon'}">
+                                            <a href="MainController?action=AddToCart&quantity=1&productID=${o.productID}"><i class="ti-shopping-cart"></i></a>
+                                        </c:if>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

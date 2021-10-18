@@ -125,7 +125,7 @@ var sc_https=1;
                                 <td class="product-price" data-title="Price">$ <%= product.getProductPrice() %></td>
                                  
                                 <td class="product-quantity" data-title="Quantity">
-                                    <form action="MainController">
+                                    <form action="MainController" method="POST">
                                         <button id="submit-form-cart" name="action" value="UpdateCart" type="submit" style="visibility: hidden; float: right"></button>
                                         <div class="quantity">
                                             <button type="submit" name="action" value="UpdateCart" class="minus">-</button>

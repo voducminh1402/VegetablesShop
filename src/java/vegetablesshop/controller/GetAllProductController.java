@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
-import static vegetablesshop.controller.GetActiveProductController.LOGGER;
 import vegetablesshop.products.CategoryDTO;
 import vegetablesshop.products.ProductDAO;
 import vegetablesshop.products.ProductDTO;

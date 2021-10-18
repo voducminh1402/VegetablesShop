@@ -222,7 +222,19 @@ var sc_https=1;
                             </div>
                         </div>
                 </div>
-                    <button type="submit" name="action" value="GetInfoCheckout" class="btn btn-default">Place Order</button>
+                    <%
+                        if (cart == null || cart.getCart().size() == 0) {
+                    %>
+                    <button style="cursor: not-allowed;" disabled="" type="submit" name="action" value="GetInfoCheckout" class="btn btn-default">Place Order</button>
+                    <%        
+                        }
+                        else {
+                        %>
+                        <button type="submit" name="action" value="GetInfoCheckout" class="btn btn-default">Place Order</button>
+                    <%
+                        }
+                    %>
+                    
                 </form>
             </div>
         </div>

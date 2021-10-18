@@ -15,6 +15,7 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="referrer" content="no-referrer">
         <title>Admin Product Page</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -75,6 +76,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MainController?action=Logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
                     </li>
                 </ul>
             </div>

@@ -176,7 +176,7 @@ public class ProductDAO {
             conn = DBUtils.getConnection();
             
             if (conn != null) {
-                String sql = "SELECT productID, productName, productImage, productPrice"
+                String sql = "SELECT productID, productName, productImage, productPrice, availableID"
                             + " FROM tblProducts "
                             + " WHERE productName LIKE ?";
                 stm = conn.prepareStatement(sql);
@@ -188,8 +188,9 @@ public class ProductDAO {
                     String productName = rs.getString("productName");
                     String productImage = rs.getString("productImage");
                     double productPrice = Double.parseDouble(rs.getString("productPrice"));
+                    String availableName = convertAvailableName(Integer.parseInt(rs.getString("availableID")));
 
-                    productList.add(new ProductDTO(productID, productName, productImage, productPrice, 1, "", "", "", ""));
+                    productList.add(new ProductDTO(productID, productName, productImage, productPrice, 1, "", availableName, "", ""));
                 }
                 
             }

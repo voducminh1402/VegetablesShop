@@ -21,7 +21,7 @@ import vegetablesshop.users.UserDTO;
  */
 public class LoginController extends HttpServlet {
     static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
-    private static final String ERROR = "login.html";
+    private static final String ERROR = "login.jsp";
     private static final String USER = "index.jsp";
     private static final String ADMIN = "admin.jsp";
     private static final String CHECKOUT = "checkout.jsp";
