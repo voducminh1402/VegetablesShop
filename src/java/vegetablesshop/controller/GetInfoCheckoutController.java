@@ -69,6 +69,7 @@ public class GetInfoCheckoutController extends HttpServlet {
                         checkQuantityProduct = true;
                     }
                     else {
+                        product.setQuantity(productData);
                         checkQuantityProduct = false;
                     }
                 }
@@ -121,7 +122,8 @@ public class GetInfoCheckoutController extends HttpServlet {
                     }
                 }
                 else {
-                    url = "404.jsp";
+                    url = "cart.jsp";
+                    session.setAttribute("ERROR_CART", "Max quantity of products are updated!!!");
                 }
                 
             }

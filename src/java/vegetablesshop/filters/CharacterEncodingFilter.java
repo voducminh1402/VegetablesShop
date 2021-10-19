@@ -15,6 +15,8 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.http.HttpResponse;
 
 /**
  *
@@ -97,6 +99,9 @@ public class CharacterEncodingFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain)
             throws IOException, ServletException {
+
+        HttpServletResponse res = (HttpServletResponse) response;
+        res.setHeader("Cache-Control", "private,no-store,no-cache");
         
         request.setCharacterEncoding("UTF-8");
         chain.doFilter(request, response);

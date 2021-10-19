@@ -111,9 +111,13 @@ var sc_https=1;
                                 <%
                                     Cart cart = (Cart)session.getAttribute("CART");
                                     double totalMoney = 0;
+                                    boolean checkQuantity = true;
                                     if (cart != null) {
                                         for (CartProduct product : cart.getCart().values()) {
                                             totalMoney += product.getProductPrice() * product.getQuantity();
+                                            if (product.getQuantity() == 0) {
+                                                checkQuantity = false;
+                                            }
                                 %>
                         	<tr>
                                     <td><%= product.getProductName() %> <span class="product-qty">x <%= product.getQuantity() %></span></td>
@@ -223,7 +227,7 @@ var sc_https=1;
                         </div>
                 </div>
                     <%
-                        if (cart == null || cart.getCart().size() == 0) {
+                        if (cart == null || cart.getCart().size() == 0 || checkQuantity == false) {
                     %>
                     <button style="cursor: not-allowed;" disabled="" type="submit" name="action" value="GetInfoCheckout" class="btn btn-default">Place Order</button>
                     <%        

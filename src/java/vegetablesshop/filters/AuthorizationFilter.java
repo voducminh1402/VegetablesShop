@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -18,7 +20,6 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import vegetablesshop.shopping.Cart;
 import vegetablesshop.users.UserDTO;
 
 /**
@@ -28,6 +29,7 @@ import vegetablesshop.users.UserDTO;
 public class AuthorizationFilter implements Filter {
     
     private static final boolean debug = true;
+    
     private static final String LOGIN = "login.jsp";
     private static final int AD = 1;
     private static final int US = 2;

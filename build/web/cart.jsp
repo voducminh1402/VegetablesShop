@@ -3,7 +3,7 @@
     Created on : Sep 28, 2021, 10:38:40 PM
     Author     : VODUCMINH
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="vegetablesshop.users.UserDTO"%>
 <%@page import="vegetablesshop.shopping.CartProduct"%>
 <%@page import="vegetablesshop.shopping.Cart"%>
@@ -44,6 +44,8 @@
 <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
 <!-- Magnific Popup CSS -->
 <link rel="stylesheet" href="assets/css/magnific-popup.css">
+<link rel="stylesheet" href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"/>
 <!-- jquery-ui CSS -->
 <link rel="stylesheet" href="assets/css/jquery-ui.css">
 <!-- Style CSS -->
@@ -99,6 +101,8 @@ var sc_https=1;
                                 error = "";
                             }
                             
+                            boolean checkQuantity = true;
+                            
                             double totalMoney = 0;
                             if (cart != null) {
                                 if (cart.getCart().size() != 0) {
@@ -117,6 +121,9 @@ var sc_https=1;
                         <%
                                 for(CartProduct product : cart.getCart().values()) {
                                     totalMoney += product.getQuantity() * product.getProductPrice();
+                                    if (product.getQuantity() == 0) {
+                                        checkQuantity = false;
+                                    }
                         %>
                         <tbody>
                             <tr>
@@ -172,8 +179,18 @@ var sc_https=1;
                                                 UserDTO loginUser = (UserDTO)session.getAttribute("LOGIN_USER");
                                                 
                                                 if (loginUser != null) {
+                                                    if (checkQuantity == true) {
                                             %>
-                                            <a href="checkout.jsp" class="btn btn-default btn-sm">Proceed to Checkout</a>
+                                                    <a href="checkout.jsp" class="btn btn-default btn-sm">Proceed to Checkout</a>
+                                            <%
+                                                    }
+                                                    else {
+                                            %>
+                                                    <a style="cursor: not-allowed; pointer-events: none;" disabled="" href="checkout.jsp" class="btn btn-default btn-sm">Proceed to Checkout</a>
+                                            <%
+                                                    }
+                                            %>
+                                                
                                             <%
                                                 }
                                                 else {
@@ -517,6 +534,7 @@ var sc_https=1;
 <script src="assets/owlcarousel/js/owl.carousel.min.js"></script> 
 <!-- magnific-popup min js  --> 
 <script src="assets/js/magnific-popup.min.js"></script> 
+<script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
 <!-- waypoints min js  --> 
 <script src="assets/js/waypoints.min.js"></script> 
 <!-- parallax js  --> 
@@ -552,6 +570,27 @@ var sc_https=1;
         localStorage.setItem('scrollpos', window.scrollY);
     };
 </script>
+    <script>
+        var polipop = new Polipop('mypolipop', {
+            layout: 'popups',
+            insert: 'before',
+            pool: 5,
+            sticky: false,
+            position: 'bottom-right',
+            life: 2000
+        });
+        
+        <c:if test="${sessionScope.ERROR_CART != null}">
+            polipop.add({
+            content: "${sessionScope.ERROR_CART}",
+            title: 'Add To Cart Error',
+            type: 'warning',
+        });
+        </c:if>
+        <c:remove var="ERROR_CART" scope="session" />
+        
+    </script>
+
 </body>
 
 <!-- Mirrored from bestwebcreator.com/organiq/demo/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:50:07 GMT -->

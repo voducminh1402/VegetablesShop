@@ -6,52 +6,38 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
-import vegetablesshop.products.ProductDAO;
-import vegetablesshop.products.ProductDTO;
+import vegetablesshop.users.UserDAO;
+import vegetablesshop.users.UserDTO;
 
 /**
  *
  * @author VODUCMINH
  */
-public class SearchProductController extends HttpServlet {
+public class CheckDuplicateUserController extends HttpServlet {
     static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
-    private static final String ERROR = "shop.jsp";
-    private static final String SUCCESS = "search.jsp";
-            
+   
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String url = ERROR;
-        
         try {
-            String search = request.getParameter("search");
+            String userID =  request.getParameter("userID");
             
-            ProductDAO dao = new ProductDAO();
-            List<ProductDTO> productList = dao.getProductForSearch(search);
+            UserDAO dao = new UserDAO();
+            UserDTO check = dao.getUser(userID);
             
-            if (!productList.isEmpty()) {
-                request.setAttribute("SEARCH_PRODUCT_LIST", productList);
-                LOGGER.info("Search product has keyword: " + search + " successfully");
-                url = SUCCESS;
-            }
-            else {
-                HttpSession session = request.getSession();
-                session.setAttribute("SEARCH_ERROR", "Can't match any product!");
+            if (check != null) {
+                response.getWriter().write("This user ID is exist! Please try again!");
             }
         } 
+        
         catch (Exception e) {
-            LOGGER.error("Error at SearchProductController: " + e.toString());
-        }
-        finally {
-            request.getRequestDispatcher(url).forward(request, response);
+            LOGGER.warn("Duplicate UserID!");
         }
     }
 

@@ -115,7 +115,7 @@ public class AddToCartController extends HttpServlet {
                     if ("searchPage".equals(valuePage)) {
                         url = SEARCH;
                     }
-                    request.setAttribute("ERROR_CART", "Quantity of this product is not enough!");
+                    request.setAttribute("ERROR_CART", "Quantity of product "+ product.getProductName() + " available " + product.getQuantity());
                     LOGGER.warn("Quantity of product " + productID + " is not enough!");
                 }
             }

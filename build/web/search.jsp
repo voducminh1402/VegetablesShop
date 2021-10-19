@@ -296,6 +296,7 @@ var sc_https=1;
         localStorage.setItem('scrollpos', window.scrollY);
     };
 </script>
+
 </body>
 
 <!-- Mirrored from bestwebcreator.com/organiq/demo/shop-grid-view.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:49:59 GMT -->

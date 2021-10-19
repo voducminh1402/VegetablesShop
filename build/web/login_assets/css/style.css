@@ -196,6 +196,22 @@ html {
     font-weight: bold;
 }
 
+#check-password-empty {
+    transform: translateY(-150%);
+    color: red;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+#check-userid {
+    transform: translateY(-150%);
+    color: red;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
 
 /* END LOGIN */
 

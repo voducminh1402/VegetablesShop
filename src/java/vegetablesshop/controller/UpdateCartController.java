@@ -53,7 +53,7 @@ public class UpdateCartController extends HttpServlet {
                     }
                     else {
                         product = new CartProduct(productID, productName, price, productImage, productDTO.getQuantity());
-                        request.setAttribute("ERROR_CART", "Quantity of this product is not enough!");
+                        session.setAttribute("ERROR_CART", "Quantity of product " + product.getProductName() + " is still : " + productDTO.getQuantity());
                         LOGGER.warn("Quantity of this product is not enough!");
                     }
                     break;

@@ -37,6 +37,7 @@ public class MainController extends HttpServlet {
     private static final String EDIT_PRODUCT = "EditProductController";
     private static final String ADD_PRODUCT = "AddProductController";
     private static final String DELETE_PRODUCT = "DeleteProductController";
+    private static final String CHECK_DUPLICATE_USER = "CheckDuplicateUserController";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -95,6 +96,9 @@ public class MainController extends HttpServlet {
             }
             else if ("DeleteProduct".equals(action)) {
                 url = DELETE_PRODUCT;
+            }
+            else if ("CheckDuplicateUser".equals(action)) {
+                url = CHECK_DUPLICATE_USER;
             }
             else {
                 HttpSession session = request.getSession();

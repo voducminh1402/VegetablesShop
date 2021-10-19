@@ -177,6 +177,7 @@ var sc_https=1;
                         }
                     %>
                   <ul class="product-meta list_none">
+                      <li style="font-weight: bold; margin-bottom: 10px; font-size: 16px; color: red">Quantity: <a style="color: red" href="#"><%= product.getQuantity() %></a></li>
                     <li>Category: <a href="#"><%= product.getCategoryName() %></a></li>
                     <li>Tags: <a href="#" rel="tag">Fruits</a>, <a href="#" rel="tag">Natural</a>, <a href="#" rel="tag">Organic</a> </li>
                   </ul>

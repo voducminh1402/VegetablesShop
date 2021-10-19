@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VDM Shoes Store</title>
+        <link rel="stylesheet" href="./login_assets/css/base.css">
+        <link rel="stylesheet" href="./login_assets/css/style.css">
+        <link rel="stylesheet" href="./login_assets/css/responsive.css"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">   
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nunito+Sans:wght@900&display=swap" rel="stylesheet">
+        <link rel="icon" href="./assets/img/title-logo.png" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        
+    </head>
+<body>
+    <div class="all-container sign-container">
+        <div class="container-wrap d-flex">
+           <div class="sign-header text-center">
+               <h3>SIGN UP</h3>
+               <form action="MainController" method="POST">
+                <div class="login-form">
+                    <div class="login-form-email">
+                        <i class="login-form-email-icon fas fa-portrait"></i>
+                        <input id="signup-form-id" class="login-form-email-input" type="text" name="userID" id="login" placeholder="User ID" required>
+                    </div>
+                    <p id="check-userid" style="display: none"></p>
+                    <div class="login-form-email">
+                     <i class="login-form-email-icon fas fa-envelope"></i>
+                     <input class="login-form-email-input" type="email" name="email" id="login" placeholder="Email" required>
+                    </div>
+                    <div class="login-form-email">
+                        <i class="login-form-email-icon fas fa-lock "></i>
+                        <input id="signup-form-password" class="login-form-email-input" type="password" name="password" id="login" placeholder="Password" required>
+                    </div>
+                    <div class="login-form-email re-pass">
+                        <i class="login-form-email-icon fas fa-lock "></i>
+                        <input id="signup-form-confirm" class="login-form-email-input" type="password" id="login" placeholder="Verify Password" required>
+                    </div>  
+                    <p id="check-password" style="display: none">Two passwords not same!!!</p>
+                    <p id="check-password-empty" style="display: none">Length of password from 8-20 characters!!!</p>
+                    <div id="signup-form-btn" class="login-form-button">
+                        <button id="signup-btn" name="action" value="SignUp" type="submit">SIGN UP</button>
+                    </div>
+                </div>
+               </form>
+               <div class="login-form-forgot">
+                   <a href="login.jsp"><span>Already Have An Account? </span>Login</a>
+               </div>
+               <div class="login-form-account">
+                   <a href="signup.html">Create Your Account <span class="ti-arrow-right"></span></a>
+               </div>
+           </div>
+        </div>
+    </div>
+    
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <script src="./login_assets/js/loader.js"></script>
+    <script>
+//      validation form input to create user
+        const password = document.getElementById("signup-form-password");
+        const confirm = document.getElementById("signup-form-confirm");
+        const id = document.getElementById("signup-form-id");
+        const checkUserID = document.getElementById("check-userid");
+        const signUpBtn = document.getElementById("signup-btn");
+        
+        password.onkeyup = validationCheck;
+        
+        confirm.onkeyup = validationCheck;
+        
+        
+//    ajax check duplicate user id
+        
+        id.onkeyup = () => {
+            let inputID = id.value;
+            
+            $.ajax({
+                type: 'POST',
+                url: "MainController?action=CheckDuplicateUser&userID=" + inputID,
+                data: inputID,
+                dataType: "text",
+                success: function(response) {
+                    if (response.length > 1) {
+                        checkUserID.innerHTML = response;
+                        checkUserID.style.display = "block";
+                        signUpBtn.disabled = true;
+                        signUpBtn.style.cursor = "not-allowed";
+                        signUpBtn.style.backgroundColor = 'rgb(' + 240 + ',' + 136 + ',' + 118 + ')';
+                        signUpBtn.style.color = "white";
+                    }
+                    else {
+                        checkUserID.innerHTML = "";
+                        checkUserID.style.display = "none";
+                        document.getElementById("check-password").style.display = "none";
+                        signUpBtn.disabled = false;
+                        signUpBtn.style.cursor = "pointer";
+                    }
+                }
+            });
+          
+        }
+        
+        function validationCheck() {
+            if (password.value !== confirm.value || password.value === "") {
+                document.getElementById("check-password").style.display = "block";
+                signUpBtn.disabled = true;
+                signUpBtn.style.cursor = "not-allowed";
+                signUpBtn.style.backgroundColor = 'rgb(' + 240 + ',' + 136 + ',' + 118 + ')';
+                signUpBtn.style.color = "white";
+            }
+            else {
+                
+                document.getElementById("check-password").style.display = "none";
+                signUpBtn.disabled = false;
+                signUpBtn.style.cursor = "pointer";
+                
+                if (password.value.length < 8 || password.value.length > 20) {
+                    document.getElementById("check-password-empty").style.display = "block";
+                    signUpBtn.disabled = true;
+                    signUpBtn.style.cursor = "not-allowed";
+                    signUpBtn.style.backgroundColor = 'rgb(' + 240 + ',' + 136 + ',' + 118 + ')';
+                    signUpBtn.style.color = "white";
+                }
+                else {
+                    if (checkUserID.textContent.length > 5) {
+                        signUpBtn.disabled = true;
+                        signUpBtn.style.cursor = "not-allowed";
+                        signUpBtn.style.backgroundColor = 'rgb(' + 240 + ',' + 136 + ',' + 118 + ')';
+                        signUpBtn.style.color = "white";
+                    }
+                    else {
+                        signUpBtn.disabled = false;
+                        signUpBtn.style.cursor = "pointer";
+                    }
+                    document.getElementById("check-password-empty").style.display = "none";
+                }
+            }
+            
+            
+        }
+        
+
+    
+        
+    </script>
+</body>
+</html>

@@ -30,7 +30,7 @@ public class UserDAO {
             if (conn != null) {
                 String sql = "SELECT userName, roleID, email "
                             + " FROM tblUsers "
-                            + " WHERE userID=? AND password=?";
+                            + " WHERE userID=? AND password=? AND userStatus=1";
                 stm = conn.prepareStatement(sql);
                 stm.setString(1, userID);
                 stm.setString(2, password);

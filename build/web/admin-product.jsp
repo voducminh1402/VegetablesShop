@@ -273,7 +273,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Quantity</label>
-                                <input id="product-quantity" name="quantity" min="1" type="number" class="form-control" required>
+                                <input id="product-quantity" name="quantity" min="0" type="number" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Available Status</label>

@@ -46,6 +46,8 @@
 <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
 <!-- Magnific Popup CSS -->
 <link rel="stylesheet" href="assets/css/magnific-popup.css">
+<link rel="stylesheet" href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"/>
 <!-- jquery-ui CSS -->
 <link rel="stylesheet" href="assets/css/jquery-ui.css">
 <!-- Style CSS -->
@@ -156,6 +158,7 @@ var sc_https=1;
 <script src="assets/owlcarousel/js/owl.carousel.min.js"></script> 
 <!-- magnific-popup min js  --> 
 <script src="assets/js/magnific-popup.min.js"></script> 
+<script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
 <!-- waypoints min js  --> 
 <script src="assets/js/waypoints.min.js"></script> 
 <!-- parallax js  --> 
@@ -190,6 +193,27 @@ var sc_https=1;
         localStorage.setItem('scrollpos', window.scrollY);
     };
 </script>
+    <script>
+        var polipop = new Polipop('mypolipop', {
+            layout: 'popups',
+            insert: 'before',
+            pool: 5,
+            sticky: false,
+            position: 'bottom-right',
+            life: 2000
+        });
+        
+        <c:if test="${sessionScope.SEARCH_ERROR != null}">
+            polipop.add({
+            content: "${sessionScope.SEARCH_ERROR}",
+            title: 'Search ERROR',
+            type: 'warning',
+        });
+        </c:if>
+        <c:remove var="SEARCH_ERROR" scope="session" />
+        
+    </script>
+
 </body>
 
 <!-- Mirrored from bestwebcreator.com/organiq/demo/shop-three-columns.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 07:49:59 GMT -->
