@@ -35,7 +35,7 @@ public class DeleteUserController extends HttpServlet {
             UserDTO user = (UserDTO) session.getAttribute("LOGIN_USER");
             
             if (userID.equals(user.getUserID())) {
-                request.setAttribute("ERROR_MESSAGE", "Can't delete current account: " + user.getUserName());
+                session.setAttribute("ERROR_MESSAGE", "Can't delete current account: " + user.getUserName());
             }
             else {
                 UserDAO dao = new UserDAO();

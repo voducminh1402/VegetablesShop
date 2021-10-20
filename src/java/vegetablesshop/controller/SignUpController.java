@@ -6,11 +6,14 @@
 package vegetablesshop.controller;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
+import static vegetablesshop.controller.CheckDuplicateUserController.LOGGER;
 import vegetablesshop.users.UserDAO;
 import vegetablesshop.users.UserDTO;
 
@@ -18,25 +21,39 @@ import vegetablesshop.users.UserDTO;
  *
  * @author VODUCMINH
  */
-public class CheckDuplicateUserController extends HttpServlet {
+public class SignUpController extends HttpServlet {
     static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
+    private static final String ERROR = "signup.html";
+    private static final String SUCCESS = "login.jsp";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String url = ERROR;
         try {
-            String userID =  request.getParameter("userID");
+            String userID = request.getParameter("userID");
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+            
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");  
+            LocalDateTime now = LocalDateTime.now();
+            String createDate = dtf.format(now);
             
             UserDAO dao = new UserDAO();
-            UserDTO check = dao.getUser(userID);
+            boolean check = dao.insertUserSignUp(new UserDTO(userID, userID, "", "", password, createDate, email, "", 2));
             
-            if (check != null) {
-                response.getWriter().write("This user ID is exist! Please try again!");
+            if (check) {
+                url = SUCCESS;
+                request.setAttribute("SIGNUP_STATUS", "Sign up successfully!");
+                LOGGER.info("Sign up successfully with user ID: " + userID);
             }
+            
         } 
-        
         catch (Exception e) {
-            LOGGER.warn("Duplicate UserID!");
+            LOGGER.error(e);
+        }
+        finally {
+            request.getRequestDispatcher(url).forward(request, response);
         }
     }
 

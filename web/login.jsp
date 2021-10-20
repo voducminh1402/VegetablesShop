@@ -3,7 +3,7 @@
     Created on : Oct 3, 2021, 11:13:33 AM
     Author     : VODUCMINH
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +16,8 @@
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="-1" />
         <title>Login Page</title>
+        <link rel="stylesheet" href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"/>
         <link rel="stylesheet" href="./login_assets/css/base.css">
         <link rel="stylesheet" href="./login_assets/css/style.css">
         <link rel="stylesheet" href="./login_assets/css/responsive.css"> 
@@ -82,7 +84,34 @@
     <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
+    <script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
     <script src="./login_assets/js/loader.js"></script>
-    <script language="JavaScript" src="js/myscript.js?n=1"></script>
+    <script>
+        var polipop = new Polipop('mypolipop', {
+            layout: 'popups',
+            insert: 'before',
+            pool: 5,
+            sticky: false,
+            position: 'bottom-right',
+            life: 2500
+        });
+        
+        <c:if test="${requestScope.SIGNUP_STATUS != null}">
+            polipop.add({
+            content: "${requestScope.SIGNUP_STATUS}",
+            title: 'Successfully!',
+            type: 'success',
+        });
+        </c:if>
+        
+        <c:if test="${sessionScope.MESSAGE_ERROR != null}">
+            polipop.add({
+            content: "${sessionScope.MESSAGE_ERROR}",
+            title: 'Login Fail!',
+            type: 'error',
+        });
+        </c:if>
+        <c:remove var="MESSAGE_ERROR" scope="session" />
+    </script>
 </body>
 </html>

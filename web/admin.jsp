@@ -18,6 +18,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Admin Page</title>
+        <link rel="stylesheet" href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -316,6 +318,7 @@
         </div>-->
       
         <!--end popup-->
+        <script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
         <script src="./assets/js/app-admin.js"></script>
         <script>
             // ---------Responsive-navbar-active-animation-----------
@@ -378,6 +381,13 @@
             
             console.log(window.location.href)
             
+            <c:if test="${sessionScope.ERROR_MESSAGE != null}">
+                polipop.add({
+                    content: "${sessionScope.ERROR_MESSAGE}",
+                    title: 'Delete User Error!',
+                    type: 'error',
+                });
+            </c:if>
         </script>
     </body>
 </html>

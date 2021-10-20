@@ -22,6 +22,7 @@ public class MainController extends HttpServlet {
     private static final String ERROR = "error.jsp";
     private static final String LOGIN = "LoginController";
     private static final String LOGOUT = "LogoutController";
+    private static final String SIGNUP = "SignUpController";
     private static final String GET_ACTIVE_PRODUCT = "GetActiveProductController";
     private static final String GET_DETAIL_PRODUCT = "GetDetailProductController";
     private static final String ADD_TO_CART = "AddToCartController";
@@ -51,6 +52,9 @@ public class MainController extends HttpServlet {
             }
             else if ("Logout".equals(action)) {
                 url = LOGOUT;
+            }
+            else if ("SignUp".equals(action)) {
+                url = SIGNUP;
             }
             else if ("GetActiveProduct".equals(action)) {
                 url = GET_ACTIVE_PRODUCT;

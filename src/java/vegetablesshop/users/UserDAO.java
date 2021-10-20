@@ -146,6 +146,46 @@ public class UserDAO {
         return check;
     }
     
+    public boolean insertUserSignUp(UserDTO user) throws SQLException {
+        boolean check = false;
+        Connection conn = null;
+        PreparedStatement stm = null;
+        
+        try {
+            conn = DBUtils.getConnection();
+            
+            if (conn != null) {
+                String sql = "INSERT INTO tblUsers(userID, userName, userAddress, userPhone, password, createDate, email, userStatus, roleID) "
+                            + " VALUES(?,?,?,?,?,?,?,?,?)";
+                            
+                stm = conn.prepareStatement(sql);
+                stm.setString(1, user.getUserID());
+                stm.setString(2, user.getUserName());
+                stm.setString(3, "*");
+                stm.setString(4, "*");
+                stm.setString(5, user.getPassword());
+                stm.setString(6, user.getCreateDate());
+                stm.setString(7, user.getEmail());
+                stm.setInt(8, 1);
+                stm.setInt(9, 2);
+                
+                check = stm.executeUpdate() > 0;
+            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return check;
+    }
+    
     public boolean editUser(UserDTO user) throws SQLException {
         boolean check = false;
         Connection conn = null;
