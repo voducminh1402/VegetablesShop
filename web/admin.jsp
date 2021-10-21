@@ -379,15 +379,23 @@
                     target.parent().addClass('active');
             });
             
-            console.log(window.location.href)
+            var polipop = new Polipop('mypolipop', {
+                layout: 'popups',
+                insert: 'before',
+                pool: 5,
+                sticky: false,
+                position: 'bottom-right',
+                life: 2000
+            });
             
             <c:if test="${sessionScope.ERROR_MESSAGE != null}">
                 polipop.add({
                     content: "${sessionScope.ERROR_MESSAGE}",
                     title: 'Delete User Error!',
-                    type: 'error',
+                    type: 'error'
                 });
             </c:if>
+            <c:remove var="ERROR_MESSAGE" scope="session" />
         </script>
     </body>
 </html>

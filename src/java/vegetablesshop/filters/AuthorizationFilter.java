@@ -9,8 +9,6 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -155,6 +153,19 @@ public class AuthorizationFilter implements Filter {
                 }
                 else {
                     chain.doFilter(request, response);
+                }
+            }
+            else if (resource.contains(LOGIN)) {
+                if (userLogin == null) {
+                    chain.doFilter(request, response);
+                }
+                else {
+                    if (userLogin.getRoleID() == AD) {
+                        res.sendRedirect("admin.jsp");
+                    }
+                    else if (userLogin.getRoleID() == US) {
+                        res.sendRedirect("index.jsp");
+                    }
                 }
             }
 //            else if (userLogin.getRoleID() == US) {
