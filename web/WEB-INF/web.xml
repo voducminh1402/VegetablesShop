@@ -108,6 +108,10 @@
         <servlet-name>SignUpController</servlet-name>
         <servlet-class>vegetablesshop.controller.SignUpController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CheckoutConfirmController</servlet-name>
+        <servlet-class>vegetablesshop.controller.CheckoutConfirmController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
         <url-pattern>/MainController</url-pattern>
@@ -203,6 +207,10 @@
     <servlet-mapping>
         <servlet-name>SignUpController</servlet-name>
         <url-pattern>/SignUpController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckoutConfirmController</servlet-name>
+        <url-pattern>/CheckoutConfirmController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

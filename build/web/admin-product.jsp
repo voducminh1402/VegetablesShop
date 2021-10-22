@@ -31,6 +31,8 @@
         <script>
           tinymce.init({
             selector: '.text-area-des',
+            plugins: "paste",
+            paste_as_text: true,
             menubar: false
           });
           tinyMCE.activeEditor.setContent('<span>some</span> html');
@@ -92,7 +94,6 @@
                                 <h2>Manage <b>Product</b></h2>
                             </div>
                             <div class="col-sm-6">
-                                <a href="#logoutEmployeeModal" class="btn btn-primary" data-toggle="modal"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
                                 <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Product</span></a>
                             </div>
                         </div>
@@ -122,7 +123,18 @@
                                 <td>${product.productPrice}</td>
                                 <td>${product.quantity}</td>
                                 <td>
-                                    <span class="badge badge-success">${product.availableName}</span>
+                                    <c:if test="${product.availableName == 'Available'}">
+                                        <span class="badge badge-success">${product.availableName}</span>
+                                    </c:if>
+                                    <c:if test="${product.availableName == 'SALE'}">
+                                        <span class="badge badge-warning">${product.availableName}</span>
+                                    </c:if>
+                                    <c:if test="${product.availableName == 'Not Available'}">
+                                        <span class="badge badge-secondary">${product.availableName}</span>
+                                    </c:if>
+                                    <c:if test="${product.availableName == 'Coming Soon'}">
+                                        <span class="badge badge-primary">${product.availableName}</span>
+                                    </c:if>    
                                 </td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit edit-product" 

@@ -181,12 +181,12 @@ var sc_https=1;
                                                 if (loginUser != null) {
                                                     if (checkQuantity == true) {
                                             %>
-                                                    <a href="checkout.jsp" class="btn btn-default btn-sm">Proceed to Checkout</a>
+                                                    <a href="MainController?action=CheckoutConfirm" class="btn btn-default btn-sm">Proceed to Checkout</a>
                                             <%
                                                     }
                                                     else {
                                             %>
-                                                    <a style="cursor: not-allowed; pointer-events: none;" disabled="" href="checkout.jsp" class="btn btn-default btn-sm">Proceed to Checkout</a>
+                                            <a style="cursor: not-allowed; pointer-events: none;" disabled="" class="" href="checkout.jsp" class="btn btn-default btn-sm">Proceed to Checkout</a>
                                             <%
                                                     }
                                             %>
