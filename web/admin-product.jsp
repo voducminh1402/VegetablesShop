@@ -282,6 +282,7 @@
 <!--                                <input id="product-image" name="image" type="text" class="form-control" required>-->
                                 <input type="file" class="custom-file-input">
                                 <input name="productImage" type="hidden" id="product-image" value="product-image">
+                                <a id="preview-product-image" target="_blank">Preview Image</a>
                             </div>
                             <div class="form-group">
                                 <label>Quantity</label>

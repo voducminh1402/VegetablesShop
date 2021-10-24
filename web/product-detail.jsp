@@ -106,7 +106,7 @@ var sc_https=1;
                                 <span class="pr_flash bg_orange">Coming Soon</span>
                             <%        
                                 }
-                                if (product.getAvailableName().equals("Not Available")) {
+                                else if (product.getAvailableName().equals("Not Available")) {
                             %>
                                 <span class="pr_flash bg_red">Out Of Stock</span>
                             <%        

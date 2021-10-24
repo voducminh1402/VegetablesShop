@@ -357,3 +357,499 @@ INFO    2021-10-23 00:52:14,452 [http-nio-8080-exec-74] vegetablesshop.controlle
 INFO    2021-10-23 00:58:58,744 [http-nio-8080-exec-71] vegetablesshop.controller.LoginController  - Remove product from cart has id: 0568ed9e-b787-415c-9de2-243af6708e2c successfully!
 INFO    2021-10-23 00:59:08,034 [http-nio-8080-exec-76] vegetablesshop.controller.LoginController  - Get product list successfully!
 INFO    2021-10-23 00:59:10,583 [http-nio-8080-exec-74] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-23 01:12:46,933 [http-nio-8080-exec-77] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-23 01:12:55,170 [http-nio-8080-exec-71] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-23 01:12:59,462 [http-nio-8080-exec-69] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:13:17,302 [http-nio-8080-exec-81] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:13:22,606 [http-nio-8080-exec-69] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:13:28,477 [http-nio-8080-exec-84] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-23 01:13:30,941 [http-nio-8080-exec-87] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-23 01:15:36,048 [http-nio-8080-exec-88] vegetablesshop.controller.LoginController  - Login user success!
+INFO    2021-10-23 01:15:38,150 [http-nio-8080-exec-84] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-23 01:15:41,533 [http-nio-8080-exec-86] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-23 01:15:43,420 [http-nio-8080-exec-80] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:18:19,055 [http-nio-8080-exec-86] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:18:46,554 [http-nio-8080-exec-82] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:19:26,623 [http-nio-8080-exec-81] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:19:43,089 [http-nio-8080-exec-84] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:20:31,785 [http-nio-8080-exec-83] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:21:53,769 [http-nio-8080-exec-86] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:22:00,130 [http-nio-8080-exec-80] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:22:19,188 [http-nio-8080-exec-81] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:22:36,119 [http-nio-8080-exec-87] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-23 01:22:37,968 [http-nio-8080-exec-80] vegetablesshop.controller.LoginController  - Get information of product has id: 0568ed9e-b787-415c-9de2-243af6708e2c successfully!
+INFO    2021-10-23 01:24:58,068 [http-nio-8080-exec-88] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-23 01:25:00,399 [http-nio-8080-exec-85] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:25:08,113 [http-nio-8080-exec-88] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:25:59,989 [http-nio-8080-exec-82] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:27:23,773 [http-nio-8080-exec-80] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:28:05,281 [http-nio-8080-exec-83] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:28:21,707 [http-nio-8080-exec-79] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:28:34,132 [http-nio-8080-exec-82] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:28:53,636 [http-nio-8080-exec-83] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:29:01,918 [http-nio-8080-exec-81] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:29:19,829 [http-nio-8080-exec-88] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:29:26,964 [http-nio-8080-exec-83] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:29:35,899 [http-nio-8080-exec-84] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:29:51,221 [http-nio-8080-exec-81] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:30:10,213 [http-nio-8080-exec-83] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:30:12,126 [http-nio-8080-exec-87] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:30:16,161 [http-nio-8080-exec-88] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:30:20,888 [http-nio-8080-exec-84] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:30:27,742 [http-nio-8080-exec-81] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:30:33,087 [http-nio-8080-exec-85] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:30:50,600 [http-nio-8080-exec-84] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:31:15,623 [http-nio-8080-exec-81] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:31:21,727 [http-nio-8080-exec-85] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-23 01:31:40,406 [http-nio-8080-exec-84] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:25:08,191 [http-nio-8080-exec-8] vegetablesshop.controller.LoginController  - Search product has keyword: a successfully
+INFO    2021-10-24 16:25:18,088 [http-nio-8080-exec-3] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:25:20,907 [http-nio-8080-exec-13] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:25:27,158 [http-nio-8080-exec-13] vegetablesshop.controller.LoginController  - Login user success!
+INFO    2021-10-24 16:25:29,240 [http-nio-8080-exec-19] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:25:32,787 [http-nio-8080-exec-15] vegetablesshop.controller.LoginController  - Get information of product has id: 12415121 successfully!
+INFO    2021-10-24 16:25:42,198 [http-nio-8080-exec-18] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:25:50,818 [http-nio-8080-exec-19] vegetablesshop.controller.LoginController  - Access COD checkout function successfully!
+INFO    2021-10-24 16:25:50,934 [http-nio-8080-exec-19] vegetablesshop.controller.LoginController  - Insert order has order id: 76d925fb-7077-40ed-a5d6-c2dd2d182600successfully!
+INFO    2021-10-24 16:25:51,071 [http-nio-8080-exec-19] vegetablesshop.controller.LoginController  - Minus product has product id: 12415121 and minus: 10 successfully
+INFO    2021-10-24 16:25:51,116 [http-nio-8080-exec-19] vegetablesshop.controller.LoginController  - Insert order detail has id: 76d925fb-7077-40ed-a5d6-c2dd2d182600 successfully
+INFO    2021-10-24 16:25:51,229 [http-nio-8080-exec-19] vegetablesshop.controller.LoginController  - Insert shipping info has id: 76d925fb-7077-40ed-a5d6-c2dd2d182600 successfully
+INFO    2021-10-24 16:26:12,278 [http-nio-8080-exec-12] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:26:15,338 [http-nio-8080-exec-20] vegetablesshop.controller.LoginController  - Get information of product has id: 12415121 successfully!
+INFO    2021-10-24 16:26:26,372 [http-nio-8080-exec-19] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:26:29,534 [http-nio-8080-exec-18] vegetablesshop.controller.LoginController  - Get information of product has id: 12515619 successfully!
+INFO    2021-10-24 16:26:43,855 [http-nio-8080-exec-14] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-24 16:26:55,973 [http-nio-8080-exec-20] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:26:58,467 [http-nio-8080-exec-11] vegetablesshop.controller.LoginController  - Logout successfully!
+WARN    2021-10-24 16:27:04,478 [http-nio-8080-exec-13] vegetablesshop.controller.LoginController  - Login fail! Incorrect user ID or password!
+INFO    2021-10-24 16:27:08,582 [http-nio-8080-exec-19] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:27:11,590 [http-nio-8080-exec-15] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:27:22,987 [http-nio-8080-exec-12] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:27:31,158 [http-nio-8080-exec-17] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:27:44,157 [http-nio-8080-exec-16] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:27:45,892 [http-nio-8080-exec-14] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-24 16:27:48,944 [http-nio-8080-exec-13] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:27:59,754 [http-nio-8080-exec-14] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:28:02,120 [http-nio-8080-exec-11] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:28:41,784 [http-nio-8080-exec-20] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:28:43,736 [http-nio-8080-exec-12] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-24 16:28:48,506 [http-nio-8080-exec-15] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:28:57,347 [http-nio-8080-exec-18] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:28:59,185 [http-nio-8080-exec-14] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:29:05,268 [http-nio-8080-exec-13] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:29:48,903 [http-nio-8080-exec-16] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:31:07,383 [http-nio-8080-exec-12] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:33:34,098 [http-nio-8080-exec-19] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:33:40,394 [http-nio-8080-exec-17] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:34:21,570 [http-nio-8080-exec-17] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-24 16:34:26,418 [http-nio-8080-exec-19] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:35:12,933 [http-nio-8080-exec-21] vegetablesshop.controller.LoginController  - Login user success!
+INFO    2021-10-24 16:35:15,746 [http-nio-8080-exec-24] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-24 16:35:19,859 [http-nio-8080-exec-22] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:35:35,452 [http-nio-8080-exec-22] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:35:39,131 [http-nio-8080-exec-28] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:35:47,566 [http-nio-8080-exec-26] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:35:49,323 [http-nio-8080-exec-24] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:35:56,193 [http-nio-8080-exec-30] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:35:58,080 [http-nio-8080-exec-28] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:36:07,590 [http-nio-8080-exec-31] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:36:09,318 [http-nio-8080-exec-22] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:36:15,963 [http-nio-8080-exec-30] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:36:17,670 [http-nio-8080-exec-23] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:36:36,217 [http-nio-8080-exec-34] vegetablesshop.controller.LoginController  - Login user success!
+INFO    2021-10-24 16:36:42,032 [http-nio-8080-exec-22] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-24 16:36:46,344 [http-nio-8080-exec-23] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:37:21,687 [http-nio-8080-exec-42] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:37:23,759 [http-nio-8080-exec-44] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-24 16:39:44,900 [http-nio-8080-exec-11] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:40:24,339 [http-nio-8080-exec-13] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:40:30,894 [http-nio-8080-exec-14] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:40:32,986 [http-nio-8080-exec-25] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:40:41,507 [http-nio-8080-exec-27] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:41:00,291 [http-nio-8080-exec-28] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:41:02,498 [http-nio-8080-exec-30] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:42:43,744 [http-nio-8080-exec-24] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:42:51,875 [http-nio-8080-exec-30] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:42:58,464 [http-nio-8080-exec-22] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:43:23,162 [http-nio-8080-exec-24] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:43:29,533 [http-nio-8080-exec-24] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:43:38,825 [http-nio-8080-exec-26] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:43:42,358 [http-nio-8080-exec-21] vegetablesshop.controller.LoginController  - Get information of product has id: 91959ac9-e768-47bb-b457-ea8441141c17 successfully!
+INFO    2021-10-24 16:43:52,299 [http-nio-8080-exec-24] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:43:54,163 [http-nio-8080-exec-26] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:44:00,830 [http-nio-8080-exec-30] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:44:07,116 [http-nio-8080-exec-22] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:44:09,831 [http-nio-8080-exec-25] vegetablesshop.controller.LoginController  - Get information of product has id: 91959ac9-e768-47bb-b457-ea8441141c17 successfully!
+INFO    2021-10-24 16:44:14,504 [http-nio-8080-exec-30] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:44:33,877 [http-nio-8080-exec-23] vegetablesshop.controller.LoginController  - Get information of product has id: 32522162 successfully!
+INFO    2021-10-24 16:44:36,808 [http-nio-8080-exec-26] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:44:38,401 [http-nio-8080-exec-24] vegetablesshop.controller.LoginController  - Get information of product has id: 44235257 successfully!
+INFO    2021-10-24 16:44:46,905 [http-nio-8080-exec-25] vegetablesshop.controller.LoginController  - Get information of product has id: null successfully!
+INFO    2021-10-24 16:45:47,890 [http-nio-8080-exec-28] vegetablesshop.controller.LoginController  - Get information of product has id: null successfully!
+INFO    2021-10-24 16:47:54,730 [http-nio-8080-exec-38] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:47:54,739 [http-nio-8080-exec-36] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:47:57,186 [http-nio-8080-exec-31] vegetablesshop.controller.LoginController  - Get information of product has id: 27452743 successfully!
+INFO    2021-10-24 16:47:59,308 [http-nio-8080-exec-40] vegetablesshop.controller.LoginController  - Get information of product has id: null successfully!
+INFO    2021-10-24 16:48:16,275 [http-nio-8080-exec-31] vegetablesshop.controller.LoginController  - Get information of product has id: 27452743 successfully!
+INFO    2021-10-24 16:48:18,541 [http-nio-8080-exec-36] vegetablesshop.controller.LoginController  - Get information of product has id: 27452743 successfully!
+INFO    2021-10-24 16:48:19,316 [http-nio-8080-exec-40] vegetablesshop.controller.LoginController  - Get information of product has id: 27452743 successfully!
+INFO    2021-10-24 16:48:21,970 [http-nio-8080-exec-37] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:48:23,824 [http-nio-8080-exec-39] vegetablesshop.controller.LoginController  - Get information of product has id: 32522162 successfully!
+INFO    2021-10-24 16:49:10,592 [http-nio-8080-exec-37] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:49:28,166 [http-nio-8080-exec-38] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:50:27,177 [http-nio-8080-exec-40] vegetablesshop.controller.LoginController  - Get information of product has id: null successfully!
+INFO    2021-10-24 16:50:40,336 [http-nio-8080-exec-38] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:50:41,931 [http-nio-8080-exec-43] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:50:43,738 [http-nio-8080-exec-38] vegetablesshop.controller.LoginController  - Get information of product has id: 23424221 successfully!
+INFO    2021-10-24 16:50:46,392 [http-nio-8080-exec-51] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:51:00,120 [http-nio-8080-exec-49] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:51:22,045 [http-nio-8080-exec-49] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:51:23,887 [http-nio-8080-exec-50] vegetablesshop.controller.LoginController  - Update cart successfully!
+INFO    2021-10-24 16:51:25,726 [http-nio-8080-exec-56] vegetablesshop.controller.LoginController  - Update cart successfully!
+WARN    2021-10-24 16:51:26,804 [http-nio-8080-exec-55] vegetablesshop.controller.LoginController  - Quantity of this product is not enough!
+WARN    2021-10-24 16:51:28,447 [http-nio-8080-exec-50] vegetablesshop.controller.LoginController  - Quantity of this product is not enough!
+INFO    2021-10-24 16:51:31,761 [http-nio-8080-exec-52] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:51:48,302 [http-nio-8080-exec-52] vegetablesshop.controller.LoginController  - Login user success!
+INFO    2021-10-24 16:51:49,993 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-24 16:51:57,337 [http-nio-8080-exec-54] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:51:59,501 [http-nio-8080-exec-59] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:52:06,708 [http-nio-8080-exec-55] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-24 16:52:08,342 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-24 16:52:10,673 [http-nio-8080-exec-52] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-24 16:52:12,461 [http-nio-8080-exec-51] vegetablesshop.controller.LoginController  - Get information of product has id: 12415121 successfully!
+INFO    2021-10-24 16:52:18,340 [http-nio-8080-exec-53] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-24 16:52:19,610 [http-nio-8080-exec-50] vegetablesshop.controller.LoginController  - Logout successfully!
+DEBUG   2021-10-24 16:52:26,622 [http-nio-8080-exec-55] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: default
+DEBUG   2021-10-24 16:52:26,634 [http-nio-8080-exec-55] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+DEBUG   2021-10-24 16:52:26,636 [http-nio-8080-exec-55] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection request: [route: {s}->https://accounts.google.com:443][total kept alive: 0; route allocated: 0 of 100; total allocated: 0 of 200]
+DEBUG   2021-10-24 16:52:26,651 [http-nio-8080-exec-55] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection leased: [id: 0][route: {s}->https://accounts.google.com:443][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 200]
+DEBUG   2021-10-24 16:52:26,653 [http-nio-8080-exec-55] org.apache.http.impl.execchain.MainClientExec  - Opening connection {s}->https://accounts.google.com:443
+DEBUG   2021-10-24 16:52:26,655 [http-nio-8080-exec-55] org.apache.http.impl.conn.DefaultHttpClientConnectionOperator  - Connecting to accounts.google.com/172.217.31.237:443
+DEBUG   2021-10-24 16:52:26,655 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  - Connecting socket to accounts.google.com/172.217.31.237:443 with timeout 0
+DEBUG   2021-10-24 16:52:26,735 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+DEBUG   2021-10-24 16:52:26,735 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+DEBUG   2021-10-24 16:52:26,735 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  - Starting handshake
+DEBUG   2021-10-24 16:52:26,898 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  - Secure session established
+DEBUG   2021-10-24 16:52:26,898 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  -  negotiated protocol: TLSv1.2
+DEBUG   2021-10-24 16:52:26,898 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  -  negotiated cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+DEBUG   2021-10-24 16:52:26,899 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  -  peer principal: CN=accounts.google.com
+DEBUG   2021-10-24 16:52:26,899 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  -  peer alternative names: [accounts.google.com, *.partner.android.com]
+DEBUG   2021-10-24 16:52:26,899 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  -  issuer principal: CN=GTS CA 1C3, O=Google Trust Services LLC, C=US
+DEBUG   2021-10-24 16:52:26,902 [http-nio-8080-exec-55] org.apache.http.impl.conn.DefaultHttpClientConnectionOperator  - Connection established 192.168.1.11:64102<->172.217.31.237:443
+DEBUG   2021-10-24 16:52:26,902 [http-nio-8080-exec-55] org.apache.http.impl.execchain.MainClientExec  - Executing request POST /o/oauth2/token HTTP/1.1
+DEBUG   2021-10-24 16:52:26,931 [http-nio-8080-exec-55] org.apache.http.impl.execchain.MainClientExec  - Target auth state: UNCHALLENGED
+DEBUG   2021-10-24 16:52:26,932 [http-nio-8080-exec-55] org.apache.http.impl.execchain.MainClientExec  - Proxy auth state: UNCHALLENGED
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 >> POST /o/oauth2/token HTTP/1.1
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 >> Content-Length: 318
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 >> Host: accounts.google.com
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_111)
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 >> "POST /o/oauth2/token HTTP/1.1[\r][\n]"
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 >> "Content-Length: 318[\r][\n]"
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 >> "Host: accounts.google.com[\r][\n]"
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_111)[\r][\n]"
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 >> "[\r][\n]"
+DEBUG   2021-10-24 16:52:26,933 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 >> "client_id=228319326160-mu93gh5bmia8f58sketkt5tg8hq47d8a.apps.googleusercontent.com&client_secret=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&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2FVegetablesShop%2Flogin-google&code=4%2F0AX4XfWhDMCCs4emvAxcKWhDBXliqpkmuLRpw3MZznoYf0YYSOf6vtmQQU53_LdNEIwRmBw&grant_type=authorization_code"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Date: Sun, 24 Oct 2021 09:52:26 GMT[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Expires: Mon, 01 Jan 1990 00:00:00 GMT[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Vary: Origin[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Vary: X-Origin[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Vary: Referer[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Content-Encoding: gzip[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Server: scaffolding on HTTPServer2[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "X-XSS-Protection: 0[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+DEBUG   2021-10-24 16:52:27,064 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "X-Content-Type-Options: nosniff[\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000[\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[0x1f][\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[0x8b][\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[0x8][\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[0x0][\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[0x0][\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[0x0][\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[0x0][\r][\n]"
+DEBUG   2021-10-24 16:52:27,065 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "000036e[\r][\n]"
+DEBUG   2021-10-24 16:52:27,115 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[0x0][0x2][0xff][0xbd]S[0xc9][0x92][0xab]F[0x10][0xbc][0xbf][0xaf][0x98][0x98][0xb3][0xa5]a[0x15][0xe2][0xdd][0xc4]*[0x10][0x8b]@[0x88][0xa5]/[\n]"
+DEBUG   2021-10-24 16:52:27,115 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "v[0x1a][0x89]}[0xc7][0xe1]7[0x9a][0x89][0xb0][0xfd][0x5][0xbe]VUgfgV[0xfd][0xf9][0xeb][0xe3][0xe3][0xd3][0xf][0xc3][0xb8][0xeb][0x1e]}[0xf5][0x8c][0xcb][0xcf][0xdf][0x1f][0x9f][0x8b][0x8f][0xd1]{[0x1f]9[0x99]m[0xe4][0xab][0x8f]*`:[0xcf][0x94][0x14][0xf7][0x0][0x80]t[0xea]&c[0xb8]rg[0x86][0xb4][0x84][0xce][0xe6][0xab][0x8b][0xb1]2[0x12][0x1b][0xc8][0xd2][0xb5][0x89]T[0xfc]"[0xef]@s[0xad][0x7][0xab]o[0xbd][0x84][0x91][0x84]$[0x84][0xf4][0x1c][0xde])[0xd6]0/[0x91][0x9b][0x10][0x2]}a[0x92][0xa2]a[0x14]}:[0xe6][0x8f]F[0xbc][0xac]2z[0x10][0xb3][0xf1][0x99][0x9][0xb7][0xf9]2[0xd5][0xe6][0xd3][0xb8][0xf1][0x12]9[0xf5]z[0x94][0xee]4R[0xa3][0xac][0x17]A[0x1f][0xf8][0x1c]9[0xde]Hc[0xe9][0x3][0xb9][0x8c]y[0xe4][0xb8][0x1c][0xe9][0xcf]?[0xde][0xc2][0xe3][0xb9][0x86]m[0xdc]=[0xe0][6N[0xd2][0xf4]w[0xb5][0xb][0xab]:~[0xff]#[0xeb][0xfb][0xba][0xfb][0xfd][0xf5]5M[0xd3]>[0xad][0xaa][0xf4][0x15][0xfb]5[0xec][0xf6]aU|[0xf9]C[0x9f]}[\r]][0xdc][0xc2]2[0xa9][0xf6]q[0xe1][0xc3][0xd7][0xc7][0xf6][0xaa][0x84][0xd1][0xf][0xf2][0xb7][0x17][0x8f]~[0xf9][0x1]bb[0xbf][0x8d][0xdb][0x9f][0xe][0x8c][0xfe]5*^[0xe4],[0x10]C[0xa8]C[0xf9]v_%T[0x83]R'[0x15]}[\r]X[0xe9] [0x15]2[0x4][0x9c][0x9c]yk[0x94]k[0xa2][0x8a][0x2]G"<[0xc7][0xcc]u[0xd1]~[0x81][0x2]@o[0xcd][\n]"
+DEBUG   2021-10-24 16:52:27,115 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[0xcd][0xe1][0x17] [0x1a][0x98][0x87]y[0xb8]f[0x19]([0xb0][0xc][0xa8][0xb0]2[0x12][0xbb][0xa7]7[0xe6][0xc5]F[\r][0x98][0x18][0xfb][0x8d][0xa6][0xe]q[0xf5]][0xca]<L[0x1b]#[0x87]D[0xc2][0x85],[0x3][0x8c].[0x3][0xf1]>x[0x18][0xdd]Kp[0x82][0x9e][OR^A5[0x97][0x8]u[0xe5]Iu[0x95]0[0xd5][0xf2]&[0xc5]AQ[0xdd][0xd2]J[0x9f][0xb3]a[0xe0][0xbc]2][0xf4]P[0xfd][0xac][0xb5][0xc0][0xdd][0x12][0xe6]l[0x4][0xac]Y[0x15]Z[0x6][0xe][0xb8],S[\n]"
+DEBUG   2021-10-24 16:52:27,115 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "a[\n]"
+DEBUG   2021-10-24 16:52:27,115 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[0xcf][0xea][0x0]0z[0x4][0xd8][0xfc][0x8a]\[0xed][0x15][0x16][0xda][0x18][0x94][0xe6]+([0x8d][0xff]p[0xd9][0xcf][0xff][0x8b]+[0xc4]m[0xf8][0xcd]e[0xf1][0xa8][0xce][0x19][0xab]fmV[0xaf][0x1e][0xa1]ZOR[[\r]r[0xe3][0x9d][0xdf]s[0xc0]A3[0xdf][0x99][0xde]>a[0x1]f[0xa2][0x1e][0x86][0xd6]A[0x91][0xce][0x1a]wZTN8[0x1][0xec][0xbb][0xff][0xf][0xee][0xcf][0xfc][0x9c]D[0x85][0xbd][0xf8][0xe][0xa8][0x81]c@[0xbd]4[0x97][0xc8][0xb9]o1[\n]"
+DEBUG   2021-10-24 16:52:27,115 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[0x88][0x8b]eY[0x88][0xa5]o<[0xc4][0xc0][0xed]*[0xc4][0x19]K[[0x5]K[0xb7][0xa3]&rC[0xc4]z[0x1d][0x9][0x15]g[0xca]7[0x96][0xef][0x8][0xc8][0xa6]q[0xd6]r[0x15]U9o[0xd3]d`[[0x94][0xaf][0xf8][0xbc]E[0x99][0xf3][0x98][0xba][0xde]'m[0x95]p[0x8d][0x3][0xf4][0xde];[0xa4][0xe2][0xda]/[0xcb][0x19]*q[0xbd][0xf3][0x1e]7'[0xa2][0x1e][0xe8]E[0xe7]Y[0x8a][0x12]o3[0xd3][0xac][0xca]U9[0xde][0x15]o[0xb7][0xe3][0xa0]QI[0xc5]E[0xdd][0x1d][0xcd]3h[0x16]([0x19][0xcb]L[0xe7][0x10]G[0x2][0xf3]~,[0x9f][0x1a][0xc9][0x8d][0xce]=[0xc4]Q[0xe2]r5[0xe3][0xf6]n[0x8e][0xf4][0xda][0x1][0xab][0x86][0xb3]'[0x9c][0xc7][0xed][0x98][0xce][0xbb][0xa4][0xcb][0xfc][0xe7][0xf5][0xc6]d[0x14]{2[0xe4][0x83][0xe4][\r]J[0x8d]^[0xa6]uP[0x95]q[0x9a]E1 pT][0x85][0x92][0xb2][0xed]`[0x87]$"
+DEBUG   2021-10-24 16:52:27,118 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << HTTP/1.1 200 OK
+DEBUG   2021-10-24 16:52:27,118 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Date: Sun, 24 Oct 2021 09:52:26 GMT
+DEBUG   2021-10-24 16:52:27,118 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Expires: Mon, 01 Jan 1990 00:00:00 GMT
+DEBUG   2021-10-24 16:52:27,118 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Pragma: no-cache
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Content-Type: application/json; charset=utf-8
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Vary: Origin
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Vary: X-Origin
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Vary: Referer
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Content-Encoding: gzip
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Server: scaffolding on HTTPServer2
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << X-XSS-Protection: 0
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << X-Frame-Options: SAMEORIGIN
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << X-Content-Type-Options: nosniff
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000
+DEBUG   2021-10-24 16:52:27,176 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-0 << Transfer-Encoding: chunked
+DEBUG   2021-10-24 16:52:27,182 [http-nio-8080-exec-55] org.apache.http.impl.execchain.MainClientExec  - Connection can be kept alive indefinitely
+DEBUG   2021-10-24 16:52:27,189 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "J[0xa5][0xd6]c)i[0x14][0xae][0xb9]ja[0xe0][0x8d][0xc3][0xef][0xdc][0xb6][0xe0][0x9c][0xa7]s[0x14][0x7][0x8b][0xe9][0xe][0xf6]r[0x9a][0x94][0xb1][0xa0]%[0xca][0x9d][0xd9][0xc8][0xbe][0xe5]M[0xcf][0xba][0x91][0x90][0x7][0xf6][0x89][0xc3][0x9a][0x82][0xe5][0xeb][0x9e][0x99]H![0x96][0x1f]u{r[0xfc][0x14][0xdc][0xf1][0x11]'[0xeb]t>[0xd7][0x8]z[0xec][0xb8][0xf4][0x90]S[0xed][0xd8][0xd3][0x90][0xe1]}}[[0x92],M[0xa8]"[0x12][0xf0][0x9c][0x8][0x8b][0xe0]l[0xfb][0xb4][0xdb][0xce]s[0x1f]i][0x1a][0xf]l[0x81][0xba]t/[0x1b],u*[0xe1][0xb5][0xaa][0xc4][0xa4][0x0][0xe][0x9b][0xca][0xf8]cH[0x1c][0x16][\r]xB;$j[0xd3][0x10][0xc6][0xfd][0xf4][0xf9][0xeb][0xaf][0xbf][0x1]D=[0x0][0xbd][0xcf][0x4][0x0][0x0][\r][\n]"
+DEBUG   2021-10-24 16:52:27,189 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "0[\r][\n]"
+DEBUG   2021-10-24 16:52:27,189 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-0 << "[\r][\n]"
+DEBUG   2021-10-24 16:52:27,189 [http-nio-8080-exec-55] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection [id: 0][route: {s}->https://accounts.google.com:443] can be kept alive indefinitely
+DEBUG   2021-10-24 16:52:27,189 [http-nio-8080-exec-55] org.apache.http.impl.conn.DefaultManagedHttpClientConnection  - http-outgoing-0: set socket timeout to 0
+DEBUG   2021-10-24 16:52:27,189 [http-nio-8080-exec-55] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection released: [id: 0][route: {s}->https://accounts.google.com:443][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 200]
+DEBUG   2021-10-24 16:52:27,237 [http-nio-8080-exec-55] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: default
+DEBUG   2021-10-24 16:52:27,237 [http-nio-8080-exec-55] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+DEBUG   2021-10-24 16:52:27,237 [http-nio-8080-exec-55] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection request: [route: {s}->https://www.googleapis.com:443][total kept alive: 1; route allocated: 0 of 100; total allocated: 1 of 200]
+DEBUG   2021-10-24 16:52:27,237 [http-nio-8080-exec-55] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection leased: [id: 1][route: {s}->https://www.googleapis.com:443][total kept alive: 1; route allocated: 1 of 100; total allocated: 2 of 200]
+DEBUG   2021-10-24 16:52:27,240 [http-nio-8080-exec-55] org.apache.http.impl.execchain.MainClientExec  - Opening connection {s}->https://www.googleapis.com:443
+DEBUG   2021-10-24 16:52:27,250 [http-nio-8080-exec-55] org.apache.http.impl.conn.DefaultHttpClientConnectionOperator  - Connecting to www.googleapis.com/142.250.66.138:443
+DEBUG   2021-10-24 16:52:27,250 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  - Connecting socket to www.googleapis.com/142.250.66.138:443 with timeout 0
+DEBUG   2021-10-24 16:52:27,314 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+DEBUG   2021-10-24 16:52:27,314 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+DEBUG   2021-10-24 16:52:27,314 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  - Starting handshake
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  - Secure session established
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  -  negotiated protocol: TLSv1.2
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  -  negotiated cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  -  peer principal: CN=upload.video.google.com
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  -  peer alternative names: [upload.video.google.com, *.clients.google.com, *.docs.google.com, *.drive.google.com, *.gdata.youtube.com, *.googleapis.com, *.photos.google.com, *.youtube-3rd-party.com, upload.google.com, *.upload.google.com, upload.youtube.com, *.upload.youtube.com, uploads.stage.gdata.youtube.com, bg-call-donation.goog, bg-call-donation-alpha.goog, bg-call-donation-canary.goog, bg-call-donation-dev.goog]
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.conn.ssl.SSLConnectionSocketFactory  -  issuer principal: CN=GTS CA 1C3, O=Google Trust Services LLC, C=US
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.impl.conn.DefaultHttpClientConnectionOperator  - Connection established 192.168.1.11:64103<->142.250.66.138:443
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.impl.execchain.MainClientExec  - Executing request GET /oauth2/v1/userinfo?access_token=ya29.a0ARrdaM_obBsYRILX6ZZIAswQuPDHB5TFsVEoKQzBICbJIPqdM3KJ-ZqPpuTtrYfEl54IFc9xcU7CQRKdXf4F9KBfmqBLOw8j_qGKzJ16GhvkhFSxKwpRkQSEI5wtOdg-N5N7Tl496Ej08S5QytbJneE08y89 HTTP/1.1
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.impl.execchain.MainClientExec  - Target auth state: UNCHALLENGED
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.impl.execchain.MainClientExec  - Proxy auth state: UNCHALLENGED
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 >> GET /oauth2/v1/userinfo?access_token=ya29.a0ARrdaM_obBsYRILX6ZZIAswQuPDHB5TFsVEoKQzBICbJIPqdM3KJ-ZqPpuTtrYfEl54IFc9xcU7CQRKdXf4F9KBfmqBLOw8j_qGKzJ16GhvkhFSxKwpRkQSEI5wtOdg-N5N7Tl496Ej08S5QytbJneE08y89 HTTP/1.1
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 >> Host: www.googleapis.com
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 >> Connection: Keep-Alive
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_111)
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 >> "GET /oauth2/v1/userinfo?access_token=ya29.a0ARrdaM_obBsYRILX6ZZIAswQuPDHB5TFsVEoKQzBICbJIPqdM3KJ-ZqPpuTtrYfEl54IFc9xcU7CQRKdXf4F9KBfmqBLOw8j_qGKzJ16GhvkhFSxKwpRkQSEI5wtOdg-N5N7Tl496Ej08S5QytbJneE08y89 HTTP/1.1[\r][\n]"
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 >> "Host: www.googleapis.com[\r][\n]"
+DEBUG   2021-10-24 16:52:27,469 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG   2021-10-24 16:52:27,470 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_111)[\r][\n]"
+DEBUG   2021-10-24 16:52:27,470 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG   2021-10-24 16:52:27,470 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 >> "[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Expires: Mon, 01 Jan 1990 00:00:00 GMT[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Date: Sun, 24 Oct 2021 09:52:27 GMT[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Pragma: no-cache[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Content-Type: application/json; charset=UTF-8[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Vary: Origin[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Vary: X-Origin[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Vary: Referer[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Content-Encoding: gzip[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Server: ESF[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "X-XSS-Protection: 0[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "X-Content-Type-Options: nosniff[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "[0x1f][\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "0001[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "[0x8b][\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "97[\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "[0x8][0x0][0x0][0x0][0x0][0x0][0x2][0xff]5[0x8c]K[\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "[0xc3] [0x10]@[0xf7][0x9e]B\71[0x93][0xbf][0x81]BoR[0x82]N[0x12][0xc1]h0c6[0xa5]w/[0xb6]t[0xfd]>/[0xc6][0xb9][0xb0]FL\[0x0]tc[0xdb]tu7[0xf4]#(5[0xb4][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "z[0x10][0xb7],[0xe0]>[[0x97][0x9d]+[0x98][0xa4]w[0xeb]7h[0xab][0xba][0x82][0xc7][0x9a]A[0xa9][0xc3][0xfe][0xf3].[0x8c]v[0xb1]h[0x9e][0xff][0x80]b[0xc2]/9[0xac][0xa6][0x14]1?6[0xa2][0xe3][0x9c][0xa4]t[S[0xae]![0xac][0xe][0xd3][0x89]Q[0x7]O[0xe8])[0xbf][0xe4],[\r].srTdr?U_h[0xc1][0xde][0xec][0x3]K[0xc]<[0x9e][0xad][0x0][0x0][0x0][\r][\n]"
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << HTTP/1.1 200 OK
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Expires: Mon, 01 Jan 1990 00:00:00 GMT
+DEBUG   2021-10-24 16:52:27,572 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Date: Sun, 24 Oct 2021 09:52:27 GMT
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Pragma: no-cache
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Content-Type: application/json; charset=UTF-8
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Vary: Origin
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Vary: X-Origin
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Vary: Referer
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Content-Encoding: gzip
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Server: ESF
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << X-XSS-Protection: 0
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << X-Frame-Options: SAMEORIGIN
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << X-Content-Type-Options: nosniff
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.headers  - http-outgoing-1 << Transfer-Encoding: chunked
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.impl.execchain.MainClientExec  - Connection can be kept alive indefinitely
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "0[\r][\n]"
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.wire  - http-outgoing-1 << "[\r][\n]"
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection [id: 1][route: {s}->https://www.googleapis.com:443] can be kept alive indefinitely
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.impl.conn.DefaultManagedHttpClientConnection  - http-outgoing-1: set socket timeout to 0
+DEBUG   2021-10-24 16:52:27,615 [http-nio-8080-exec-55] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection released: [id: 1][route: {s}->https://www.googleapis.com:443][total kept alive: 2; route allocated: 1 of 100; total allocated: 2 of 200]
+INFO    2021-10-24 16:52:27,618 [http-nio-8080-exec-55] vegetablesshop.controller.LoginController  - Login by Google with email: voducminh140201@gmail.com successfully!
+INFO    2021-10-24 16:53:28,580 [http-nio-8080-exec-50] vegetablesshop.controller.LoginController  - Logout successfully!
+DEBUG   2021-10-24 16:53:34,016 [http-nio-8080-exec-56] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: default
+DEBUG   2021-10-24 16:53:34,016 [http-nio-8080-exec-56] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+DEBUG   2021-10-24 16:53:34,017 [http-nio-8080-exec-56] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection request: [route: {s}->https://accounts.google.com:443][total kept alive: 2; route allocated: 1 of 100; total allocated: 2 of 200]
+DEBUG   2021-10-24 16:53:34,022 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[read] I/O error: Read timed out"
+DEBUG   2021-10-24 16:53:34,022 [http-nio-8080-exec-56] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection leased: [id: 0][route: {s}->https://accounts.google.com:443][total kept alive: 1; route allocated: 1 of 100; total allocated: 2 of 200]
+DEBUG   2021-10-24 16:53:34,022 [http-nio-8080-exec-56] org.apache.http.impl.conn.DefaultManagedHttpClientConnection  - http-outgoing-0: set socket timeout to 0
+DEBUG   2021-10-24 16:53:34,022 [http-nio-8080-exec-56] org.apache.http.impl.execchain.MainClientExec  - Executing request POST /o/oauth2/token HTTP/1.1
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.impl.execchain.MainClientExec  - Target auth state: UNCHALLENGED
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.impl.execchain.MainClientExec  - Proxy auth state: UNCHALLENGED
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 >> POST /o/oauth2/token HTTP/1.1
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 >> Content-Length: 318
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 >> Host: accounts.google.com
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_111)
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 >> "POST /o/oauth2/token HTTP/1.1[\r][\n]"
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 >> "Content-Length: 318[\r][\n]"
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 >> "Host: accounts.google.com[\r][\n]"
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_111)[\r][\n]"
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 >> "[\r][\n]"
+DEBUG   2021-10-24 16:53:34,023 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 >> "client_id=228319326160-mu93gh5bmia8f58sketkt5tg8hq47d8a.apps.googleusercontent.com&client_secret=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&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2FVegetablesShop%2Flogin-google&code=4%2F0AX4XfWiipytCV9ZDAbXV9eGCQiOvP0YfEXO046lAgpiOmcdG5RWWemgbGfI0tZ5Fyw90OA&grant_type=authorization_code"
+DEBUG   2021-10-24 16:53:34,148 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Expires: Mon, 01 Jan 1990 00:00:00 GMT[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Date: Sun, 24 Oct 2021 09:53:34 GMT[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Pragma: no-cache[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Vary: Origin[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Vary: X-Origin[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Vary: Referer[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Content-Encoding: gzip[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Server: scaffolding on HTTPServer2[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "X-XSS-Protection: 0[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "X-Content-Type-Options: nosniff[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0x1f][\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0x8b][\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0x8][\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0x0][\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0x0][\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0x0][\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0x0][\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:53:34,162 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0x0][\r][\n]"
+DEBUG   2021-10-24 16:53:34,224 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:53:34,224 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0x2][\r][\n]"
+DEBUG   2021-10-24 16:53:34,224 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "1[\r][\n]"
+DEBUG   2021-10-24 16:53:34,224 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0xff][\r][\n]"
+DEBUG   2021-10-24 16:53:34,224 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "366[\r][\n]"
+DEBUG   2021-10-24 16:53:34,224 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0xbd]S[0xc9][0x92][0xb2]H[0x18][0xbc][0xff]O[0xd1][0xe1]y[0xb4][0xa1][0xb0]h[0xfd]o([0xab]Z [0xbb]p1[0x8a]E(dQ[0x16]Y&[0xe6][0xdd][0x7][0xbb]#f[0xe6][0x9][0xe6][0xfa]-[0x99][0xf9]eV[0xfd][0xf9][0xeb][0xe3]c[0x81][0xc3]0n[0x9a]k[[0xdd][0xe3]r[0xf1][0xfb]c1b[0xb0]]a[0x8a]3[0xea][0x8][0xa3][0xe5]t[0xcb]w7[0xdd][0x1d][0xe9]*a[0xd9]%^[0x92][0x88]/[0xd9]Mt[0x84]26#h[0xaa][0x1e][0xaf][0xeb][0xf5]s[0xf7]:N[0xa6]=[0xf4][0xd7][0xd4][\r][0xea][0xee][0xc6]q[0xfb]:[0xa1]q[0xd7][0x9a]&[0x9b]qv[0x82][0x1]3[0xe5]]H[0x1d]2K[0xbe],[0xf7][0x17]0[\r][0x9][0xf][0x9a][0x9c]s[0xe2][0x14]de[\r][0xbd][0x93],[0x1d]N[0x82][0xd4]Q[0x91]BC[0x8b][0xd2]j.[0x1d][0xb7][0x19][0xad][0xe0][0xe9]kT[0xef][0xc1][0xee][0x8c][0x83][0xb3]Q[0x1d][0xdb][0x84][0x8f]jn[0xf1][0xc7][x<<H[0x1d]7W[0xf2][0x96][0xcd][0xc0][0xed][0xf6][0xbb][0xda][0x84][0xd5]#~[0xdf][0x91][0xb6][0xed][0xa3][0xf9][0xfd][0xf9][0xd9][0xf7][0xfd]*[0xa9][0xaa]$[0x8f][0xf1][0x83]4[0xab][0xb0]*>ga[0xe9]g[0xd7][0xc4]5)o[0xd5]*.0[0xc9]?[0xe6][0xad][0x92]D?[0xc8][0xdf]^\[0xdb][0xf1][0x7]h[0x17][0xe3]:[0xae]:$[0xfa][0xd7][0xa8]x<[0xa4][0x81][0x14][0x12][0x8d][0x1c]L{Rh[0x95]([0x8d]R[0xb4][0xf][0xaf][0xb0]Jq >H[0xbd])[0xca]T[0x9][0xd1][0xbe][0xab][0xac]=[0xd7][0xc8]4[0xc9][0xc9][0xfd][0xc2]'[0xde][0x94][0x16][0xaa]+[0x8c][0xbe][0xa4][0x3][0xf]x[0x8c]j[0xe9][0xb4]o[0xe9][0xe4][0xb4]?P[0xf1][0x85]{c[0x1e][0x1d]Z'7}5[0xd3]<B[0x6][0xbd]K[0xa9][0x7][0xd4]W[0xe4]B*[0x1c]a[0x19][0x80]m[0x19]Hv[0xe7][0x81]m[0xab][0x90][0x9e]x[0x97]G[0xaf]d[0x15]A[0x99][0xb2]F[0x93][0x0][0xd1][0xa4][0x0]dy[0xfd][0xc9][0xa5]i[0xcd]RK[0xcc];$p[0xf3]T[0x93]<Z[0x93][0xd5][0xda][0xbf][0xcc][0x9][0xf3][0xe][0xe5]Oi[0x15]Z:[0xe3][0xf3]iz*[0xc4]>[0x94]Q[0xe7][0x83][0xed][0xcb][0x7]C[0x1e]][0xd4]<,[0xd4]WP[0x1a]yP[0xea][0xff][0xe1]r[0xee][0xff][0x17]W[0xc8]8[0xe4][0x9b][0xcb][0x12]h[0x8d][0xd7]'[0xd5][0x9a][0xad][0x9e][0xbc]5[0xb2][0xee]P[0x9d]t8[0xf3][0xe][0xef]9[0xdf][0xa5]S[0xec][0xf6]o[0x9f]@[0x0][0xc][0xda][0x3][0xf4]#([0x92]A[0xe5][0xb9][0x11][0xf1]"[0xe7][0x83][0xef][0xfe]?[0xb8]?[0xf3][0xc3]-*[0x9c][0x11][0xbb][0xfe][0xc3]wu[0xa2][0x95][0xc6][0x18][0xb9][0xf6][0x1c][0xa3]H]@[0x9a][0x86] [0x99][0xf1]f[0xbe]K[0xba][0xd6]K[0xf5]d[0x94][0x88]A[0x14]tl[0xe1]![0xf9]#[0x5]MQ[0xdc][0xbd][0xb1][0xb0]+R[0xb3][0xc6]A[0xcd][0x10][0x8d]x[0xf][0xa2]L[0xa0][0xe6]([0xf3]X[0x9e][0xa3][0xcc][0x4][0x80]&[0xbb]W[0xa7][0xd9]+[0xcb][0xd8][0xae][0x86][0x9b]x[0xcc][0x9c]h[0x9d]2[0xf0]yJ"!GJ$o[0xc2]%C[0xe8][0xec][0xa6]"[0x7]C[0xe6][0xe][0xc7][0xb4][0x99]6[0xed]c[0x3]k[0xb2][0xbc]&[0x81][0xde][0xc9][0x19]8[0xef][0xed][0xc6][0xc0][0xa1]d[0xa3][0xf4]e[0x96][0x90][0xdc][0xac][0xc1]8k[0xd2]A[0xc]H[0xb5][0xde][0xd9][0xb5][0xe7][0x1e][\r][0xf3][0xdc]5'[0xcb][0xb5][0x19][0x93][0x12][0xfb][0xa9][0xc0][0xd7][0x3][0xb4]5[0xf4]5[0x14][0xb4][0x8a][0xf9]y[0x8d][0x0] "
+DEBUG   2021-10-24 16:53:34,224 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << HTTP/1.1 200 OK
+DEBUG   2021-10-24 16:53:34,224 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Expires: Mon, 01 Jan 1990 00:00:00 GMT
+DEBUG   2021-10-24 16:53:34,224 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Date: Sun, 24 Oct 2021 09:53:34 GMT
+DEBUG   2021-10-24 16:53:34,224 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+DEBUG   2021-10-24 16:53:34,224 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Pragma: no-cache
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Content-Type: application/json; charset=utf-8
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Vary: Origin
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Vary: X-Origin
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Vary: Referer
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Content-Encoding: gzip
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Server: scaffolding on HTTPServer2
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << X-XSS-Protection: 0
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << X-Frame-Options: SAMEORIGIN
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << X-Content-Type-Options: nosniff
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-0 << Transfer-Encoding: chunked
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.impl.execchain.MainClientExec  - Connection can be kept alive indefinitely
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[0x8b]b[0x5][0xbc][0xa7]_br[0xd4][0x97][0x17][0xbf]<[0x80][0x97][0x1e].[0x9f][0xae]J[0xa0]XOF[0xa9][0xcd][0xa6]^[0xf5][0x0][0x8d]`[0xe3][0x81][0xc4][0xa5][0xea]S7X[0xc2]5[0x15][0x13][0xb6][0xdc]SD`[0xad]d[0x10][0x18]k[0x93]H[0xad]L[0x99][\n]"
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "+[0xdd][0xd1]Kf[0xfd][0xfd][0xfc][0xb][0x10][0xfb][0xc][0xa8] [0x97]@[0xeb][0xee][0xc3]V[0xb2][0xf3][0xa3]>[0xbf][0xd1][0xb5]z[0xcb][0x9d]N6[0xc6]a[0xc9][0x7]d?[0xd4][0x3]nD[0xfb]l}A[0xd5][0x1c]9[0xc5]o[0xe]/[0x6]#[0x11]a[0xea][0x8b][0x18][0x93][0xb9][0xa3][0x89][0xe7][0xe][0xd0]l.H[0xa9]EYL/9[0xc3][0xb0][0xe3][0xbe]d[0x97][0x9b][0x86]4ST?[0xf7]-[0x3][0xb4]2z[0xd5]p[0xe4][0x7][0xc1][0xdc][0xed][0xb8][0xc5][0xaf][0xbf][0xfe][0x6]][0x0][0xa2]~[0xcf][0x4][0x0][0x0][\r][\n]"
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "0[\r][\n]"
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-0 << "[\r][\n]"
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection [id: 0][route: {s}->https://accounts.google.com:443] can be kept alive indefinitely
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.impl.conn.DefaultManagedHttpClientConnection  - http-outgoing-0: set socket timeout to 0
+DEBUG   2021-10-24 16:53:34,286 [http-nio-8080-exec-56] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection released: [id: 0][route: {s}->https://accounts.google.com:443][total kept alive: 2; route allocated: 1 of 100; total allocated: 2 of 200]
+DEBUG   2021-10-24 16:53:34,287 [http-nio-8080-exec-56] org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: default
+DEBUG   2021-10-24 16:53:34,287 [http-nio-8080-exec-56] org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+DEBUG   2021-10-24 16:53:34,287 [http-nio-8080-exec-56] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection request: [route: {s}->https://www.googleapis.com:443][total kept alive: 2; route allocated: 1 of 100; total allocated: 2 of 200]
+DEBUG   2021-10-24 16:53:34,301 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "[read] I/O error: Read timed out"
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection leased: [id: 1][route: {s}->https://www.googleapis.com:443][total kept alive: 1; route allocated: 1 of 100; total allocated: 2 of 200]
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.impl.conn.DefaultManagedHttpClientConnection  - http-outgoing-1: set socket timeout to 0
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.impl.execchain.MainClientExec  - Executing request GET /oauth2/v1/userinfo?access_token=ya29.a0ARrdaM-zflBfZ4uK1og66-a-idDn68dK5HaSd5SNYDQQrqBvKzSUxw_hWbrufAACrg1autSS6jAUga23zluc0JjTHX-CX2zxgD2slAVeh2jnr5YLHGJLEGu0dI15T0OrAhy9j1Iaz7yNkbBPabPRoKtgDdrA HTTP/1.1
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.impl.execchain.MainClientExec  - Target auth state: UNCHALLENGED
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.impl.execchain.MainClientExec  - Proxy auth state: UNCHALLENGED
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 >> GET /oauth2/v1/userinfo?access_token=ya29.a0ARrdaM-zflBfZ4uK1og66-a-idDn68dK5HaSd5SNYDQQrqBvKzSUxw_hWbrufAACrg1autSS6jAUga23zluc0JjTHX-CX2zxgD2slAVeh2jnr5YLHGJLEGu0dI15T0OrAhy9j1Iaz7yNkbBPabPRoKtgDdrA HTTP/1.1
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 >> Host: www.googleapis.com
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 >> Connection: Keep-Alive
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_111)
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 >> "GET /oauth2/v1/userinfo?access_token=ya29.a0ARrdaM-zflBfZ4uK1og66-a-idDn68dK5HaSd5SNYDQQrqBvKzSUxw_hWbrufAACrg1autSS6jAUga23zluc0JjTHX-CX2zxgD2slAVeh2jnr5YLHGJLEGu0dI15T0OrAhy9j1Iaz7yNkbBPabPRoKtgDdrA HTTP/1.1[\r][\n]"
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 >> "Host: www.googleapis.com[\r][\n]"
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_111)[\r][\n]"
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG   2021-10-24 16:53:34,348 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 >> "[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Date: Sun, 24 Oct 2021 09:53:34 GMT[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Pragma: no-cache[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Expires: Mon, 01 Jan 1990 00:00:00 GMT[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Content-Type: application/json; charset=UTF-8[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Vary: Origin[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Vary: X-Origin[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Vary: Referer[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Content-Encoding: gzip[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Server: ESF[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "X-XSS-Protection: 0[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "X-Content-Type-Options: nosniff[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "[0x1f][\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "00000001[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "[0x8b][\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "000097[\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "[0x8][0x0][0x0][0x0][0x0][0x0][0x2][0xff]5[0x8c]K[\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "[0xc3] [0x10]@[0xf7][0x9e]B\71[0x93][0xbf][0x81]BoR[0x82]N[0x12][0xc1]h0c6[0xa5]w/[0xb6]t[0xfd]>/[0xc6][0xb9][0xb0]FL\[0x0]tc[0xdb]tu7[0xf4]#(5[0xb4][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "z[0x10][0xb7],[0xe0]>[[0x97][0x9d]+[0x98][0xa4]w[0xeb]7h[0xab][0xba][0x82][0xc7][0x9a]A[0xa9][0xc3][0xfe][0xf3].[0x8c]v[0xb1]h[0x9e][0xff][0x80]b[0xc2]/9[0xac][0xa6][0x14]1?6[0xa2][0xe3][0x9c][0xa4]t[S[0xae]![0xac][0xe][0xd3][0x89]Q[0x7]O[0xe8])[0xbf][0xe4],[\r].srTdr?U_h[0xc1][0xde][0xec][0x3]K[0xc]<[0x9e][0xad][0x0][0x0][0x0][\r][\n]"
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << HTTP/1.1 200 OK
+DEBUG   2021-10-24 16:53:34,452 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Date: Sun, 24 Oct 2021 09:53:34 GMT
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Pragma: no-cache
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Expires: Mon, 01 Jan 1990 00:00:00 GMT
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Content-Type: application/json; charset=UTF-8
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Vary: Origin
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Vary: X-Origin
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Vary: Referer
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Content-Encoding: gzip
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Server: ESF
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << X-XSS-Protection: 0
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << X-Frame-Options: SAMEORIGIN
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << X-Content-Type-Options: nosniff
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.headers  - http-outgoing-1 << Transfer-Encoding: chunked
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.impl.execchain.MainClientExec  - Connection can be kept alive indefinitely
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "0[\r][\n]"
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.wire  - http-outgoing-1 << "[\r][\n]"
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection [id: 1][route: {s}->https://www.googleapis.com:443] can be kept alive indefinitely
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.impl.conn.DefaultManagedHttpClientConnection  - http-outgoing-1: set socket timeout to 0
+DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection released: [id: 1][route: {s}->https://www.googleapis.com:443][total kept alive: 2; route allocated: 1 of 100; total allocated: 2 of 200]
+INFO    2021-10-24 16:53:34,473 [http-nio-8080-exec-56] vegetablesshop.controller.LoginController  - Login by Google with email: voducminh140201@gmail.com successfully!
+INFO    2021-10-24 16:53:44,439 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Logout successfully!

@@ -117,7 +117,7 @@ public class ProductDAO {
     }
     
     public ProductDTO getProduct(String productID) throws SQLException {
-        ProductDTO product = new ProductDTO();
+        ProductDTO product = null;
         ProductDAO dao = new ProductDAO();
         Connection conn = null;
         PreparedStatement stm = null;
@@ -214,7 +214,7 @@ public class ProductDAO {
     }
     
     public ProductDTO getProductForCart(String productID) throws SQLException {
-        ProductDTO product = new ProductDTO();
+        ProductDTO product = null;
         ProductDAO dao = new ProductDAO();
         Connection conn = null;
         PreparedStatement stm = null;
