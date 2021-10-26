@@ -853,3 +853,16 @@ DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.impl.con
 DEBUG   2021-10-24 16:53:34,470 [http-nio-8080-exec-56] org.apache.http.impl.conn.PoolingHttpClientConnectionManager  - Connection released: [id: 1][route: {s}->https://www.googleapis.com:443][total kept alive: 2; route allocated: 1 of 100; total allocated: 2 of 200]
 INFO    2021-10-24 16:53:34,473 [http-nio-8080-exec-56] vegetablesshop.controller.LoginController  - Login by Google with email: voducminh140201@gmail.com successfully!
 INFO    2021-10-24 16:53:44,439 [http-nio-8080-exec-58] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-25 12:47:05,692 [http-nio-8080-exec-10] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-25 12:47:56,636 [http-nio-8080-exec-14] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-25 12:48:12,005 [http-nio-8080-exec-22] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-25 12:50:46,306 [http-nio-8080-exec-34] vegetablesshop.controller.LoginController  - Login user success!
+INFO    2021-10-25 12:50:49,122 [http-nio-8080-exec-29] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-25 12:50:53,048 [http-nio-8080-exec-26] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-25 12:52:27,258 [http-nio-8080-exec-43] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-25 12:52:36,782 [http-nio-8080-exec-46] vegetablesshop.controller.LoginController  - Login user success!
+INFO    2021-10-25 12:52:45,699 [http-nio-8080-exec-41] vegetablesshop.controller.LoginController  - Login admin success!
+INFO    2021-10-25 12:52:54,021 [http-nio-8080-exec-52] vegetablesshop.controller.LoginController  - Admin get all product list successfully!
+INFO    2021-10-25 12:53:02,452 [http-nio-8080-exec-49] vegetablesshop.controller.LoginController  - Logout successfully!
+INFO    2021-10-25 12:53:12,878 [http-nio-8080-exec-46] vegetablesshop.controller.LoginController  - Get product list successfully!
+INFO    2021-10-25 12:53:19,914 [http-nio-8080-exec-53] vegetablesshop.controller.LoginController  - Get product list successfully!

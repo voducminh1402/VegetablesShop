@@ -135,7 +135,7 @@ public class AuthorizationFilter implements Filter {
                     res.sendRedirect(LOGIN);
                 }
             }
-            else if (resource.isEmpty() || resource.contains("index.jsp") || resource.contains("shop.jsp") || resource.contains("search.jsp")
+            else if (resource.isEmpty() || resource.contains("index.jsp") || resource.contains("404.jsp") || resource.contains("shop.jsp") || resource.contains("search.jsp")
                     || resource.contains("cart.jsp") || resource.contains("product-detail.jsp") || 
                     resource.contains("success.jsp") || resource.contains("error-checkout.jsp") || resource.contains("checkout.jsp")
                     || pathAction.contains("GetActiveProduct") || pathAction.contains("GetDetailProduct") || pathAction.contains("AddToCart")
@@ -178,6 +178,11 @@ public class AuthorizationFilter implements Filter {
 //                }
 //            }
             else {
+                if (userLogin != null) {
+                    if (AD == userLogin.getRoleID()) {
+                        session.removeAttribute("LOGIN_USER");
+                    }
+                }
                 chain.doFilter(request, response);
             }
         } 
