@@ -178,11 +178,11 @@ public class AuthorizationFilter implements Filter {
 //                }
 //            }
             else {
-                if (userLogin != null) {
-                    if (AD == userLogin.getRoleID()) {
-                        session.removeAttribute("LOGIN_USER");
-                    }
-                }
+//                if (userLogin != null) {
+//                    if (AD == userLogin.getRoleID()) {
+//                        session.removeAttribute("LOGIN_USER");
+//                    }
+//                }
                 chain.doFilter(request, response);
             }
         } 
