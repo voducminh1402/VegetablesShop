@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
-import static vegetablesshop.controller.CheckDuplicateUserController.LOGGER;
 import vegetablesshop.users.UserDAO;
 import vegetablesshop.users.UserDTO;
 
@@ -31,8 +30,8 @@ public class SignUpController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
         try {
-            String userID = request.getParameter("userID");
-            String email = request.getParameter("email");
+            String userID = request.getParameter("userID").trim();
+            String email = request.getParameter("email").trim();
             String password = request.getParameter("password");
             
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");  

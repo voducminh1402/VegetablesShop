@@ -116,3 +116,47 @@ $(document).on("click", ".delete-product", function () {
    
 });
 
+const nameAdd = document.getElementById("add-product-name");
+const nameEdit = document.getElementById("product-name");
+const nameNoti = document.getElementById("add-name-noti");
+const editNoti = document.getElementById("edit-name-noti");
+const submitAdd = document.getElementById("submit-add");
+const submitEdit = document.getElementById("submit-edit");
+            
+nameAdd.onkeyup = validEmptyName; 
+nameEdit.onkeyup = validEmptyNameEdit;
+        
+function validEmptyName() {
+    nameNoti.style.display = "none";
+    if (nameAdd.value.trim().length === 0) {
+        nameNoti.innerHTML = "Name of product can't be empty!";
+        nameNoti.style.display = "block";
+        submitAdd.disabled = true;
+        submitAdd.style.cursor = "not-allowed";
+    }
+    else {
+        nameNoti.innerHTML = "";
+        nameNoti.style.display = "none";
+        submitAdd.disabled = false;
+        submitAdd.style.cursor = "pointer";
+    }
+}
+
+function validEmptyNameEdit() {
+    editNoti.style.display = "none";
+    if (nameEdit.value.trim().length === 0) {
+        editNoti.innerHTML = "Name of product can't be empty!";
+        editNoti.style.display = "block";
+        submitEdit.disabled = true;
+        submitEdit.style.cursor = "not-allowed";
+    }
+    else {
+        editNoti.innerHTML = "";
+        editNoti.style.display = "none";
+        submitEdit.disabled = false;
+        submitEdit.style.cursor = "pointer";
+    }
+}
+
+
+

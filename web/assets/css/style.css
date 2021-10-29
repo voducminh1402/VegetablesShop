@@ -1333,6 +1333,44 @@ input[type=number] {
 	max-width: 60px;
 	vertical-align: top;
 }
+.checkout-noti {
+    position: relative;
+    
+}
+.checkout-noti:hover + .checkout-noti-content {
+    display: block;
+}
+.checkout-noti-content {
+    position: absolute;
+    right: 0%;
+    top: -140%;
+    display: inline-block;
+    width: 500px;
+    padding: 10px 15px;
+    background-color: rgba(250,234,200,0.3);
+    text-align: center !important;
+    display: none;
+    color: green;
+}
+.button-cart-custom {
+    padding: 0!important;
+    /*optional*/
+    /*input has OS specific font-family*/
+    cursor: pointer;
+    background-color: #07d765;
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease-in;
+    border-radius: 40px;
+    width: 37px;
+    height: 37px;
+    padding: 0;
+    border: 0;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
 .cart_list a {
 	color: #fff !important;
 	font-size: 14px;

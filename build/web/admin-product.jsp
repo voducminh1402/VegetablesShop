@@ -191,15 +191,16 @@
                             </div>
                             <div class="form-group">
                                 <label>Product Name</label>
-                                <input name="productName" type="text" class="form-control" required>
+                                <input id="add-product-name" name="productName" type="text" class="form-control" required>
                             </div>
+                            <p id="add-name-noti" style="color: red"></p>
                             <div class="form-group">
                                 <label>Price</label>
                                 <input step="0.01" name="productPrice" min="0" type="number" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
-                                <textarea  name="description" rows="10" type="number" class="form-control text-area-des"></textarea>
+                                <textarea id="description" name="description" rows="10" type="number" class="form-control text-area-des"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Product Image</label>
@@ -237,7 +238,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" name="action" value="AddProduct">
+                            <input id="submit-add" type="submit" class="btn btn-success" name="action" value="AddProduct">
                         </div>
                     </form>
                 </div>
@@ -269,6 +270,7 @@
                                 <label>Product Name</label>
                                 <input id="product-name" name="productName" type="text" class="form-control" required>
                             </div>
+                            <p id="edit-name-noti" style="color: red"></p>
                             <div class="form-group">
                                 <label>Price</label>
                                 <input id="product-price" step="0.01" name="productPrice" min="0" type="number" class="form-control" required>
@@ -304,7 +306,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" name="action" value="EditProduct">
+                            <input id="submit-edit" type="submit" class="btn btn-success" name="action" value="EditProduct">
                         </div>
                     </form>
                 </div>
@@ -504,8 +506,7 @@
                 }
 
             });
-        });
+        });        
         </script>
-        
     </body>
 </html>

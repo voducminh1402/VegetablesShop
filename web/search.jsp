@@ -143,7 +143,17 @@ var sc_https=1;
                                         <%
                                             if (!product.getAvailableName().equals("Coming Soon") && !product.getAvailableName().equals("Not Available")) {
                                         %>
-                                            <li class="add-to-cart"><a href="MainController?action=AddToCart&quantity=1&productID=<%= product.getProductID() %>&valuePage=searchPage&search=<%= search %>"><i class="ti-shopping-cart"></i></a></li>
+                                            <li class="add-to-cart">
+                                                <form action="MainController" method="POST">
+                                                    <input type="hidden" name="quantity" value="1">
+                                                    <input type="hidden" name="productID" value="<%= product.getProductID() %>">
+                                                    <input type="hidden" name="valuePage" value="searchPage">
+                                                    <input type="hidden" name="search" value="<%= search %>">
+                                                    <button name="action" value="AddToCart" type="submit" class="button-cart-custom">
+                                                        <i class="ti-shopping-cart"></i>
+                                                    </button>
+                                                </form>
+                                            </li>
                                         <%
                                             }
                                         %>

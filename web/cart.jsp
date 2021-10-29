@@ -186,7 +186,7 @@ var sc_https=1;
                                                     }
                                                     else {
                                             %>
-                                            <a style="cursor: not-allowed; pointer-events: none;" disabled="" class="" href="checkout.jsp" class="btn btn-default btn-sm">Proceed to Checkout</a>
+                                            <span class="checkout-noti"><a style="cursor: not-allowed; pointer-events: none;" disabled="" href="checkout.jsp" class="btn btn-default btn-sm">Proceed to Checkout</a></span><span class="checkout-noti-content">Please remove product with quantity 0 to checkout!</span>
                                             <%
                                                     }
                                             %>
