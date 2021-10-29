@@ -23,6 +23,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/polipop/dist/css/polipop.core.min.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/polipop/dist/css/polipop.default.min.css"/>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="./assets/css/style-admin.css">
@@ -283,8 +285,8 @@
                                 <label>Product Image</label>
 <!--                                <input id="product-image" name="image" type="text" class="form-control" required>-->
                                 <input type="file" class="custom-file-input">
-                                <input name="productImage" type="hidden" id="product-image" value="product-image">
-                                <a id="preview-product-image" target="_blank">Preview Image</a>
+                                <input name="productImage" type="hidden" id="product-image-update" value="product-image">
+                                <a id="preview-product-image-up" target="_blank">Preview Image</a>
                             </div>
                             <div class="form-group">
                                 <label>Quantity</label>
@@ -406,7 +408,7 @@
         </div>
   
         end popup-->
-
+        <script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
         <script src="./assets/js/app-admin.js"></script>
         <script src="https://dl.dropboxusercontent.com/s/nvklmhq3kw4j9pq/jquerylasted.js?dl=0"></script>
         <script>
@@ -502,11 +504,31 @@
                     console.log(response);
                     var obj = JSON.parse(response);
                     document.getElementById("product-image").value = obj.data.link;
+                    document.getElementById("product-image-update").value = obj.data.link;
+                    document.getElementById("preview-product-image-up").href = obj.data.link;
                 });
                 }
 
             });
         });        
+        </script>
+        <script>
+            var polipop = new Polipop('mypolipop', {
+                layout: 'popups',
+                insert: 'before',
+                pool: 5,
+                sticky: false,
+                position: 'bottom-right',
+                life: 2000
+            });
+            <c:if test="${sessionScope.ERROR_DELETE != null}">
+                polipop.add({
+                content: "${sessionScope.ERROR_DELETE}",
+                title: 'Delete Product Error',
+                type: 'warning',
+            });
+            </c:if>
+            <c:remove var="ERROR_DELETE" scope="session" />
         </script>
     </body>
 </html>

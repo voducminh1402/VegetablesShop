@@ -192,7 +192,7 @@ var sc_https=1;
                             <input class="form-control" required type="text" name="city">
                         </div>
                         <div class="form-group col-md-6">
-                            <label>State / County</label>
+                            <label>State / County <span class="required">*</span></label>
                             <input class="form-control" required type="text" name="state">
                         </div>
                         <div class="form-group col-md-6">

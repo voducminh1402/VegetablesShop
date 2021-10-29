@@ -189,7 +189,6 @@ public class AuthorizationFilter implements Filter {
         catch (Exception e) {
             e.printStackTrace();
         }
-        
     }
 
     /**
