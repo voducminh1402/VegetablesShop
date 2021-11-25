@@ -104,7 +104,8 @@ $(document).on("click", ".edit-product", function () {
 //    $(".mce-content-body p").val(description);
     tinyMCE.activeEditor.setContent(description);
     $(".modal-body #product-image").val(image);
-    $(".modal-body #preview-product-image").attr("href", image);
+    $(".modal-body #preview-product-image-up").attr("href", image);
+    $(".modal-body #product-image-update").val(image);
     $(".modal-body #product-quantity").val(parseInt(quantity));
     $(".modal-body #date").val(date);
 });
