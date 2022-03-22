@@ -65,5 +65,4 @@ Contact me to contribute or you have questions:
 <br>[Linkedin](https://www.linkedin.com/in/minhvd0406/)
 
 ## License
-
-This project is developed by Vo Duc Minh @ 2021
+Developed by Vo Duc Minh @ 2021
