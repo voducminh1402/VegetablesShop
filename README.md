@@ -25,7 +25,6 @@ This website application has the following main features:
   + Product Management
   + User Management
 
-[Live Demo]
 
 ## Requirements
 
@@ -52,10 +51,8 @@ Step 4: Add libraries
  - Add all libraries in folder lib to project
 
 Step 5: Run project and enjoy that moment ^^
-
     
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
 ## Contributors
 
